@@ -1,0 +1,1883 @@
+Microsoft Windows [Version 10.0.19045.7725]
+(c) Microsoft Corporation. Tüm hakları saklıdır.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py printgpt
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+.....Port - Device detected :)
+Preloader - Detected regular mode !
+Preloader -     CPU:                    MT6891/MT6893(Dimensity 1200)
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xa
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x950
+Preloader - Target config:              0xe7
+Preloader -     SBC enabled:            True
+Preloader -     SLA enabled:            True
+Preloader -     DAA enabled:            True
+Preloader -     SWJTAG enabled:         True
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          True
+Preloader -     Mem write auth:         True
+Preloader -     Cmd 0xC8 blocked:       True
+Preloader - Get Target info
+Preloader - BROM mode detected.
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xca00
+Preloader -     SW Ver:                 0x0
+Preloader - ME_ID:                      514B7C693AC7BA62167CAA36E21BCC76
+Preloader - SOC_ID:                     CB5FC8C80D799CBD8D6FB659D9FC07D3CE309AED37B088A23C72C4E4FC5FF027
+Preloader
+Preloader - [LIB]: Auth file is required. Use --auth option.
+DaHandler - Device is protected.
+DaHandler - Device is in BROM-Mode. Bypassing security.
+PLTools - Loading payload from mt6893_payload.bin, 0x264 bytes
+Exploitation - Kamakiri Run
+Exploitation - Done sending payload...
+PLTools - Successfully sent payload: C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\payloads\mt6893_payload.bin
+Port - Device detected :)
+DaHandler
+DaHandler - [LIB]: Device is in BROM mode. No preloader given, trying to dump preloader from ram.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Sending emi data ...
+DAXFlash - DRAM setup passed.
+DAXFlash - Sending emi data succeeded.
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - UFS Blocksize: 0x1000
+DAXFlash - UFS ID:       KLUDG4UHDC-B0E
+DAXFlash - UFS MID:      0xce
+DAXFlash - UFS CID:      ce014b4c55444734554844432d423045
+DAXFlash - UFS FWVer:    30323030
+DAXFlash - UFS Serial:   353132316338333838643230
+DAXFlash - UFS LU0 Size: 0x1dcb000000
+DAXFlash - UFS LU1 Size: 0x400000
+DAXFlash - UFS LU2 Size: 0x400000
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added at 0x4fff0000
+Main - Handling da commands ...
+
+GPT Table:
+-------------
+misc:                Offset 0x0000000000008000, Length 0x0000000000400000, Flags 0x0000000000000000, UUID f57ad330-39c2-4488-b09b-00cb43c9ccd4, Type EFI_BASIC_DATA
+para:                Offset 0x0000000000408000, Length 0x0000000000080000, Flags 0x0000000000000000, UUID fe686d97-3544-4a41-21be-167e25b61b6f, Type EFI_BASIC_DATA
+expdb:               Offset 0x0000000000488000, Length 0x0000000002800000, Flags 0x0000000000000000, UUID 1cb143a8-b1a8-4b57-51b2-945c5119e8fe, Type EFI_BASIC_DATA
+frp:                 Offset 0x0000000002c88000, Length 0x0000000000100000, Flags 0x0000000000000000, UUID 3b9e343b-cdc8-4d7f-a69f-b6812e50ab62, Type EFI_BASIC_DATA
+nvcfg:               Offset 0x0000000002d88000, Length 0x0000000002000000, Flags 0x0000000000000000, UUID 5f6a2c79-6617-4b85-02ac-c2975a14d2d7, Type EFI_BASIC_DATA
+nvdata:              Offset 0x0000000004d88000, Length 0x0000000004000000, Flags 0x0000000000000000, UUID 4ae2050b-5db5-4ff7-d3aa-5730534be63d, Type EFI_BASIC_DATA
+vbmeta_a:            Offset 0x0000000008d88000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID 1f9b0939-e16b-4bc9-bca5-dc2ee969d801, Type EFI_BASIC_DATA
+vbmeta_system_a:     Offset 0x0000000009588000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID d722c721-0dee-4cb8-838a-2c63cd1393c7, Type EFI_BASIC_DATA
+vbmeta_vendor_a:     Offset 0x0000000009d88000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID e02179a8-ceb5-48a9-3188-4f1c9c5a8695, Type EFI_BASIC_DATA
+vbmeta_b:            Offset 0x000000000a588000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID 84b09a81-fad2-41ac-0e89-407c24975e74, Type EFI_BASIC_DATA
+vbmeta_system_b:     Offset 0x000000000ad88000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID e8f0a5ef-8d1b-42ea-2a9c-835cd77de363, Type EFI_BASIC_DATA
+vbmeta_vendor_b:     Offset 0x000000000b588000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID d5f0e175-a6e1-4db7-c094-f82ad032950b, Type EFI_BASIC_DATA
+metadata:            Offset 0x000000000bd88000, Length 0x0000000002000000, Flags 0x0000000000000000, UUID 1d9056e1-e139-4fca-0b8c-b75fd74d81c6, Type EFI_BASIC_DATA
+persist:             Offset 0x000000000dd88000, Length 0x0000000004278000, Flags 0x0000000000000000, UUID 7792210b-b6a8-45d5-91ad-3361ed14c608, Type EFI_BASIC_DATA
+protect1:            Offset 0x0000000012000000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID 138a6db9-1032-451d-e991-0fa38ff94fbb, Type EFI_BASIC_DATA
+protect2:            Offset 0x0000000012800000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID 756d934c-50e3-4c91-46af-02d824169ca7, Type EFI_BASIC_DATA
+seccfg:              Offset 0x0000000013000000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID a3f3c267-5521-42dd-24a7-3bdec20c7c6f, Type EFI_BASIC_DATA
+otp:                 Offset 0x0000000013800000, Length 0x0000000003000000, Flags 0x0000000000000000, UUID 8c68cd2a-ccc9-4c5d-578b-34ae9b2dd481, Type EFI_BASIC_DATA
+md1img_a:            Offset 0x0000000016800000, Length 0x000000000c800000, Flags 0x0000000000000000, UUID 6a5cebf8-54a7-4b89-1d8d-c5eb140b095b, Type EFI_BASIC_DATA
+spmfw_a:             Offset 0x0000000023000000, Length 0x0000000000100000, Flags 0x0000000000000000, UUID a0d65bf8-e8de-4107-3494-1d318c843d37, Type EFI_BASIC_DATA
+audio_dsp_a:         Offset 0x0000000023100000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID 46f0c0bb-f227-4eb6-2fb8-66408e13e36d, Type EFI_BASIC_DATA
+pi_img_a:            Offset 0x0000000023900000, Length 0x0000000000100000, Flags 0x0000000000000000, UUID fbc2c131-6392-4217-1eb5-548a6edb03d0, Type EFI_BASIC_DATA
+dpm_a:               Offset 0x0000000023a00000, Length 0x0000000000400000, Flags 0x0000000000000000, UUID e195a981-e285-4734-2580-ec323e9589d9, Type EFI_BASIC_DATA
+scp_a:               Offset 0x0000000023e00000, Length 0x0000000000600000, Flags 0x0000000000000000, UUID e29052f8-5d3a-4e97-b5ad-5f312ce6610a, Type EFI_BASIC_DATA
+sspm_a:              Offset 0x0000000024400000, Length 0x0000000000100000, Flags 0x0000000000000000, UUID 9c3cabd7-a35d-4b45-578c-b80775426b35, Type EFI_BASIC_DATA
+mcupm_a:             Offset 0x0000000024500000, Length 0x0000000000100000, Flags 0x0000000000000000, UUID e7099731-95a6-45a6-e5a1-1b6aba032cf1, Type EFI_BASIC_DATA
+cam_vpu1_a:          Offset 0x0000000024600000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID 8273e1ab-846f-4468-99b9-ee2ea8e50a16, Type EFI_BASIC_DATA
+cam_vpu2_a:          Offset 0x0000000024e00000, Length 0x0000000001300000, Flags 0x0000000000000000, UUID d26472f1-9ebc-421d-14ba-311296457c90, Type EFI_BASIC_DATA
+cam_vpu3_a:          Offset 0x0000000026100000, Length 0x0000000001200000, Flags 0x0000000000000000, UUID b72ccbe9-2055-46f4-67a1-4a069c201738, Type EFI_BASIC_DATA
+gz_a:                Offset 0x0000000027300000, Length 0x0000000002000000, Flags 0x0000000000000000, UUID 9c1520f3-c2c5-4b89-4282-fe4c61208a9e, Type EFI_BASIC_DATA
+lk_a:                Offset 0x0000000029300000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID 902d5f3f-434a-4de7-8889-321e88c9b8aa, Type EFI_BASIC_DATA
+boot_a:              Offset 0x0000000029b00000, Length 0x0000000008000000, Flags 0x0000000000000000, UUID bece74c8-d8e2-4863-fe9b-5b0b66bb920f, Type EFI_BASIC_DATA
+vendor_boot_a:       Offset 0x0000000031b00000, Length 0x0000000004000000, Flags 0x0000000000000000, UUID ff1342cf-b7be-44d5-5ea2-a435addd2702, Type EFI_BASIC_DATA
+dtbo_a:              Offset 0x0000000035b00000, Length 0x0000000002000000, Flags 0x0000000000000000, UUID a4da8f1b-fe07-433b-cb95-84a5f23e477b, Type EFI_BASIC_DATA
+tee_a:               Offset 0x0000000037b00000, Length 0x0000000000500000, Flags 0x0000000000000000, UUID c2635e15-61aa-454e-409c-ebe1bdf19b9b, Type EFI_BASIC_DATA
+mitee_a:             Offset 0x0000000038000000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID 4d2d1290-36a3-4f5d-b4af-319f8ab6dcd8, Type EFI_BASIC_DATA
+sec1:                Offset 0x0000000038800000, Length 0x0000000000200000, Flags 0x0000000000000000, UUID fdce12f0-a7eb-40f7-5083-960972e6cb57, Type EFI_BASIC_DATA
+proinfo:             Offset 0x0000000038a00000, Length 0x0000000000300000, Flags 0x0000000000000000, UUID 0fbbafa2-4aa9-4490-8389-5329328505fd, Type EFI_BASIC_DATA
+efuse:               Offset 0x0000000038d00000, Length 0x0000000000080000, Flags 0x0000000000000000, UUID a76e4b2f-31cb-40ba-6a82-c0cb0b73c856, Type EFI_BASIC_DATA
+nvram:               Offset 0x0000000038d80000, Length 0x0000000004000000, Flags 0x0000000000000000, UUID f54ac030-7004-4d02-8194-bbf982036807, Type EFI_BASIC_DATA
+boot_para:           Offset 0x000000003cd80000, Length 0x0000000001a00000, Flags 0x0000000000000000, UUID c4c310e2-4a7e-77d3-1848-61e2d8bb5e86, Type EFI_BASIC_DATA
+logo:                Offset 0x000000003e780000, Length 0x0000000004080000, Flags 0x0000000000000000, UUID 3734710f-0f13-1ab9-4c73-12a08ec50837, Type EFI_BASIC_DATA
+md1img_b:            Offset 0x0000000042800000, Length 0x000000000c800000, Flags 0x0000000000000000, UUID 85a5b02f-3773-18b3-4910-718cde95107e, Type EFI_BASIC_DATA
+spmfw_b:             Offset 0x000000004f000000, Length 0x0000000000100000, Flags 0x0000000000000000, UUID 6fce83a6-5273-4748-4511-c205ebb4b8ad, Type EFI_BASIC_DATA
+audio_dsp_b:         Offset 0x000000004f100000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID 3645e6a3-a7e3-19b2-4149-172c10190eef, Type EFI_BASIC_DATA
+pi_img_b:            Offset 0x000000004f900000, Length 0x0000000000100000, Flags 0x0000000000000000, UUID f60b92b4-0e2f-91b6-4afb-2d0b643bab4b, Type EFI_BASIC_DATA
+dpm_b:               Offset 0x000000004fa00000, Length 0x0000000000400000, Flags 0x0000000000000000, UUID d05cedfe-20b7-68b3-f259-4fe25317f2fc, Type EFI_BASIC_DATA
+scp_b:               Offset 0x000000004fe00000, Length 0x0000000000600000, Flags 0x0000000000000000, UUID 54060b67-fa74-5c82-1661-44821e54dced, Type EFI_BASIC_DATA
+sspm_b:              Offset 0x0000000050400000, Length 0x0000000000100000, Flags 0x0000000000000000, UUID c0a128fb-59d1-0a9e-e8f0-ea3d36a9d658, Type EFI_BASIC_DATA
+mcupm_b:             Offset 0x0000000050500000, Length 0x0000000000100000, Flags 0x0000000000000000, UUID f5f5a7f8-f8ec-3ba1-c9cb-4e2a7cbc7d07, Type EFI_BASIC_DATA
+cam_vpu1_b:          Offset 0x0000000050600000, Length 0x0000000000f00000, Flags 0x0000000000000000, UUID 736d618a-5b79-530b-ac9d-895339690613, Type EFI_BASIC_DATA
+cam_vpu2_b:          Offset 0x0000000051500000, Length 0x0000000000f00000, Flags 0x0000000000000000, UUID a2342ac6-4c40-b02c-4f51-e90d46f93454, Type EFI_BASIC_DATA
+cam_vpu3_b:          Offset 0x0000000052400000, Length 0x0000000000f00000, Flags 0x0000000000000000, UUID 339d6f74-bcb8-f02b-4a69-ae0152bcadc0, Type EFI_BASIC_DATA
+gz_b:                Offset 0x0000000053300000, Length 0x0000000002000000, Flags 0x0000000000000000, UUID 2cd122a3-6142-31a9-8812-cb60fbead9be, Type EFI_BASIC_DATA
+lk_b:                Offset 0x0000000055300000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID c09b7bd1-5e46-450c-d597-adf4072a8d6b, Type EFI_BASIC_DATA
+boot_b:              Offset 0x0000000055b00000, Length 0x0000000008000000, Flags 0x0000000000000000, UUID 448a65b8-a5d4-bdb0-ebdd-bf4ea3ceafc6, Type EFI_BASIC_DATA
+vendor_boot_b:       Offset 0x000000005db00000, Length 0x0000000004000000, Flags 0x0000000000000000, UUID b1b1e374-8c7f-b48a-75d5-ce0ca20f1183, Type EFI_BASIC_DATA
+dtbo_b:              Offset 0x0000000061b00000, Length 0x0000000002000000, Flags 0x0000000000000000, UUID 24d37dd4-caf8-1a6e-45be-89e4b0705843, Type EFI_BASIC_DATA
+tee_b:               Offset 0x0000000063b00000, Length 0x0000000000500000, Flags 0x0000000000000000, UUID 37957b10-67ef-1440-3b89-6200484311b6, Type EFI_BASIC_DATA
+mitee_b:             Offset 0x0000000064000000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID 441c978b-5309-1faa-913c-32c5f087e9ae, Type EFI_BASIC_DATA
+super:               Offset 0x0000000064800000, Length 0x0000000220000000, Flags 0x0000000000000000, UUID 575fb526-8d23-61c4-fed5-e9e040eb0741, Type EFI_BASIC_DATA
+gsort:               Offset 0x0000000284800000, Length 0x0000000001000000, Flags 0x0000000000000000, UUID d8bbfddf-8e4c-8cf5-e3ca-fc4f02e1c49a, Type EFI_BASIC_DATA
+ffu:                 Offset 0x0000000285800000, Length 0x0000000000800000, Flags 0x0000000000000000, UUID 7c881e59-5172-82a8-5c30-42abbd467b7d, Type EFI_BASIC_DATA
+mem:                 Offset 0x0000000286000000, Length 0x0000000000400000, Flags 0x0000000000000000, UUID aa224eb0-1781-c4d2-1ed8-b39e64810df6, Type EFI_BASIC_DATA
+oops:                Offset 0x0000000286400000, Length 0x0000000001000000, Flags 0x0000000000000000, UUID a03b5e9f-674c-998f-fbf4-e24b171a35f3, Type EFI_BASIC_DATA
+oem_misc1:           Offset 0x0000000287400000, Length 0x0000000001000000, Flags 0x0000000000000000, UUID dc83390e-bdca-ff71-1b9d-92d5e182f092, Type EFI_BASIC_DATA
+exaid:               Offset 0x0000000288400000, Length 0x0000000018000000, Flags 0x0000000000000000, UUID 2b938ac7-d28c-091e-1301-afbe49497c0a, Type EFI_BASIC_DATA
+backup1:             Offset 0x00000002a0400000, Length 0x0000000000100000, Flags 0x0000000000000000, UUID da38a12d-1146-2277-e814-4d8400d84f75, Type EFI_BASIC_DATA
+backup2:             Offset 0x00000002a0500000, Length 0x0000000000100000, Flags 0x0000000000000000, UUID 8e905218-ead7-faba-551f-b81d1e1ad12f, Type EFI_BASIC_DATA
+backup3:             Offset 0x00000002a0600000, Length 0x0000000001000000, Flags 0x0000000000000000, UUID 9b943967-7c67-0b69-7994-d406710b64aa, Type EFI_BASIC_DATA
+backup4:             Offset 0x00000002a1600000, Length 0x0000000004000000, Flags 0x0000000000000000, UUID 69ee88a0-4229-96a0-72cc-8691b4527df8, Type EFI_BASIC_DATA
+backup5:             Offset 0x00000002a5600000, Length 0x0000000008000000, Flags 0x0000000000000000, UUID b53e48fd-4cc7-5cc1-88c1-6dc5709bc656, Type EFI_BASIC_DATA
+cust:                Offset 0x00000002ad600000, Length 0x0000000040000000, Flags 0x0000000000000000, UUID 1ffbf267-ba52-9aa7-9b65-a7d92beed5fa, Type EFI_BASIC_DATA
+rescue:              Offset 0x00000002ed600000, Length 0x0000000008200000, Flags 0x0000000000000000, UUID bd5af0c2-83ad-6a0e-667d-eb37cb2d0003, Type EFI_BASIC_DATA
+userdata:            Offset 0x00000002f5800000, Length 0x0000001ad47f8000, Flags 0x0000000000000000, UUID 0ecaa08b-65c9-c44d-8dd8-a689554a0579, Type EFI_BASIC_DATA
+flashinfo:           Offset 0x0000001dc9ff8000, Length 0x0000000001000000, Flags 0x0000000000000000, UUID b9a0fe86-15e8-ebe0-fb85-a2dfb4da2a03, Type EFI_BASIC_DATA
+
+Total disk size:0x0000001dcb019000, sectors:0x0000000001dcb019
+
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py r nvram nvram_backup.bin
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...Port - Device detected :)
+Preloader - Detected regular mode !
+Preloader -     CPU:                    MT6891/MT6893(Dimensity 1200)
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xa
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x950
+Preloader - Target config:              0xe7
+Preloader -     SBC enabled:            True
+Preloader -     SLA enabled:            True
+Preloader -     DAA enabled:            True
+Preloader -     SWJTAG enabled:         True
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          True
+Preloader -     Mem write auth:         True
+Preloader -     Cmd 0xC8 blocked:       True
+Preloader - Get Target info
+Preloader - BROM mode detected.
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xca00
+Preloader -     SW Ver:                 0x0
+Preloader - ME_ID:                      514B7C693AC7BA62167CAA36E21BCC76
+Preloader - SOC_ID:                     CB5FC8C80D799CBD8D6FB659D9FC07D3CE309AED37B088A23C72C4E4FC5FF027
+Preloader
+Preloader - [LIB]: Auth file is required. Use --auth option.
+DaHandler - Device is protected.
+DaHandler - Device is in BROM-Mode. Bypassing security.
+PLTools - Loading payload from mt6893_payload.bin, 0x264 bytes
+Exploitation - Kamakiri Run
+Exploitation - Done sending payload...
+PLTools - Successfully sent payload: C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\payloads\mt6893_payload.bin
+Port - Device detected :)
+DaHandler
+DaHandler - [LIB]: Device is in BROM mode. No preloader given, trying to dump preloader from ram.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Sending emi data ...
+DAXFlash - DRAM setup passed.
+DAXFlash - Sending emi data succeeded.
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - UFS Blocksize: 0x1000
+DAXFlash - UFS ID:       KLUDG4UHDC-B0E
+DAXFlash - UFS MID:      0xce
+DAXFlash - UFS CID:      ce014b4c55444734554844432d423045
+DAXFlash - UFS FWVer:    30323030
+DAXFlash - UFS Serial:   353132316338333838643230
+DAXFlash - UFS LU0 Size: 0x1dcb000000
+DAXFlash - UFS LU1 Size: 0x400000
+DAXFlash - UFS LU2 Size: 0x400000
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added at 0x4fff0000
+Main - Handling da commands ...
+DaHandler - Requesting available partitions ....
+DaHandler - Dumping partition "nvram"
+Progress: |██████████| 100.0% Read: (0x4000000/0x4000000), 21.23 MB/s  s left
+DaHandler - Dumped sector 232832 with sector count 16384 as nvram_backup.bin.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py r nvdata nvdata_backup.bin
+fuse library not installed
+Main - Handling da commands ...
+DaHandler - Requesting available partitions ....
+DaHandler - Dumping partition "nvdata"
+Progress: |██████████| 100.0% Read: (0x4000000/0x4000000), 31.25 MB/s  s left
+DaHandler - Dumped sector 19848 with sector count 16384 as nvdata_backup.bin.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py r nvcfg nvcfg_backup.bin
+fuse library not installed
+Main - Handling da commands ...
+DaHandler - Requesting available partitions ....
+DaHandler - Dumping partition "nvcfg"
+Progress: |██████████| 100.0% Read: (0x2000000/0x2000000), 31.24 MB/s  s left
+DaHandler - Dumped sector 11656 with sector count 8192 as nvcfg_backup.bin.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>dir /-c nvram_backup.bin nvdata_backup.bin nvcfg_backup.bin
+ Volume in drive C has no label.
+ Volume Serial Number is A259-8752
+
+ Directory of C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1
+
+22.09.2026  23:16          67108864 nvram_backup.bin
+
+ Directory of C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1
+
+22.09.2026  23:17          67108864 nvdata_backup.bin
+
+ Directory of C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1
+
+22.09.2026  23:17          33554432 nvcfg_backup.bin
+               3 File(s)      167772160 bytes
+               0 Dir(s)     23795789824 bytes free
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>certutil -hashfile nvram_backup.bin SHA256
+SHA256 hash of nvram_backup.bin:
+f0d1e23199bc5145f0cfb2a715c8c7fd15850bfd3c09bfe3c135826c11123d09
+CertUtil: -hashfile command completed successfully.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>certutil -hashfile nvdata_backup.bin SHA256
+SHA256 hash of nvdata_backup.bin:
+1da7a9ee85d25ee4b7934ef00cc8fcbe48fbf36a0d9b08a65af528ca8b0c9591
+CertUtil: -hashfile command completed successfully.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>certutil -hashfile nvcfg_backup.bin SHA256
+SHA256 hash of nvcfg_backup.bin:
+70c657cf8d730692de13da2115e58fca5a977554ae7a12eef313e78798069d22
+CertUtil: -hashfile command completed successfully.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>nvram_backup.bin
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>f0d1e23199bc5145f0cfb2a715c8c7fd15850bfd3c09bfe3c135826c11123d09
+'f0d1e23199bc5145f0cfb2a715c8c7fd15850bfd3c09bfe3c135826c11123d09' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>nvdata_backup.bin
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>1da7a9ee85d25ee4b7934ef00cc8fcbe48fbf36a0d9b08a65af528ca8b0c9591
+'1da7a9ee85d25ee4b7934ef00cc8fcbe48fbf36a0d9b08a65af528ca8b0c9591' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>nvcfg_backup.bin
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>70c657cf8d730692de13da2115e58fca5a977554ae7a12eef313e78798069d22
+'70c657cf8d730692de13da2115e58fca5a977554ae7a12eef313e78798069d22' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py rl nvcheck
+fuse library not installed
+DaHandler - Please disconnect, start mtkclient and reconnect.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>certutil -dump nvdata_backup.bin | more
+  000000  ...
+  4000000
+    000000  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000010  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000020  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000030  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000040  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000050  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000060  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000070  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000080  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000090  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    0000a0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    0000b0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    0000c0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    0000d0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    0000e0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    0000f0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000100  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000110  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000120  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000130  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000140  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000150  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000160  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000170  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000180  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    000190  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+    0001a0  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00   ................
+^C^C
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>certutil -dump nvdata_backup.bin | findstr /V "00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"
+^C^C
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>dir /b "C:\Users\Yusuf\Desktop\ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn"
+CheckSum_Gen
+check_sum.sh
+flash_all.bat
+flash_all.sh
+flash_all_except_data_storage.bat
+flash_all_except_data_storage.sh
+flash_all_lock.bat
+flash_all_lock.sh
+flash_gen_crc_list.py
+flash_gen_md5_list.py
+images
+libflashtool.so
+libflashtool.v1.so
+libflashtoolEx.so
+Log
+md5sum.xml
+misc.txt
+MTK_AllInOne_DA.bin
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>dir /b "C:\Users\Yusuf\Desktop\ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn\images"
+anti_version.txt
+audio_dsp.img
+boot.img
+cam_vpu1.img
+cam_vpu2.img
+cam_vpu3.img
+crclist.txt
+cust.img
+dpm.img
+dtbo.img
+efuse.img
+gsort.img
+gz.img
+lk.img
+logo.bin
+mcupm.img
+md1img.img
+mitee.img
+MT6893_Android_scatter.txt
+oem_misc1.img
+pi_img.img
+preloader_ares.bin
+rescue.img
+scp.img
+sparsecrclist.txt
+spmfw.img
+sspm.img
+super.img
+tee.img
+userdata.img
+vbmeta.img
+vbmeta_system.img
+vbmeta_vendor.img
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>findstr /i "nvram nvdata nvcfg md1img persist protect1 protect2 proinfo" "C:\Users\Yusuf\Desktop\ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn\images\MT6893_Android_scatter.txt"
+    partition_name: nvcfg
+    partition_name: nvdata
+    partition_name: persist
+    partition_name: protect1
+    partition_name: protect2
+    partition_name: md1img_a
+    file_name: md1img.img
+    partition_name: proinfo
+    partition_name: nvram
+    partition_name: md1img_b
+    partition_name: nvcfg
+    partition_name: nvdata
+    partition_name: persist
+    partition_name: protect1
+    partition_name: protect2
+    partition_name: md1img_a
+    file_name: md1img.img
+    partition_name: proinfo
+    partition_name: nvram
+    partition_name: md1img_b
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>findstr /i "nvram nvdata nvcfg persist protect1 protect2 proinfo md1img" "C:\Users\Yusuf\Desktop\ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn\flash_all.bat"
+fastboot %* flash md1img_ab             %~dp0images\md1img.img                          || @echo "Flash md1img
+error" && exit /B 1
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>findstr /i "nvram nvdata nvcfg persist protect1 protect2 proinfo md1img" "C:\Users\Yusuf\Desktop\ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn\flash_all_except_data_storage.bat"
+fastboot %* flash md1img_ab             %~dp0images\md1img.img                          || @echo "Flash md1img
+error" && exit /B 1
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>certutil -hashfile "C:\Users\Yusuf\Desktop\ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn\images\md1img.img" SHA256
+SHA256 hash of C:\Users\Yusuf\Desktop\ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn\images\md1img.img:
+82c36256d582dcfea653a8cf340d6090a02b6b6aa418fae663cd23eb18c94ee2
+CertUtil: -hashfile command completed successfully.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>certutil -hashfile "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\nvram_backup.bin" SHA256
+SHA256 hash of C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\nvram_backup.bin:
+f0d1e23199bc5145f0cfb2a715c8c7fd15850bfd3c09bfe3c135826c11123d09
+CertUtil: -hashfile command completed successfully.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>certutil -hashfile "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\nvdata_backup.bin" SHA256
+SHA256 hash of C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\nvdata_backup.bin:
+1da7a9ee85d25ee4b7934ef00cc8fcbe48fbf36a0d9b08a65af528ca8b0c9591
+CertUtil: -hashfile command completed successfully.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>certutil -hashfile "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\nvcfg_backup.bin" SHA256
+SHA256 hash of C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\nvcfg_backup.bin:
+70c657cf8d730692de13da2115e58fca5a977554ae7a12eef313e78798069d22
+CertUtil: -hashfile command completed successfully.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>DaHandler - Please disconnect, start mtkclient and reconnect.
+'DaHandler' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py w nvdata nvdata_backup.bin
+fuse library not installed
+Main - Handling da commands ...
+Progress: |██████████| 100.0% Write: (0x4000000/0x4000000), 8.4 MB/s  s left
+Wrote nvdata_backup.bin to sector 19848 with sector count 16384.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py w nvcfg nvcfg_backup.bin
+fuse library not installed
+Main - Handling da commands ...
+Progress: |██████████| 100.0% Write: (0x2000000/0x2000000), 7.81 MB/s   left
+Wrote nvcfg_backup.bin to sector 11656 with sector count 8192.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py w nvram nvram_backup.bin
+fuse library not installed
+Main - Handling da commands ...
+Progress: |██████████| 100.0% Write: (0x4000000/0x4000000), 8.37 MB/s  s left
+Wrote nvram_backup.bin to sector 232832 with sector count 16384.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py reset
+fuse library not installed
+Main - Handling da commands ...
+DeviceClass - [Errno 19] No such device (it may have been disconnected)
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>fastboot reboot bootloader
+'fastboot' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>fastboot reboot bootloader
+'fastboot' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>where fastboot
+INFO: Could not find files for the given pattern(s).
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" devices
+wkbmq8pfbeaejbo7         fastboot
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" reboot
+Rebooting                                          OKAY [  0.000s]
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>fastboot reboot bootloader
+'fastboot' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" fastboot reboot bootloader
+fastboot: usage: unknown command fastboot
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" reboot bootloader
+Rebooting into bootloader                          OKAY [  0.000s]
+Finished. Total time: 0.003s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" devices
+wkbmq8pfbeaejbo7         fastboot
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar product 2>&1
+product: ares
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" reboot
+Rebooting                                          OKAY [  0.000s]
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar all 2>&1
+(bootloader) anti: 1
+(bootloader) tokenversion: 2
+(bootloader) token: VQECHgEEFYMJ+QMEYXJlcwIQ4F8Ks4J7ISAEl2Qu0lH2Jw==
+(bootloader) max-download-size: 0x10000000
+(bootloader) variant:
+(bootloader) logical-block-size: 0x1000
+(bootloader) erase-block-size: 0x0
+(bootloader) hw-revision: ca00
+(bootloader) battery-soc-ok: yes
+(bootloader) battery-voltage: 4253mV
+(bootloader) partition-size:sgpt: 8000
+(bootloader) partition-type:sgpt: raw data
+(bootloader) partition-size:flashinfo: 1000000
+(bootloader) partition-type:flashinfo: raw data
+(bootloader) partition-size:userdata: 1ad47f8000
+(bootloader) partition-type:userdata: f2fs
+(bootloader) partition-size:rescue: 8200000
+(bootloader) partition-type:rescue: raw data
+(bootloader) partition-size:cust: 40000000
+(bootloader) partition-type:cust: raw data
+(bootloader) partition-size:backup5: 8000000
+(bootloader) partition-type:backup5: raw data
+(bootloader) partition-size:backup4: 4000000
+(bootloader) partition-type:backup4: raw data
+(bootloader) partition-size:backup3: 1000000
+(bootloader) partition-type:backup3: raw data
+(bootloader) partition-size:backup2: 100000
+(bootloader) partition-type:backup2: raw data
+(bootloader) partition-size:backup1: 100000
+(bootloader) partition-type:backup1: raw data
+(bootloader) partition-size:exaid: 18000000
+(bootloader) partition-type:exaid: raw data
+(bootloader) partition-size:oem_misc1: 1000000
+(bootloader) partition-type:oem_misc1: raw data
+(bootloader) partition-size:oops: 1000000
+(bootloader) partition-type:oops: raw data
+(bootloader) partition-size:mem: 400000
+(bootloader) partition-type:mem: raw data
+(bootloader) partition-size:ffu: 800000
+(bootloader) partition-type:ffu: raw data
+(bootloader) partition-size:gsort: 1000000
+(bootloader) partition-type:gsort: raw data
+(bootloader) partition-size:super: 220000000
+(bootloader) partition-type:super: raw data
+(bootloader) partition-size:mitee_b: 800000
+(bootloader) partition-type:mitee_b: raw data
+(bootloader) partition-size:tee_b: 500000
+(bootloader) partition-type:tee_b: raw data
+(bootloader) partition-size:dtbo_b: 2000000
+(bootloader) partition-type:dtbo_b: raw data
+(bootloader) partition-size:vendor_boot_b: 4000000
+(bootloader) partition-type:vendor_boot_b: raw data
+(bootloader) partition-size:boot_b: 8000000
+(bootloader) partition-type:boot_b: raw data
+(bootloader) partition-size:lk_b: 800000
+(bootloader) partition-type:lk_b: raw data
+(bootloader) partition-size:gz_b: 2000000
+(bootloader) partition-type:gz_b: raw data
+(bootloader) partition-size:cam_vpu3_b: f00000
+(bootloader) partition-type:cam_vpu3_b: raw data
+(bootloader) partition-size:cam_vpu2_b: f00000
+(bootloader) partition-type:cam_vpu2_b: raw data
+(bootloader) partition-size:cam_vpu1_b: f00000
+(bootloader) partition-type:cam_vpu1_b: raw data
+(bootloader) partition-size:mcupm_b: 100000
+(bootloader) partition-type:mcupm_b: raw data
+(bootloader) partition-size:sspm_b: 100000
+(bootloader) partition-type:sspm_b: raw data
+(bootloader) partition-size:scp_b: 600000
+(bootloader) partition-type:scp_b: raw data
+(bootloader) partition-size:dpm_b: 400000
+(bootloader) partition-type:dpm_b: raw data
+(bootloader) partition-size:pi_img_b: 100000
+(bootloader) partition-type:pi_img_b: raw data
+(bootloader) partition-size:audio_dsp_b: 800000
+(bootloader) partition-type:audio_dsp_b: raw data
+(bootloader) partition-size:spmfw_b: 100000
+(bootloader) partition-type:spmfw_b: raw data
+(bootloader) partition-size:md1img_b: c800000
+(bootloader) partition-type:md1img_b: raw data
+(bootloader) partition-size:logo: 4080000
+(bootloader) partition-type:logo: raw data
+(bootloader) partition-size:boot_para: 1a00000
+(bootloader) partition-type:boot_para: raw data
+(bootloader) partition-size:nvram: 4000000
+(bootloader) partition-type:nvram: raw data
+(bootloader) partition-size:efuse: 80000
+(bootloader) partition-type:efuse: raw data
+(bootloader) partition-size:proinfo: 300000
+(bootloader) partition-type:proinfo: raw data
+(bootloader) partition-size:sec1: 200000
+(bootloader) partition-type:sec1: raw data
+(bootloader) partition-size:mitee_a: 800000
+(bootloader) partition-type:mitee_a: raw data
+(bootloader) partition-size:tee_a: 500000
+(bootloader) partition-type:tee_a: raw data
+(bootloader) partition-size:dtbo_a: 2000000
+(bootloader) partition-type:dtbo_a: raw data
+(bootloader) partition-size:vendor_boot_a: 4000000
+(bootloader) partition-type:vendor_boot_a: raw data
+(bootloader) partition-size:boot_a: 8000000
+(bootloader) partition-type:boot_a: raw data
+(bootloader) partition-size:lk_a: 800000
+(bootloader) partition-type:lk_a: raw data
+(bootloader) partition-size:gz_a: 2000000
+(bootloader) partition-type:gz_a: raw data
+(bootloader) partition-size:cam_vpu3_a: 1200000
+(bootloader) partition-type:cam_vpu3_a: raw data
+(bootloader) partition-size:cam_vpu2_a: 1300000
+(bootloader) partition-type:cam_vpu2_a: raw data
+(bootloader) partition-size:cam_vpu1_a: 800000
+(bootloader) partition-type:cam_vpu1_a: raw data
+(bootloader) partition-size:mcupm_a: 100000
+(bootloader) partition-type:mcupm_a: raw data
+(bootloader) partition-size:sspm_a: 100000
+(bootloader) partition-type:sspm_a: raw data
+(bootloader) partition-size:scp_a: 600000
+(bootloader) partition-type:scp_a: raw data
+(bootloader) partition-size:dpm_a: 400000
+(bootloader) partition-type:dpm_a: raw data
+(bootloader) partition-size:pi_img_a: 100000
+(bootloader) partition-type:pi_img_a: raw data
+(bootloader) partition-size:audio_dsp_a: 800000
+(bootloader) partition-type:audio_dsp_a: raw data
+(bootloader) partition-size:spmfw_a: 100000
+(bootloader) partition-type:spmfw_a: raw data
+(bootloader) partition-size:md1img_a: c800000
+(bootloader) partition-type:md1img_a: raw data
+(bootloader) partition-size:otp: 3000000
+(bootloader) partition-type:otp: raw data
+(bootloader) partition-size:seccfg: 800000
+(bootloader) partition-type:seccfg: raw data
+(bootloader) partition-size:protect2: 800000
+(bootloader) partition-type:protect2: ext4
+(bootloader) partition-size:protect1: 800000
+(bootloader) partition-type:protect1: ext4
+(bootloader) partition-size:persist: 4278000
+(bootloader) partition-type:persist: ext4
+(bootloader) partition-size:metadata: 2000000
+(bootloader) partition-type:metadata: raw data
+(bootloader) partition-size:vbmeta_vendor_b: 800000
+(bootloader) partition-type:vbmeta_vendor_b: raw data
+(bootloader) partition-size:vbmeta_system_b: 800000
+(bootloader) partition-type:vbmeta_system_b: raw data
+(bootloader) partition-size:vbmeta_b: 800000
+(bootloader) partition-type:vbmeta_b: raw data
+(bootloader) partition-size:vbmeta_vendor_a: 800000
+(bootloader) partition-type:vbmeta_vendor_a: raw data
+(bootloader) partition-size:vbmeta_system_a: 800000
+(bootloader) partition-type:vbmeta_system_a: raw data
+(bootloader) partition-size:vbmeta_a: 800000
+(bootloader) partition-type:vbmeta_a: raw data
+(bootloader) partition-size:nvdata: 4000000
+(bootloader) partition-type:nvdata: ext4
+(bootloader) partition-size:nvcfg: 2000000
+(bootloader) partition-type:nvcfg: ext4
+(bootloader) partition-size:frp: 100000
+(bootloader) partition-type:frp: raw data
+(bootloader) partition-size:expdb: 2800000
+(bootloader) partition-type:expdb: raw data
+(bootloader) partition-size:para: 80000
+(bootloader) partition-type:para: raw data
+(bootloader) partition-size:misc: 400000
+(bootloader) partition-type:misc: raw data
+(bootloader) partition-size:pgpt: 8000
+(bootloader) partition-type:pgpt: raw data
+(bootloader) partition-size:preloader_b: 400000
+(bootloader) partition-type:preloader_b: raw data
+(bootloader) partition-size:preloader_a: 400000
+(bootloader) partition-type:preloader_a: raw data
+(bootloader) partition-size:preloader: 400000
+(bootloader) partition-type:preloader: raw data
+(bootloader) serialno: wkbmq8pfbeaejbo7
+(bootloader) off-mode-charge: 1
+(bootloader) warranty: no
+(bootloader) unlocked: yes
+(bootloader) secure: no
+(bootloader) fuse: yes
+(bootloader) crc: 1
+(bootloader) kernel: lk
+(bootloader) product: ares
+(bootloader) is-userspace: no
+(bootloader) slot-retry-count:b: 0
+(bootloader) slot-retry-count:a: 0
+(bootloader) slot-unbootable:b: yes
+(bootloader) slot-unbootable:a: yes
+(bootloader) slot-successful:b: no
+(bootloader) slot-successful:a: no
+(bootloader) slot-count: 2
+(bootloader) current-slot: a
+(bootloader) has-slot:sgpt: no
+(bootloader) has-slot:flashinfo: no
+(bootloader) has-slot:userdata: no
+(bootloader) has-slot:rescue: no
+(bootloader) has-slot:cust: no
+(bootloader) has-slot:backup5: no
+(bootloader) has-slot:backup4: no
+(bootloader) has-slot:backup3: no
+(bootloader) has-slot:backup2: no
+(bootloader) has-slot:backup1: no
+(bootloader) has-slot:exaid: no
+(bootloader) has-slot:oem_misc1: no
+(bootloader) has-slot:oops: no
+(bootloader) has-slot:mem: no
+(bootloader) has-slot:ffu: no
+(bootloader) has-slot:gsort: no
+(bootloader) has-slot:super: no
+(bootloader) has-slot:logo: no
+(bootloader) has-slot:boot_para: no
+(bootloader) has-slot:nvram: no
+(bootloader) has-slot:efuse: no
+(bootloader) has-slot:proinfo: no
+(bootloader) has-slot:sec1: no
+(bootloader) has-slot:mitee: yes
+(bootloader) has-slot:tee: yes
+(bootloader) has-slot:dtbo: yes
+(bootloader) has-slot:vendor_boot: yes
+(bootloader) has-slot:boot: yes
+(bootloader) has-slot:lk: yes
+(bootloader) has-slot:gz: yes
+(bootloader) has-slot:cam_vpu3: yes
+(bootloader) has-slot:cam_vpu2: yes
+(bootloader) has-slot:cam_vpu1: yes
+(bootloader) has-slot:mcupm: yes
+(bootloader) has-slot:sspm: yes
+(bootloader) has-slot:scp: yes
+(bootloader) has-slot:dpm: yes
+(bootloader) has-slot:pi_img: yes
+(bootloader) has-slot:audio_dsp: yes
+(bootloader) has-slot:spmfw: yes
+(bootloader) has-slot:md1img: yes
+(bootloader) has-slot:otp: no
+(bootloader) has-slot:seccfg: no
+(bootloader) has-slot:protect2: no
+(bootloader) has-slot:protect1: no
+(bootloader) has-slot:persist: no
+(bootloader) has-slot:metadata: no
+(bootloader) has-slot:vbmeta_vendor: yes
+(bootloader) has-slot:vbmeta_system: yes
+(bootloader) has-slot:vbmeta: yes
+(bootloader) has-slot:nvdata: no
+(bootloader) has-slot:nvcfg: no
+(bootloader) has-slot:frp: no
+(bootloader) has-slot:expdb: no
+(bootloader) has-slot:para: no
+(bootloader) has-slot:misc: no
+(bootloader) has-slot:pgpt: no
+(bootloader) has-slot:preloader: yes
+(bootloader) version-baseband: MOLY.NR15.R3.TC8.PR2.SP.V2.1.P28
+(bootloader) version-bootloader: ares-2ba77eec0-20220309093219-202210172
+(bootloader) version-preloader:
+(bootloader) version: 0.5
+all: Done!!
+Finished. Total time: 0.247s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" flash md1img_a "C:\Users\Yusuf\Desktop\ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn\images\md1img.img"
+Sending 'md1img_a' (64926 KB)                      OKAY [  1.528s]
+Writing 'md1img_a'                                 OKAY [  0.118s]
+Finished. Total time: 1.711s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" flash md1img_b "C:\Users\Yusuf\Desktop\ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn\images\md1img.img"
+Sending 'md1img_b' (64926 KB)                      OKAY [  1.536s]
+Writing 'md1img_b'                                 OKAY [  0.133s]
+Finished. Total time: 1.739s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" reboot
+Rebooting                                          OKAY [  0.000s]
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar current-slot 2>&1
+< waiting for any device >
+current-slot: a
+Finished. Total time: 0.005s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" set_active a
+Setting current slot to 'a'                        OKAY [  0.001s]
+Finished. Total time: 0.002s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" reboot
+Rebooting                                          OKAY [  0.000s]
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar all 2>&1
+(bootloader) anti: 1
+(bootloader) tokenversion: 2
+(bootloader) token: VQECHgEETxE9uwMEYXJlcwIQ4F8Ks4J7ISAEl2Qu0lH2Jw==
+(bootloader) max-download-size: 0x10000000
+(bootloader) variant:
+(bootloader) logical-block-size: 0x1000
+(bootloader) erase-block-size: 0x0
+(bootloader) hw-revision: ca00
+(bootloader) battery-soc-ok: yes
+(bootloader) battery-voltage: 4255mV
+(bootloader) partition-size:sgpt: 8000
+(bootloader) partition-type:sgpt: raw data
+(bootloader) partition-size:flashinfo: 1000000
+(bootloader) partition-type:flashinfo: raw data
+(bootloader) partition-size:userdata: 1ad47f8000
+(bootloader) partition-type:userdata: f2fs
+(bootloader) partition-size:rescue: 8200000
+(bootloader) partition-type:rescue: raw data
+(bootloader) partition-size:cust: 40000000
+(bootloader) partition-type:cust: raw data
+(bootloader) partition-size:backup5: 8000000
+(bootloader) partition-type:backup5: raw data
+(bootloader) partition-size:backup4: 4000000
+(bootloader) partition-type:backup4: raw data
+(bootloader) partition-size:backup3: 1000000
+(bootloader) partition-type:backup3: raw data
+(bootloader) partition-size:backup2: 100000
+(bootloader) partition-type:backup2: raw data
+(bootloader) partition-size:backup1: 100000
+(bootloader) partition-type:backup1: raw data
+(bootloader) partition-size:exaid: 18000000
+(bootloader) partition-type:exaid: raw data
+(bootloader) partition-size:oem_misc1: 1000000
+(bootloader) partition-type:oem_misc1: raw data
+(bootloader) partition-size:oops: 1000000
+(bootloader) partition-type:oops: raw data
+(bootloader) partition-size:mem: 400000
+(bootloader) partition-type:mem: raw data
+(bootloader) partition-size:ffu: 800000
+(bootloader) partition-type:ffu: raw data
+(bootloader) partition-size:gsort: 1000000
+(bootloader) partition-type:gsort: raw data
+(bootloader) partition-size:super: 220000000
+(bootloader) partition-type:super: raw data
+(bootloader) partition-size:mitee_b: 800000
+(bootloader) partition-type:mitee_b: raw data
+(bootloader) partition-size:tee_b: 500000
+(bootloader) partition-type:tee_b: raw data
+(bootloader) partition-size:dtbo_b: 2000000
+(bootloader) partition-type:dtbo_b: raw data
+(bootloader) partition-size:vendor_boot_b: 4000000
+(bootloader) partition-type:vendor_boot_b: raw data
+(bootloader) partition-size:boot_b: 8000000
+(bootloader) partition-type:boot_b: raw data
+(bootloader) partition-size:lk_b: 800000
+(bootloader) partition-type:lk_b: raw data
+(bootloader) partition-size:gz_b: 2000000
+(bootloader) partition-type:gz_b: raw data
+(bootloader) partition-size:cam_vpu3_b: f00000
+(bootloader) partition-type:cam_vpu3_b: raw data
+(bootloader) partition-size:cam_vpu2_b: f00000
+(bootloader) partition-type:cam_vpu2_b: raw data
+(bootloader) partition-size:cam_vpu1_b: f00000
+(bootloader) partition-type:cam_vpu1_b: raw data
+(bootloader) partition-size:mcupm_b: 100000
+(bootloader) partition-type:mcupm_b: raw data
+(bootloader) partition-size:sspm_b: 100000
+(bootloader) partition-type:sspm_b: raw data
+(bootloader) partition-size:scp_b: 600000
+(bootloader) partition-type:scp_b: raw data
+(bootloader) partition-size:dpm_b: 400000
+(bootloader) partition-type:dpm_b: raw data
+(bootloader) partition-size:pi_img_b: 100000
+(bootloader) partition-type:pi_img_b: raw data
+(bootloader) partition-size:audio_dsp_b: 800000
+(bootloader) partition-type:audio_dsp_b: raw data
+(bootloader) partition-size:spmfw_b: 100000
+(bootloader) partition-type:spmfw_b: raw data
+(bootloader) partition-size:md1img_b: c800000
+(bootloader) partition-type:md1img_b: raw data
+(bootloader) partition-size:logo: 4080000
+(bootloader) partition-type:logo: raw data
+(bootloader) partition-size:boot_para: 1a00000
+(bootloader) partition-type:boot_para: raw data
+(bootloader) partition-size:nvram: 4000000
+(bootloader) partition-type:nvram: raw data
+(bootloader) partition-size:efuse: 80000
+(bootloader) partition-type:efuse: raw data
+(bootloader) partition-size:proinfo: 300000
+(bootloader) partition-type:proinfo: raw data
+(bootloader) partition-size:sec1: 200000
+(bootloader) partition-type:sec1: raw data
+(bootloader) partition-size:mitee_a: 800000
+(bootloader) partition-type:mitee_a: raw data
+(bootloader) partition-size:tee_a: 500000
+(bootloader) partition-type:tee_a: raw data
+(bootloader) partition-size:dtbo_a: 2000000
+(bootloader) partition-type:dtbo_a: raw data
+(bootloader) partition-size:vendor_boot_a: 4000000
+(bootloader) partition-type:vendor_boot_a: raw data
+(bootloader) partition-size:boot_a: 8000000
+(bootloader) partition-type:boot_a: raw data
+(bootloader) partition-size:lk_a: 800000
+(bootloader) partition-type:lk_a: raw data
+(bootloader) partition-size:gz_a: 2000000
+(bootloader) partition-type:gz_a: raw data
+(bootloader) partition-size:cam_vpu3_a: 1200000
+(bootloader) partition-type:cam_vpu3_a: raw data
+(bootloader) partition-size:cam_vpu2_a: 1300000
+(bootloader) partition-type:cam_vpu2_a: raw data
+(bootloader) partition-size:cam_vpu1_a: 800000
+(bootloader) partition-type:cam_vpu1_a: raw data
+(bootloader) partition-size:mcupm_a: 100000
+(bootloader) partition-type:mcupm_a: raw data
+(bootloader) partition-size:sspm_a: 100000
+(bootloader) partition-type:sspm_a: raw data
+(bootloader) partition-size:scp_a: 600000
+(bootloader) partition-type:scp_a: raw data
+(bootloader) partition-size:dpm_a: 400000
+(bootloader) partition-type:dpm_a: raw data
+(bootloader) partition-size:pi_img_a: 100000
+(bootloader) partition-type:pi_img_a: raw data
+(bootloader) partition-size:audio_dsp_a: 800000
+(bootloader) partition-type:audio_dsp_a: raw data
+(bootloader) partition-size:spmfw_a: 100000
+(bootloader) partition-type:spmfw_a: raw data
+(bootloader) partition-size:md1img_a: c800000
+(bootloader) partition-type:md1img_a: raw data
+(bootloader) partition-size:otp: 3000000
+(bootloader) partition-type:otp: raw data
+(bootloader) partition-size:seccfg: 800000
+(bootloader) partition-type:seccfg: raw data
+(bootloader) partition-size:protect2: 800000
+(bootloader) partition-type:protect2: ext4
+(bootloader) partition-size:protect1: 800000
+(bootloader) partition-type:protect1: ext4
+(bootloader) partition-size:persist: 4278000
+(bootloader) partition-type:persist: ext4
+(bootloader) partition-size:metadata: 2000000
+(bootloader) partition-type:metadata: raw data
+(bootloader) partition-size:vbmeta_vendor_b: 800000
+(bootloader) partition-type:vbmeta_vendor_b: raw data
+(bootloader) partition-size:vbmeta_system_b: 800000
+(bootloader) partition-type:vbmeta_system_b: raw data
+(bootloader) partition-size:vbmeta_b: 800000
+(bootloader) partition-type:vbmeta_b: raw data
+(bootloader) partition-size:vbmeta_vendor_a: 800000
+(bootloader) partition-type:vbmeta_vendor_a: raw data
+(bootloader) partition-size:vbmeta_system_a: 800000
+(bootloader) partition-type:vbmeta_system_a: raw data
+(bootloader) partition-size:vbmeta_a: 800000
+(bootloader) partition-type:vbmeta_a: raw data
+(bootloader) partition-size:nvdata: 4000000
+(bootloader) partition-type:nvdata: ext4
+(bootloader) partition-size:nvcfg: 2000000
+(bootloader) partition-type:nvcfg: ext4
+(bootloader) partition-size:frp: 100000
+(bootloader) partition-type:frp: raw data
+(bootloader) partition-size:expdb: 2800000
+(bootloader) partition-type:expdb: raw data
+(bootloader) partition-size:para: 80000
+(bootloader) partition-type:para: raw data
+(bootloader) partition-size:misc: 400000
+(bootloader) partition-type:misc: raw data
+(bootloader) partition-size:pgpt: 8000
+(bootloader) partition-type:pgpt: raw data
+(bootloader) partition-size:preloader_b: 400000
+(bootloader) partition-type:preloader_b: raw data
+(bootloader) partition-size:preloader_a: 400000
+(bootloader) partition-type:preloader_a: raw data
+(bootloader) partition-size:preloader: 400000
+(bootloader) partition-type:preloader: raw data
+(bootloader) serialno: wkbmq8pfbeaejbo7
+(bootloader) off-mode-charge: 1
+(bootloader) warranty: no
+(bootloader) unlocked: yes
+(bootloader) secure: no
+(bootloader) fuse: yes
+(bootloader) crc: 1
+(bootloader) kernel: lk
+(bootloader) product: ares
+(bootloader) is-userspace: no
+(bootloader) slot-retry-count:b: 0
+(bootloader) slot-retry-count:a: 4
+(bootloader) slot-unbootable:b: yes
+(bootloader) slot-unbootable:a: no
+(bootloader) slot-successful:b: no
+(bootloader) slot-successful:a: no
+(bootloader) slot-count: 2
+(bootloader) current-slot: a
+(bootloader) has-slot:sgpt: no
+(bootloader) has-slot:flashinfo: no
+(bootloader) has-slot:userdata: no
+(bootloader) has-slot:rescue: no
+(bootloader) has-slot:cust: no
+(bootloader) has-slot:backup5: no
+(bootloader) has-slot:backup4: no
+(bootloader) has-slot:backup3: no
+(bootloader) has-slot:backup2: no
+(bootloader) has-slot:backup1: no
+(bootloader) has-slot:exaid: no
+(bootloader) has-slot:oem_misc1: no
+(bootloader) has-slot:oops: no
+(bootloader) has-slot:mem: no
+(bootloader) has-slot:ffu: no
+(bootloader) has-slot:gsort: no
+(bootloader) has-slot:super: no
+(bootloader) has-slot:logo: no
+(bootloader) has-slot:boot_para: no
+(bootloader) has-slot:nvram: no
+(bootloader) has-slot:efuse: no
+(bootloader) has-slot:proinfo: no
+(bootloader) has-slot:sec1: no
+(bootloader) has-slot:mitee: yes
+(bootloader) has-slot:tee: yes
+(bootloader) has-slot:dtbo: yes
+(bootloader) has-slot:vendor_boot: yes
+(bootloader) has-slot:boot: yes
+(bootloader) has-slot:lk: yes
+(bootloader) has-slot:gz: yes
+(bootloader) has-slot:cam_vpu3: yes
+(bootloader) has-slot:cam_vpu2: yes
+(bootloader) has-slot:cam_vpu1: yes
+(bootloader) has-slot:mcupm: yes
+(bootloader) has-slot:sspm: yes
+(bootloader) has-slot:scp: yes
+(bootloader) has-slot:dpm: yes
+(bootloader) has-slot:pi_img: yes
+(bootloader) has-slot:audio_dsp: yes
+(bootloader) has-slot:spmfw: yes
+(bootloader) has-slot:md1img: yes
+(bootloader) has-slot:otp: no
+(bootloader) has-slot:seccfg: no
+(bootloader) has-slot:protect2: no
+(bootloader) has-slot:protect1: no
+(bootloader) has-slot:persist: no
+(bootloader) has-slot:metadata: no
+(bootloader) has-slot:vbmeta_vendor: yes
+(bootloader) has-slot:vbmeta_system: yes
+(bootloader) has-slot:vbmeta: yes
+(bootloader) has-slot:nvdata: no
+(bootloader) has-slot:nvcfg: no
+(bootloader) has-slot:frp: no
+(bootloader) has-slot:expdb: no
+(bootloader) has-slot:para: no
+(bootloader) has-slot:misc: no
+(bootloader) has-slot:pgpt: no
+(bootloader) has-slot:preloader: yes
+(bootloader) version-baseband: MOLY.NR15.R3.TC8.PR2.SP.V2.1.P28
+(bootloader) version-bootloader: ares-2ba77eec0-20220309093219-202210172
+(bootloader) version-preloader:
+(bootloader) version: 0.5
+all: Done!!
+Finished. Total time: 0.254s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" flash super "C:\Users\Yusuf\Desktop\ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn\images\super.img"
+Sending sparse 'super' 1/33 (262140 KB)            OKAY [  6.325s]
+Writing 'super'                                    OKAY [  1.056s]
+Sending sparse 'super' 2/33 (261918 KB)            OKAY [  6.489s]
+Writing 'super'                                    OKAY [  1.250s]
+Sending sparse 'super' 3/33 (261805 KB)            OKAY [  6.454s]
+Writing 'super'                                    OKAY [  1.280s]
+Sending sparse 'super' 4/33 (261709 KB)            OKAY [  6.501s]
+Writing 'super'                                    OKAY [  1.585s]
+Sending sparse 'super' 5/33 (260883 KB)            OKAY [  6.431s]
+Writing 'super'                                    OKAY [  1.140s]
+Sending sparse 'super' 6/33 (260917 KB)            OKAY [  6.526s]
+Writing 'super'                                    OKAY [  1.550s]
+Sending sparse 'super' 7/33 (261011 KB)            OKAY [  6.454s]
+Writing 'super'                                    OKAY [  1.304s]
+Sending sparse 'super' 8/33 (261900 KB)            OKAY [  6.455s]
+Writing 'super'                                    OKAY [  0.966s]
+Sending sparse 'super' 9/33 (261832 KB)            OKAY [  6.490s]
+Writing 'super'                                    OKAY [  0.812s]
+Sending sparse 'super' 10/33 (261020 KB)           OKAY [  6.453s]
+Writing 'super'                                    OKAY [  1.971s]
+Sending sparse 'super' 11/33 (256572 KB)           OKAY [  6.352s]
+Writing 'super'                                    OKAY [  1.777s]
+Sending sparse 'super' 12/33 (261578 KB)           OKAY [  6.431s]
+Writing 'super'                                    OKAY [  0.931s]
+Sending sparse 'super' 13/33 (261960 KB)           OKAY [  6.442s]
+Writing 'super'                                    OKAY [  1.198s]
+Sending sparse 'super' 14/33 (261600 KB)           OKAY [  6.421s]
+Writing 'super'                                    OKAY [  1.248s]
+Sending sparse 'super' 15/33 (262052 KB)           OKAY [  6.445s]
+Writing 'super'                                    OKAY [  0.967s]
+Sending sparse 'super' 16/33 (262068 KB)           OKAY [  6.417s]
+Writing 'super'                                    OKAY [  0.955s]
+Sending sparse 'super' 17/33 (260797 KB)           OKAY [  6.419s]
+Writing 'super'                                    OKAY [  1.633s]
+Sending sparse 'super' 18/33 (260781 KB)           OKAY [  6.439s]
+Writing 'super'                                    OKAY [  1.221s]
+Sending sparse 'super' 19/33 (260808 KB)           OKAY [  6.437s]
+Writing 'super'                                    OKAY [  1.371s]
+Sending sparse 'super' 20/33 (261766 KB)           OKAY [  6.473s]
+Writing 'super'                                    OKAY [  1.054s]
+Sending sparse 'super' 21/33 (262142 KB)           OKAY [  6.466s]
+Writing 'super'                                    OKAY [  1.217s]
+Sending sparse 'super' 22/33 (262038 KB)           OKAY [  6.533s]
+Writing 'super'                                    OKAY [  1.723s]
+Sending sparse 'super' 23/33 (242295 KB)           OKAY [  5.957s]
+Writing 'super'                                    OKAY [  1.147s]
+Sending sparse 'super' 24/33 (250784 KB)           OKAY [  6.152s]
+Writing 'super'                                    OKAY [  0.850s]
+Sending sparse 'super' 25/33 (259980 KB)           OKAY [  6.481s]
+Writing 'super'                                    OKAY [  1.240s]
+Sending sparse 'super' 26/33 (262120 KB)           OKAY [  6.573s]
+Writing 'super'                                    OKAY [  0.598s]
+Sending sparse 'super' 27/33 (262128 KB)           OKAY [  6.620s]
+Writing 'super'                                    OKAY [  0.621s]
+Sending sparse 'super' 28/33 (254732 KB)           OKAY [  6.485s]
+Writing 'super'                                    OKAY [  1.142s]
+Sending sparse 'super' 29/33 (262140 KB)           OKAY [  6.488s]
+Writing 'super'                                    OKAY [  1.427s]
+Sending sparse 'super' 30/33 (262140 KB)           OKAY [  6.531s]
+Writing 'super'                                    OKAY [  1.293s]
+Sending sparse 'super' 31/33 (260593 KB)           OKAY [  6.442s]
+Writing 'super'                                    OKAY [  1.293s]
+Sending sparse 'super' 32/33 (250280 KB)           OKAY [  6.137s]
+Writing 'super'                                    OKAY [  1.063s]
+Sending sparse 'super' 33/33 (67792 KB)            OKAY [  1.682s]
+Writing 'super'                                    OKAY [  0.430s]
+Finished. Total time: 247.705s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>^B"C:\Programs\Telefon adb\platform-tools\fastboot.exe" reboot
+Dosya adı, dizin adı veya birim etiketi sözdizimi hatalı.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" reboot
+Rebooting                                          OKAY [  0.000s]
+Finished. Total time: 0.002s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar product 2>&1
+product: ares
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar version-baseband 2>&1
+version-baseband: MOLY.NR15.R3.TC8.PR2.SP.V2.1.P28
+Finished. Total time: 0.002s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar current-slot 2>&1
+current-slot: a
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk w nvram nvram_backup.bin
+python: can't open file 'C:\\Users\\Yusuf\\Desktop\\mtkclient-2.1.4.1\\mtk': [Errno 2] No such file or directory
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk w nvdata nvdata_backup.bin
+python: can't open file 'C:\\Users\\Yusuf\\Desktop\\mtkclient-2.1.4.1\\mtk': [Errno 2] No such file or directory
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk w nvcfg nvcfg_backup.bin
+python: can't open file 'C:\\Users\\Yusuf\\Desktop\\mtkclient-2.1.4.1\\mtk': [Errno 2] No such file or directory
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py dumpbrom
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...........
+Port - Device detected :)
+Preloader - Detected regular mode !
+Preloader -     CPU:                    MT6891/MT6893(Dimensity 1200)
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xa
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x950
+Preloader - Target config:              0xe7
+Preloader -     SBC enabled:            True
+Preloader -     SLA enabled:            True
+Preloader -     DAA enabled:            True
+Preloader -     SWJTAG enabled:         True
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          True
+Preloader -     Mem write auth:         True
+Preloader -     Cmd 0xC8 blocked:       True
+Preloader - Get Target info
+Preloader - BROM mode detected.
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xca00
+Preloader -     SW Ver:                 0x0
+Preloader - ME_ID:                      514B7C693AC7BA62167CAA36E21BCC76
+Preloader - SOC_ID:                     CB5FC8C80D799CBD8D6FB659D9FC07D3CE309AED37B088A23C72C4E4FC5FF027
+Preloader
+Preloader - [LIB]: Auth file is required. Use --auth option.
+PLTools - Kamakiri / DA Run
+PLTools - Loading payload from generic_dump_payload.bin, 0xf4 bytes
+Exploitation - Kamakiri Run
+Exploitation - Done sending payload...
+PLTools - Successfully sent payload: C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\payloads\generic_dump_payload.bin
+Progress: |██████████| 100.0% Progress: (0x1/0x1),0.00 MB/s
+PLTools - Dumped as:brom_MT6891_MT6893_950.bin
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py w nvram,nvdata,nvcfg nvram_backup.bin,nvdata_backup.bin,nvcfg_backup.bin
+fuse library not installed
+DaHandler - Please disconnect, start mtkclient and reconnect.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py w nvram,nvdata,nvcfg nvram_backup.bin,nvdata_backup.bin,nvcfg_backup.bin
+fuse library not installed
+DaHandler - Please disconnect, start mtkclient and reconnect.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py w nvram,nvdata,nvcfg nvram_backup.bin,nvdata_backup.bin,nvcfg_backup.bin
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+.......Port - Device detected :)
+Preloader - Detected regular mode !
+Preloader -     CPU:                    MT6891/MT6893(Dimensity 1200)
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xa
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x950
+Preloader - Target config:              0xe7
+Preloader -     SBC enabled:            True
+Preloader -     SLA enabled:            True
+Preloader -     DAA enabled:            True
+Preloader -     SWJTAG enabled:         True
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          True
+Preloader -     Mem write auth:         True
+Preloader -     Cmd 0xC8 blocked:       True
+Preloader - Get Target info
+Preloader - BROM mode detected.
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xca00
+Preloader -     SW Ver:                 0x0
+Preloader - ME_ID:                      514B7C693AC7BA62167CAA36E21BCC76
+Preloader - SOC_ID:                     CB5FC8C80D799CBD8D6FB659D9FC07D3CE309AED37B088A23C72C4E4FC5FF027
+Preloader
+Preloader - [LIB]: Auth file is required. Use --auth option.
+DaHandler - Device is protected.
+DaHandler - Device is in BROM-Mode. Bypassing security.
+PLTools - Loading payload from mt6893_payload.bin, 0x264 bytes
+Exploitation - Kamakiri Run
+Exploitation - Done sending payload...
+PLTools - Successfully sent payload: C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\payloads\mt6893_payload.bin
+Port - Device detected :)
+DaHandler
+DaHandler - [LIB]: Device is in BROM mode. No preloader given, trying to dump preloader from ram.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Sending emi data ...
+DAXFlash - DRAM setup passed.
+DAXFlash - Sending emi data succeeded.
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - UFS Blocksize: 0x1000
+DAXFlash - UFS ID:       KLUDG4UHDC-B0E
+DAXFlash - UFS MID:      0xce
+DAXFlash - UFS CID:      ce014b4c55444734554844432d423045
+DAXFlash - UFS FWVer:    30323030
+DAXFlash - UFS Serial:   353132316338333838643230
+DAXFlash - UFS LU0 Size: 0x1dcb000000
+DAXFlash - UFS LU1 Size: 0x400000
+DAXFlash - UFS LU2 Size: 0x400000
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added at 0x4fff0000
+Main - Handling da commands ...
+Progress: |██████████| 100.0% Write: (0x4000000/0x4000000), 7.54 MB/s  s left
+Wrote nvram_backup.bin to sector 232832 with sector count 16384.
+Progress: |██████████| 100.0% Write: (0x4000000/0x4000000), 7.29 MB/s  s left
+Wrote nvdata_backup.bin to sector 19848 with sector count 16384.
+Progress: |██████████| 100.0% Write: (0x2000000/0x2000000), 6.04 MB/s  s left
+Wrote nvcfg_backup.bin to sector 11656 with sector count 8192.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py reset
+fuse library not installed
+Main - Handling da commands ...
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py printgpt
+'C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>fuse library not installed
+'fuse' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+'Preloader' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>Port - Hint:
+'Port' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>Power off the phone before connecting.
+'Power' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+brom was unexpected at this time.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>For preloader mode, don't press any hw button and connect usb.
+preloader was unexpected at this time.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>If it is already connected and on, hold power for 10 seconds to reset.
+is was unexpected at this time.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>DeviceClass
+'DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>DeviceClass - [LIB]: Couldn't get device configuration.
+'DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>.DeviceClass
+'.DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>DeviceClass - [LIB]: Couldn't get device configuration.
+'DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>.DeviceClass
+'.DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>DeviceClass - [LIB]: Couldn't get device configuration.
+'DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>.DeviceClass
+'.DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>DeviceClass - [LIB]: Couldn't get device configuration.
+'DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>.DeviceClass
+'.DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>DeviceClass - [LIB]: Couldn't get device configuration.
+'DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>.DeviceClass
+'.DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>DeviceClass - [LIB]: Couldn't get device configuration.
+'DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>.DeviceClass
+'.DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>DeviceClass - [LIB]: Couldn't get device configuration.
+'DeviceClass' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>Traceback (most recent call last):
+'Traceback' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 347, in <module>
+The syntax of the command is incorrect.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    sys.exit(main() or 0)
+'sys.exit' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>             ^^^^^^
+'^^^' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 343, in main
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    return mtk.run(parser)
+'return' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>           ^^^^^^^^^^^^^^^
+More?   File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_main.py", line 727, in run
+'^^^^^^^' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    mtk = da_handler.connect(mtk, directory)
+fuse library not installed
+usage: mtk.py [-h] [--vid VID] [--pid PID] [--serialport [SERIALPORT]]
+              [--noreconnect] [--stock] [--uartloglevel UARTLOGLEVEL]
+              [--loglevel LOGLEVEL] [--write_preloader_to_file]
+              [--generatekeys] [--iot] [--socid] [--auth AUTH] [--cert CERT]
+              [--debugmode] [--loader LOADER] [--preloader PRELOADER]
+              [--ptype PTYPE] [--var1 VAR1] [--uart_addr UART_ADDR]
+              [--da_addr DA_ADDR] [--brom_addr BROM_ADDR] [--mode MODE]
+              [--wdt WDT] [--skipwdt] [--crash] [--appid APPID]
+              [--sectorsize SECTORSIZE]
+              [--gpt-num-part-entries GPT_NUM_PART_ENTRIES]
+              [--gpt-part-entry-size GPT_PART_ENTRY_SIZE]
+              [--gpt-part-entry-start-lba GPT_PART_ENTRY_START_LBA]
+              [--parttype PARTTYPE] [--skip SKIP]
+              command ...
+mtk.py: error: argument command: invalid choice: '=' (choose from printgpt, gpt, r, rl, rf, rs, ro, w, wf, wl, wo, e, es, ess, footer, fs, reset, meta, meta2, dumpbrom, dumpsram, dumppreloader, payload, crash, brute, gettargetconfig, logs, peek, stage, plstage, da, devices, script, multi)
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+'^^^^^^^^^^^^^^^^^' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\DA\mtk_da_handler.py", line 116, in connect
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    mtk.preloader.init(directory=directory)
+'mtk.preloader.init' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_preloader.py", line 164, in init
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    res = self.mtk.port.handshake(maxtries=maxtries)
+'res' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+'^^^^^^^^^^^^^^^^^^^^^' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\Port.py", line 183, in handshake
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    if self.cdc.connect() and self.run_handshake():
+and was unexpected at this time.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>       ^^^^^^^^^^^^^^^^^^
+'^^^^^^^^^' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\Connection\usblib.py", line 326, in connect
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    self.error("Couldn't get device configuration.")
+'self.error' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1568, in error
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    self._log(ERROR, msg, args, **kwargs)
+'self._log' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1684, in _log
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    self.handle(record)
+'self.handle' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1700, in handle
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    self.callHandlers(record)
+'self.callHandlers' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1762, in callHandlers
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    hdlr.handle(record)
+'hdlr.handle' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1028, in handle
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    self.emit(record)
+'self.emit' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1164, in emit
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    self.flush()
+'self.flush' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1144, in flush
+'File' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>    self.stream.flush()
+'self.stream.flush' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>KeyboardInterrupt
+'KeyboardInterrupt' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>^C
+'C' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+The syntax of the command is incorrect.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py printgpt
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.....Traceback (most recent call last):
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 347, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 343, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_main.py", line 727, in run
+    mtk = da_handler.connect(mtk, directory)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\DA\mtk_da_handler.py", line 116, in connect
+    mtk.preloader.init(directory=directory)
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_preloader.py", line 164, in init
+    res = self.mtk.port.handshake(maxtries=maxtries)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\Port.py", line 200, in handshake
+    time.sleep(0.3)
+KeyboardInterrupt
+^C
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py stage
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...........
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...........
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...........
+Preloader
+Preloader - [LIB]: Status: Handshake failed, retrying...
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...........
+Traceback (most recent call last):
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 347, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 343, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_main.py", line 670, in run
+    self.cmd_stage(mtk=mtk, filename=filename, stage2addr=stage2addr, stage2file=stage2file,
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_main.py", line 201, in cmd_stage
+    if mtk.preloader.init():
+       ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_preloader.py", line 164, in init
+    res = self.mtk.port.handshake(maxtries=maxtries)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\Port.py", line 200, in handshake
+    time.sleep(0.3)
+KeyboardInterrupt
+^C
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py wf C:\Users\Yusuf\Desktop\ares_eng\images
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+..........
+Traceback (most recent call last):
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 347, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 343, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_main.py", line 727, in run
+    mtk = da_handler.connect(mtk, directory)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\DA\mtk_da_handler.py", line 116, in connect
+    mtk.preloader.init(directory=directory)
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_preloader.py", line 164, in init
+    res = self.mtk.port.handshake(maxtries=maxtries)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\Port.py", line 200, in handshake
+    time.sleep(0.3)
+KeyboardInterrupt
+^C
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py wf C:\Users\Yusuf\Desktop\ares_eng\images
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+.......DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+....
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+Traceback (most recent call last):
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 347, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 343, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_main.py", line 727, in run
+    mtk = da_handler.connect(mtk, directory)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\DA\mtk_da_handler.py", line 116, in connect
+    mtk.preloader.init(directory=directory)
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_preloader.py", line 164, in init
+    res = self.mtk.port.handshake(maxtries=maxtries)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\Port.py", line 200, in handshake
+    time.sleep(0.3)
+KeyboardInterrupt
+^C
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py wf C:\Users\Yusuf\Desktop\ares_eng\images
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py payload
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.

@@ -1,0 +1,1055 @@
+Microsoft Windows [Version 10.0.19045.7725]
+(c) Microsoft Corporation. Tüm hakları saklıdır.
+
+C:\Users\Yusuf>dir /b "C:\Users\Yusuf\Downloads\TWRP-k40g-F3GT"
+Magisk-v23.0 (1).zip
+ReadMe.txt
+TWRP-UNOFFICIAL-3.6.0-beta4-Stable12580.img
+
+C:\Users\Yusuf>"C:\Program Files\7-Zip\7z.exe" l "C:\Users\Yusuf\Desktop\EvolutionX-16.0-20260620-ares-11.8-Unofficial.zip" | findstr /i "boot payload vendor_boot dtbo"
+2009-01-01 00:00:00 .....   2979759625   2979759625  payload.bin
+2009-01-01 00:00:00 .....          156          156  payload_properties.txt
+
+C:\Users\Yusuf>cd /d C:\Users\Yusuf\Desktop
+
+C:\Users\Yusuf\Desktop>git clone https://github.com/ssut/payload-dumper-go.git
+'git' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop>python --version
+Python 3.12.10
+
+C:\Users\Yusuf\Desktop>python -m pip install payload-dumper
+Collecting payload-dumper
+  Downloading payload_dumper-0.3.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting bsdiff4<2.0.0,>=1.2.1 (from payload-dumper)
+  Downloading bsdiff4-1.2.6-cp312-cp312-win_amd64.whl.metadata (2.9 kB)
+Collecting enlighten<2.0.0,>=1.12.2 (from payload-dumper)
+  Downloading enlighten-1.14.1-py2.py3-none-any.whl.metadata (18 kB)
+Collecting protobuf<4.0.0,>=3.19.1 (from payload-dumper)
+  Downloading protobuf-3.20.3-py2.py3-none-any.whl.metadata (720 bytes)
+Collecting blessed>=1.17.7 (from enlighten<2.0.0,>=1.12.2->payload-dumper)
+  Downloading blessed-1.50.0-py3-none-any.whl.metadata (13 kB)
+Collecting prefixed>=0.3.2 (from enlighten<2.0.0,>=1.12.2->payload-dumper)
+  Downloading prefixed-0.9.0-py2.py3-none-any.whl.metadata (11 kB)
+Collecting wcwidth>=0.8.3 (from blessed>=1.17.7->enlighten<2.0.0,>=1.12.2->payload-dumper)
+  Downloading wcwidth-0.8.4-py3-none-any.whl.metadata (23 kB)
+Collecting jinxed<3,>=2.1 (from blessed>=1.17.7->enlighten<2.0.0,>=1.12.2->payload-dumper)
+  Downloading jinxed-2.1.0-py2.py3-none-any.whl.metadata (7.2 kB)
+Collecting ansicon (from jinxed<3,>=2.1->blessed>=1.17.7->enlighten<2.0.0,>=1.12.2->payload-dumper)
+  Downloading ansicon-1.89.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Downloading payload_dumper-0.3.0-py3-none-any.whl (10.0 kB)
+Downloading bsdiff4-1.2.6-cp312-cp312-win_amd64.whl (19 kB)
+Downloading enlighten-1.14.1-py2.py3-none-any.whl (42 kB)
+Downloading protobuf-3.20.3-py2.py3-none-any.whl (162 kB)
+Downloading blessed-1.50.0-py3-none-any.whl (140 kB)
+Downloading prefixed-0.9.0-py2.py3-none-any.whl (13 kB)
+Downloading jinxed-2.1.0-py2.py3-none-any.whl (104 kB)
+Downloading wcwidth-0.8.4-py3-none-any.whl (299 kB)
+Downloading ansicon-1.89.0-py2.py3-none-any.whl (63 kB)
+Installing collected packages: prefixed, bsdiff4, ansicon, wcwidth, protobuf, jinxed, blessed, enlighten, payload-dumper
+Successfully installed ansicon-1.89.0 blessed-1.50.0 bsdiff4-1.2.6 enlighten-1.14.1 jinxed-2.1.0 payload-dumper-0.3.0 prefixed-0.9.0 protobuf-3.20.3 wcwidth-0.8.4
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\Yusuf\Desktop>python -m payload_dumper "C:\Users\Yusuf\Desktop\EvolutionX-16.0-20260620-ares-11.8-Unofficial.zip"
+C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\python.exe: No module named payload_dumper.__main__; 'payload_dumper' is a package and cannot be directly executed
+
+C:\Users\Yusuf\Desktop>payload-dumper "C:\Users\Yusuf\Desktop\EvolutionX-16.0-20260620-ares-11.8-Unofficial.zip"
+'payload-dumper' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop>python -c "import payload_dumper,os; print(payload_dumper.__file__); print(os.listdir(os.path.dirname(payload_dumper.__file__)))"
+C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\payload_dumper\__init__.py
+['dumper.py', 'update_metadata_pb2.py', '__init__.py', '__pycache__']
+
+C:\Users\Yusuf\Desktop>python "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\payload_dumper\dumper.py" --help
+usage: dumper.py [-h] [--out OUT] [--diff] [--old OLD] [--partitions PARTITIONS] [--workers WORKERS] payloadfile
+
+OTA payload dumper
+
+positional arguments:
+  payloadfile           payload file name
+
+options:
+  -h, --help            show this help message and exit
+  --out OUT             output directory (default: 'output')
+  --diff                extract differential OTA
+  --old OLD             directory with original images for differential OTA (default: 'old')
+  --partitions PARTITIONS
+                        comma separated list of partitions to extract (default: extract all)
+  --workers WORKERS     numer of workers (default: CPU count - 6)
+
+C:\Users\Yusuf\Desktop>"C:\Program Files\7-Zip\7z.exe" e "C:\Users\Yusuf\Desktop\EvolutionX-16.0-20260620-ares-11.8-Unofficial.zip" payload.bin -o"C:\Users\Yusuf\Desktop\evo_payload"
+
+7-Zip 26.01 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-04-27
+
+Scanning the drive for archives:
+1 file, 2979767048 bytes (2842 MiB)
+
+Extracting archive: C:\Users\Yusuf\Desktop\EvolutionX-16.0-20260620-ares-11.8-Unofficial.zip
+--
+Path = C:\Users\Yusuf\Desktop\EvolutionX-16.0-20260620-ares-11.8-Unofficial.zip
+Type = zip
+Physical Size = 2979767048
+Comment = signed by SignApk
+
+Everything is Ok
+boot 100%|█████████████████████████████████████████████████████████████████████████████| 64/64 [00:32<00:00, 2.01 ops/s]
+C:\Users\Yusuf\Desktop>dir /b "C:\Users\Yusuf\Desktop\evo_boot"
+boot.imged: 2979767048
+
+C:\Users\Yusuf\Desktop>python "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\payload_dumper\d
+umper.py" "C:\Users\Yusuf\Desktop\evo_payload\payload.bin" --out "C:\Users\Yusuf\Desktop\evo_boot" --partitions boot
+C:\Users\Yusuf\Desktop>dir "C:\Users\Yusuf\Desktop\evo_boot\boot*"
+ Volume in drive C has no label.
+ Volume Serial Number is A259-8752
+
+ Directory of C:\Users\Yusuf\Desktop\evo_boot
+
+23.09.2026  00:57       134.217.728 boot.img
+               1 File(s)    134.217.728 bytes
+               0 Dir(s)  24.422.723.584 bytes free
+
+C:\Users\Yusuf\Desktop>python -c "import os; p=r'C:\Users\Yusuf\Desktop\evo_boot\boot.img'; print('exists=',os.path.exists(p)); print('size=',os.path.getsize(p) if os.path.exists(p) else 'YOK')"
+exists= True
+size= 134217728
+
+C:\Users\Yusuf\Desktop>"C:\Program Files\7-Zip\7z.exe" l "C:\Users\Yusuf\Desktop\evo_boot\boot.img"
+
+7-Zip 26.01 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-04-27
+
+Scanning the drive for archives:
+1 file, 134217728 bytes (128 MiB)
+
+Listing archive: C:\Users\Yusuf\Desktop\evo_boot\boot.img
+
+--
+Path = C:\Users\Yusuf\Desktop\evo_boot\boot.img
+Type = gzip
+ERRORS:
+There are data after the end of archive
+Offset = 2048
+Physical Size = 13195213
+Tail Size = 121020467
+Headers Size = 10
+Streams = 1
+
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+                    .....     35162128     13195213  boot
+------------------- ----- ------------ ------------  ------------------------
+                              35162128     13195213  1 files
+
+Warnings: 1
+
+Errors: 1
+
+C:\Users\Yusuf\Desktop>python -c "p=r'C:\Users\Yusuf\Desktop\evo_boot\boot.img'; f=open(p,'rb'); print(f.read(16).hex())"
+414e44524f494421cd57c90000000840
+
+C:\Users\Yusuf\Desktop>dir /b "C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0"
+CheckSum_Gen
+check_sum.sh
+flash_all.bat
+flash_all.sh
+flash_all_except_data_storage.bat
+flash_all_except_data_storage.sh
+flash_all_lock.bat
+flash_all_lock.sh
+flash_gen_crc_list.py
+flash_gen_md5_list.py
+images
+libflashtool.so
+libflashtool.v1.so
+libflashtoolEx.so
+Log
+misc.txt
+MTK_AllInOne_DA.bin
+
+C:\Users\Yusuf\Desktop>dir /b "C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images"
+anti_version.txt
+audio_dsp.img
+boot.img
+cam_vpu1.img
+cam_vpu2.img
+cam_vpu3.img
+crclist.txt
+cust.img
+dpm.img
+dtbo.img
+gsort.img
+gz.img
+lk.img
+logo.bin
+mcupm.img
+md1img.img
+mitee.img
+MT6893_Android_scatter.txt
+oem_misc1.img
+pi_img.img
+preloader_ares.bin
+rescue.img
+scp.img
+sparsecrclist.txt
+spmfw.img
+sspm.img
+super.img
+tee.img
+userdata.img
+vbmeta.img
+vbmeta_system.img
+vbmeta_vendor.img
+
+C:\Users\Yusuf\Desktop>type "C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\flash_all.bat"
+if exist %~dp0images\anti_version.txt (for /f "delims==" %%a in (%~dp0images\anti_version.txt) do (set CURRENT_ANTI_VER=%%a))
+if [%CURRENT_ANTI_VER%] EQU [] set CURRENT_ANTI_VER=0
+for /f "tokens=2 delims=: " %%i in ('fastboot %* getvar anti 2^>^&1 ^| findstr /r /c:"anti:"') do (set version=%%i)
+if [%version%] EQU [] set version=0
+set anticheck="antirollback check pass"
+if %version% GTR %CURRENT_ANTI_VER% set anticheck="Current device antirollback version is greater than this pakcage"
+echo %anticheck% | findstr /r /c:"pass" || @echo "Antirollback check error" && exit /B 1
+fastboot %* getvar product 2>&1 | findstr "ares" || @echo "Missmatching image and device" && exit /B 1
+@echo "Now Check Finished ......"
+
+fastboot %* getvar crc 2>&1 | findstr /r /c:"^crc: 1" && if %errorlevel% equ 0 (
+fastboot %* flash crclist %~dp0images\crclist.txt || @echo "Flash crclist error" && exit /B 1
+fastboot %* flash sparsecrclist %~dp0images\sparsecrclist.txt || @echo "Flash sparsecrclist error" && exit /B 1
+)
+
+fastboot %* erase boot_ab  || @echo "Erase boot error" && exit /B 1
+fastboot %* erase expdb || @echo "Erase expdb error" && exit /B 1
+fastboot %* erase metadata || @echo "Erase metadata error" && exit /B 1
+
+@echo "Now Start Flash ......"
+fastboot %* flash preloader_ab          %~dp0images\preloader_ares.bin          || @echo "Flash preloader              error" && exit /B 1
+fastboot %* flash vbmeta_ab         %~dp0images\vbmeta.img              || @echo "Flash vbmeta                  error" && exit /B 1
+fastboot %* flash vbmeta_system_ab  %~dp0images\vbmeta_system.img       || @echo "Flash vbmeta_system   error" && exit /B 1
+fastboot %* flash vbmeta_vendor_ab  %~dp0images\vbmeta_vendor.img       || @echo "Flash vbmeta_vendor   error" && exit /B 1
+fastboot %* flash md1img_ab             %~dp0images\md1img.img                          || @echo "Flash md1img
+error" && exit /B 1
+fastboot %* flash spmfw_ab              %~dp0images\spmfw.img                           || @echo "Flash spmfw
+error" && exit /B 1
+fastboot %* flash audio_dsp_ab          %~dp0images\audio_dsp.img                       || @echo "Flash audio_dsp
+error" && exit /B 1
+fastboot %* flash pi_img_ab             %~dp0images\pi_img.img                          || @echo "Flash pi_img
+error" && exit /B 1
+fastboot %* flash dpm_ab                %~dp0images\dpm.img                             || @echo "Flash dpm
+error" && exit /B 1
+fastboot %* flash scp_ab                %~dp0images\scp.img                             || @echo "Flash scp
+error" && exit /B 1
+fastboot %* flash sspm_ab               %~dp0images\sspm.img                            || @echo "Flash sspm
+error" && exit /B 1
+fastboot %* flash mcupm_ab                      %~dp0images\mcupm.img                           || @echo "Flash mcupm                   error" && exit /B 1
+fastboot %* flash cam_vpu1_ab           %~dp0images\cam_vpu1.img                        || @echo "Flash cam_vpu1
+error" && exit /B 1
+fastboot %* flash cam_vpu2_ab           %~dp0images\cam_vpu2.img                        || @echo "Flash cam_vpu2
+error" && exit /B 1
+fastboot %* flash cam_vpu3_ab           %~dp0images\cam_vpu3.img                        || @echo "Flash cam_vpu3
+error" && exit /B 1
+fastboot %* flash gz_ab                 %~dp0images\gz.img                              || @echo "Flash gz
+error" && exit /B 1
+fastboot %* flash lk_ab                 %~dp0images\lk.img                              || @echo "Flash lk
+error" && exit /B 1
+fastboot %* flash boot_ab               %~dp0images\boot.img                    || @echo "Flash boot                   error" && exit /B 1
+fastboot %* flash dtbo_ab               %~dp0images\dtbo.img                            || @echo "Flash dtbo
+error" && exit /B 1
+fastboot %* flash tee_ab                %~dp0images\tee.img                             || @echo "Flash tee
+error" && exit /B 1
+fastboot %* flash mitee_ab              %~dp0images\mitee.img                   || @echo "Flash mitee                  error" && exit /B 1
+fastboot %* flash logo                  %~dp0images\logo.bin                            || @echo "Flash logo
+error" && exit /B 1
+fastboot %* flash super                 %~dp0images\super.img                   || @echo "Flash super                  error" && exit /B 1
+fastboot %* flash rescue                %~dp0images\rescue.img                  || @echo "Flash rescue                 error" && exit /B 1
+fastboot %* flash cust                  %~dp0images\cust.img                    || @echo "Flash cust                   error" && exit /B 1
+fastboot %* flash userdata              %~dp0images\userdata.img                || @echo "Flash userdata               error" && exit /B 1
+@echo "Now Flash Finished ......"
+
+fastboot %* oem cdms
+fastboot %* set_active a || @echo "set_active a" && exit /B 1
+
+@echo "Now Reboot ......"
+fastboot %* reboot || @echo "Reboot error" && exit /B 1
+
+
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>
+C:\Users\Yusuf\Desktop>cd /d "C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>flash_all.bat
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>if exist C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\anti_version.txt (for /F "delims==" %a in (C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\anti_version.txt) do (set CURRENT_ANTI_VER=%a ) )
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>(set CURRENT_ANTI_VER=1 )
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>if [1] EQU [] set CURRENT_ANTI_VER=0
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>for /F "tokens=2 delims=: " %i in ('fastboot getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i )
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>if [] EQU [] set version=0
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>set anticheck="antirollback check pass"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>if 0 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>echo "antirollback check pass"   | findstr /r /c:"pass"   ||
+"antirollback check pass"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  getvar product   2>&1  | findstr "ares"   ||
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot getvar product
+'fastboot' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>set "PATH=C:\Programs\Telefon adb\platform-tools;%PATH%"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot devices
+wkbmq8pfbeaejbo7         fastboot
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>flash_all.bat
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>if exist C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\anti_version.txt (for /F "delims==" %a in (C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\anti_version.txt) do (set CURRENT_ANTI_VER=%a ) )
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>(set CURRENT_ANTI_VER=1 )
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>if [1] EQU [] set CURRENT_ANTI_VER=0
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>for /F "tokens=2 delims=: " %i in ('fastboot getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i )
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>(set version=1 )
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>if [1] EQU [] set version=0
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>set anticheck="antirollback check pass"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>echo "antirollback check pass"   | findstr /r /c:"pass"   ||
+"antirollback check pass"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  getvar product   2>&1  | findstr "ares"   ||
+product: ares
+"Now Check Finished ......"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  getvar crc   2>&1  | findstr /r /c:"^crc: 1"   && if 0 EQU 0 (
+fastboot  flash crclist C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\crclist.txt   ||
+ fastboot  flash sparsecrclist C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\sparsecrclist.txt   ||
+)
+crc: 1
+Warning: skip copying crclist image avb footer (crclist partition size: 0, crclist image size: 439).
+Sending 'crclist' (0 KB)                           OKAY [  0.038s]
+Writing 'crclist'                                  OKAY [  0.002s]
+Finished. Total time: 0.052s
+Warning: skip copying sparsecrclist image avb footer (sparsecrclist partition size: 0, sparsecrclist image size: 436).
+Sending 'sparsecrclist' (0 KB)                     OKAY [  0.038s]
+Writing 'sparsecrclist'                            OKAY [  0.003s]
+Finished. Total time: 0.048s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  erase boot_ab    ||
+Erasing 'boot_ab'                                  (bootloader) Partition boot_a erase successfully
+(bootloader) Partition boot_b erase successfully
+OKAY [  0.503s]
+Finished. Total time: 0.505s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  erase expdb   ||
+Erasing 'expdb'                                    OKAY [  0.108s]
+Finished. Total time: 0.111s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  erase metadata   ||
+Erasing 'metadata'                                 OKAY [  0.241s]
+Finished. Total time: 0.243s
+"Now Start Flash ......"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash preloader_ab                C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\preloader_ares.bin     ||
+Warning: skip copying preloader_ab image avb footer (preloader_ab partition size: 0, preloader_ab image size: 454780).
+Sending 'preloader_ab' (444 KB)                    OKAY [  0.042s]
+Writing 'preloader_ab'                             (bootloader) Partition preloader_a flashed successfully
+(bootloader) Partition preloader_b flashed successfully
+OKAY [  0.015s]
+Finished. Total time: 0.066s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash vbmeta_ab         C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\vbmeta.img               ||
+Warning: skip copying vbmeta_ab image avb footer (vbmeta_ab partition size: 0, vbmeta_ab image size: 4096).
+Sending 'vbmeta_ab' (4 KB)                         OKAY [  0.038s]
+Writing 'vbmeta_ab'                                (bootloader) Partition vbmeta_a flashed successfully
+(bootloader) Partition vbmeta_b flashed successfully
+OKAY [  0.003s]
+Finished. Total time: 0.050s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash vbmeta_system_ab  C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\vbmeta_system.img        ||
+Warning: skip copying vbmeta_system_ab image avb footer (vbmeta_system_ab partition size: 0, vbmeta_system_ab image size: 4096).
+Sending 'vbmeta_system_ab' (4 KB)                  OKAY [  0.038s]
+Writing 'vbmeta_system_ab'                         (bootloader) Partition vbmeta_system_a flashed successfully
+(bootloader) Partition vbmeta_system_b flashed successfully
+OKAY [  0.003s]
+Finished. Total time: 0.051s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash vbmeta_vendor_ab  C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\vbmeta_vendor.img        ||
+Warning: skip copying vbmeta_vendor_ab image avb footer (vbmeta_vendor_ab partition size: 0, vbmeta_vendor_ab image size: 4096).
+Sending 'vbmeta_vendor_ab' (4 KB)                  OKAY [  0.038s]
+Writing 'vbmeta_vendor_ab'                         (bootloader) Partition vbmeta_vendor_a flashed successfully
+(bootloader) Partition vbmeta_vendor_b flashed successfully
+OKAY [  0.004s]
+Finished. Total time: 0.051s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash md1img_ab                   C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\md1img.img                             ||
+Warning: skip copying md1img_ab image avb footer (md1img_ab partition size: 0, md1img_ab image size: 66546320).
+Sending 'md1img_ab' (64986 KB)                     OKAY [  1.576s]
+Writing 'md1img_ab'                                (bootloader) Partition md1img_a flashed successfully
+(bootloader) Partition md1img_b flashed successfully
+OKAY [  0.664s]
+Finished. Total time: 2.250s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash spmfw_ab            C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\spmfw.img                              ||
+Warning: skip copying spmfw_ab image avb footer (spmfw_ab partition size: 0, spmfw_ab image size: 13712).
+Sending 'spmfw_ab' (13 KB)                         OKAY [  0.038s]
+Writing 'spmfw_ab'                                 (bootloader) Partition spmfw_a flashed successfully
+(bootloader) Partition spmfw_b flashed successfully
+OKAY [  0.003s]
+Finished. Total time: 0.050s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash audio_dsp_ab                C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\audio_dsp.img                          ||
+Warning: skip copying audio_dsp_ab image avb footer (audio_dsp_ab partition size: 0, audio_dsp_ab image size: 3067040).
+Sending 'audio_dsp_ab' (2995 KB)                   OKAY [  0.103s]
+Writing 'audio_dsp_ab'                             (bootloader) Partition audio_dsp_a flashed successfully
+(bootloader) Partition audio_dsp_b flashed successfully
+OKAY [  0.039s]
+Finished. Total time: 0.151s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash pi_img_ab                   C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\pi_img.img                             ||
+Warning: skip copying pi_img_ab image avb footer (pi_img_ab partition size: 0, pi_img_ab image size: 7024).
+Sending 'pi_img_ab' (6 KB)                         OKAY [  0.038s]
+Writing 'pi_img_ab'                                (bootloader) Partition pi_img_a flashed successfully
+(bootloader) Partition pi_img_b flashed successfully
+OKAY [  0.003s]
+Finished. Total time: 0.051s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash dpm_ab              C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\dpm.img                                ||
+Warning: skip copying dpm_ab image avb footer (dpm_ab partition size: 0, dpm_ab image size: 133888).
+Sending 'dpm_ab' (130 KB)                          OKAY [  0.037s]
+Writing 'dpm_ab'                                   (bootloader) Partition dpm_a flashed successfully
+(bootloader) Partition dpm_b flashed successfully
+OKAY [  0.004s]
+Finished. Total time: 0.051s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash scp_ab                      C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\scp.img                                ||
+Warning: skip copying scp_ab image avb footer (scp_ab partition size: 0, scp_ab image size: 1801280).
+Sending 'scp_ab' (1759 KB)                         OKAY [  0.071s]
+Writing 'scp_ab'                                   (bootloader) Partition scp_a flashed successfully
+(bootloader) Partition scp_b flashed successfully
+OKAY [  0.028s]
+Finished. Total time: 0.107s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash sspm_ab             C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\sspm.img                               ||
+Warning: skip copying sspm_ab image avb footer (sspm_ab partition size: 0, sspm_ab image size: 750624).
+Sending 'sspm_ab' (733 KB)                         OKAY [  0.047s]
+Writing 'sspm_ab'                                  (bootloader) Partition sspm_a flashed successfully
+(bootloader) Partition sspm_b flashed successfully
+OKAY [  0.023s]
+Finished. Total time: 0.078s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash mcupm_ab                    C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\mcupm.img                              ||
+Warning: skip copying mcupm_ab image avb footer (mcupm_ab partition size: 0, mcupm_ab image size: 357008).
+Sending 'mcupm_ab' (348 KB)                        OKAY [  0.038s]
+Writing 'mcupm_ab'                                 (bootloader) Partition mcupm_a flashed successfully
+(bootloader) Partition mcupm_b flashed successfully
+OKAY [  0.010s]
+Finished. Total time: 0.056s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash cam_vpu1_ab                 C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\cam_vpu1.img                           ||
+Warning: skip copying cam_vpu1_ab image avb footer (cam_vpu1_ab partition size: 0, cam_vpu1_ab image size: 6446960).
+Sending 'cam_vpu1_ab' (6295 KB)                    OKAY [  0.179s]
+Writing 'cam_vpu1_ab'                              (bootloader) Partition cam_vpu1_a flashed successfully
+(bootloader) Partition cam_vpu1_b flashed successfully
+OKAY [  0.089s]
+Finished. Total time: 0.276s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash cam_vpu2_ab                 C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\cam_vpu2.img                           ||
+Warning: skip copying cam_vpu2_ab image avb footer (cam_vpu2_ab partition size: 0, cam_vpu2_ab image size: 11706080).
+Sending 'cam_vpu2_ab' (11431 KB)                   OKAY [  0.301s]
+Writing 'cam_vpu2_ab'                              (bootloader) Partition cam_vpu2_a flashed successfully
+(bootloader) Partition cam_vpu2_b flashed successfully
+OKAY [  0.159s]
+Finished. Total time: 0.468s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash cam_vpu3_ab                 C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\cam_vpu3.img                           ||
+Warning: skip copying cam_vpu3_ab image avb footer (cam_vpu3_ab partition size: 0, cam_vpu3_ab image size: 4320).
+Sending 'cam_vpu3_ab' (4 KB)                       OKAY [  0.036s]
+Writing 'cam_vpu3_ab'                              (bootloader) Partition cam_vpu3_a flashed successfully
+(bootloader) Partition cam_vpu3_b flashed successfully
+OKAY [  0.003s]
+Finished. Total time: 0.048s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash gz_ab                       C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\gz.img                                 ||
+Warning: skip copying gz_ab image avb footer (gz_ab partition size: 0, gz_ab image size: 3817440).
+Sending 'gz_ab' (3727 KB)                          OKAY [  0.118s]
+Writing 'gz_ab'                                    (bootloader) Partition gz_a flashed successfully
+(bootloader) Partition gz_b flashed successfully
+OKAY [  0.058s]
+Finished. Total time: 0.184s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash lk_ab                       C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\lk.img                                 ||
+Warning: skip copying lk_ab image avb footer (lk_ab partition size: 0, lk_ab image size: 1813872).
+Sending 'lk_ab' (1771 KB)                          OKAY [  0.071s]
+Writing 'lk_ab'                                    (bootloader) Partition lk_a flashed successfully
+(bootloader) Partition lk_b flashed successfully
+OKAY [  0.026s]
+Finished. Total time: 0.106s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash boot_ab                     C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\boot.img                       ||
+Warning: skip copying boot_ab image avb footer (boot_ab partition size: 0, boot_ab image size: 134217728).
+Sending 'boot_ab' (131072 KB)                      OKAY [  3.122s]
+Writing 'boot_ab'                                  (bootloader) Partition boot_a flashed successfully
+(bootloader) Partition boot_b flashed successfully
+OKAY [  1.199s]
+Finished. Total time: 4.330s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash dtbo_ab                     C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\dtbo.img                               ||
+Warning: skip copying dtbo_ab image avb footer (dtbo_ab partition size: 0, dtbo_ab image size: 33554432).
+Sending 'dtbo_ab' (32768 KB)                       OKAY [  0.798s]
+Writing 'dtbo_ab'                                  (bootloader) Partition dtbo_a flashed successfully
+(bootloader) Partition dtbo_b flashed successfully
+OKAY [  0.298s]
+Finished. Total time: 1.106s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash tee_ab                      C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\tee.img                                ||
+Warning: skip copying tee_ab image avb footer (tee_ab partition size: 0, tee_ab image size: 2637024).
+Sending 'tee_ab' (2575 KB)                         OKAY [  0.089s]
+Writing 'tee_ab'                                   (bootloader) Partition tee_a flashed successfully
+(bootloader) Partition tee_b flashed successfully
+OKAY [  0.028s]
+Finished. Total time: 0.124s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash mitee_ab            C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\mitee.img                      ||
+Warning: skip copying mitee_ab image avb footer (mitee_ab partition size: 0, mitee_ab image size: 2595552).
+Sending 'mitee_ab' (2534 KB)                       OKAY [  0.089s]
+Writing 'mitee_ab'                                 (bootloader) Partition mitee_a flashed successfully
+(bootloader) Partition mitee_b flashed successfully
+OKAY [  0.033s]
+Finished. Total time: 0.132s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash logo                C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\logo.bin                               ||
+Sending 'logo' (1207 KB)                           OKAY [  0.058s]
+Writing 'logo'                                     OKAY [  0.009s]
+Finished. Total time: 0.075s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash super               C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\super.img                      ||
+Sending sparse 'super' 1/34 (262141 KB)            OKAY [  6.343s]
+Writing 'super'                                    OKAY [  2.304s]
+Sending sparse 'super' 2/34 (261236 KB)            OKAY [  6.582s]
+Writing 'super'                                    OKAY [  3.042s]
+Sending sparse 'super' 3/34 (261602 KB)            OKAY [  6.457s]
+Writing 'super'                                    OKAY [  2.751s]
+Sending sparse 'super' 4/34 (261343 KB)            OKAY [  6.443s]
+Writing 'super'                                    OKAY [  2.622s]
+Sending sparse 'super' 5/34 (262072 KB)            OKAY [  6.389s]
+Writing 'super'                                    OKAY [  1.903s]
+Sending sparse 'super' 6/34 (261669 KB)            OKAY [  6.453s]
+Writing 'super'                                    OKAY [  2.263s]
+Sending sparse 'super' 7/34 (260523 KB)            OKAY [  6.438s]
+Writing 'super'                                    OKAY [  2.695s]
+Sending sparse 'super' 8/34 (261463 KB)            OKAY [  6.392s]
+Writing 'super'                                    OKAY [  2.530s]
+Sending sparse 'super' 9/34 (261678 KB)            OKAY [  6.449s]
+Writing 'super'                                    OKAY [  2.381s]
+Sending sparse 'super' 10/34 (261647 KB)           OKAY [  6.561s]
+Writing 'super'                                    OKAY [  2.403s]
+Sending sparse 'super' 11/34 (261421 KB)           OKAY [  6.395s]
+Writing 'super'                                    OKAY [  2.765s]
+Sending sparse 'super' 12/34 (260083 KB)           OKAY [  6.393s]
+Writing 'super'                                    OKAY [  3.016s]
+Sending sparse 'super' 13/34 (261383 KB)           OKAY [  6.417s]
+Writing 'super'                                    OKAY [  2.552s]
+Sending sparse 'super' 14/34 (261407 KB)           OKAY [  6.510s]
+Writing 'super'                                    OKAY [  2.401s]
+Sending sparse 'super' 15/34 (260425 KB)           OKAY [  6.377s]
+Writing 'super'                                    OKAY [  2.597s]
+Sending sparse 'super' 16/34 (261638 KB)           OKAY [  6.393s]
+Writing 'super'                                    OKAY [  2.250s]
+Sending sparse 'super' 17/34 (256459 KB)           OKAY [  6.650s]
+Writing 'super'                                    OKAY [  3.603s]
+Sending sparse 'super' 18/34 (257984 KB)           OKAY [  6.535s]
+Writing 'super'                                    OKAY [  2.121s]
+Sending sparse 'super' 19/34 (254020 KB)           OKAY [  6.476s]
+Writing 'super'                                    OKAY [  2.005s]
+Sending sparse 'super' 20/34 (259266 KB)           OKAY [  7.467s]
+Writing 'super'                                    OKAY [  5.671s]
+Sending sparse 'super' 21/34 (234412 KB)           OKAY [  5.782s]
+Writing 'super'                                    OKAY [  2.234s]
+Sending sparse 'super' 22/34 (256541 KB)           OKAY [  6.350s]
+Writing 'super'                                    OKAY [  2.331s]
+Sending sparse 'super' 23/34 (229604 KB)           OKAY [  5.660s]
+Writing 'super'                                    OKAY [  2.110s]
+Sending sparse 'super' 24/34 (262040 KB)           OKAY [  6.870s]
+Writing 'super'                                    OKAY [  2.146s]
+Sending sparse 'super' 25/34 (260437 KB)           OKAY [  7.185s]
+Writing 'super'                                    OKAY [  3.257s]
+Sending sparse 'super' 26/34 (262142 KB)           OKAY [  6.544s]
+Writing 'super'                                    OKAY [  3.006s]
+Sending sparse 'super' 27/34 (262140 KB)           OKAY [  6.551s]
+Writing 'super'                                    OKAY [  1.880s]
+Sending sparse 'super' 28/34 (262140 KB)           OKAY [  8.304s]
+Writing 'super'                                    OKAY [  2.276s]
+Sending sparse 'super' 29/34 (234784 KB)           OKAY [  5.867s]
+Writing 'super'                                    OKAY [  2.376s]
+Sending sparse 'super' 30/34 (254512 KB)           OKAY [  6.354s]
+Writing 'super'                                    OKAY [  3.019s]
+Sending sparse 'super' 31/34 (261068 KB)           OKAY [  6.733s]
+Writing 'super'                                    OKAY [  2.044s]
+Sending sparse 'super' 32/34 (261777 KB)           OKAY [  6.934s]
+Writing 'super'                                    OKAY [  2.474s]
+Sending sparse 'super' 33/34 (259916 KB)           OKAY [  6.362s]
+Writing 'super'                                    OKAY [  2.637s]
+Sending sparse 'super' 34/34 (82984 KB)            OKAY [  2.058s]
+Writing 'super'                                    OKAY [  0.966s]
+Finished. Total time: 317.199s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash rescue              C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\rescue.img                     ||
+Warning: skip copying rescue image avb footer due to sparse image.
+Sending 'rescue' (40 KB)                           OKAY [  0.036s]
+Writing 'rescue'                                   OKAY [  0.050s]
+Finished. Total time: 0.096s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash cust                        C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\cust.img                       ||
+Warning: skip copying cust image avb footer due to sparse image.
+Sending 'cust' (182748 KB)                         OKAY [  4.402s]
+Writing 'cust'                                     OKAY [  1.453s]
+Finished. Total time: 5.863s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  flash userdata            C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\userdata.img           ||
+Warning: skip copying userdata image avb footer due to sparse image.
+Sending 'userdata' (8236 KB)                       OKAY [  0.225s]
+Writing 'userdata'                                 OKAY [  0.658s]
+Finished. Total time: 0.893s
+"Now Flash Finished ......"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  oem cdms
+OKAY [  0.002s]
+Finished. Total time: 0.003s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  set_active a   ||
+Setting current slot to 'a'                        OKAY [  0.001s]
+Finished. Total time: 0.002s
+"Now Reboot ......"
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>fastboot  reboot   ||
+Rebooting                                          OKAY [  0.000s]
+Finished. Total time: 0.001s
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar product 2>&1
+product: ares
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar current-slot 2>&1
+current-slot: a
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar version-baseband 2>&1
+version-baseband: MOLY.NR15.R3.TC8.PR2.SP.V2.1.P87
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar all 2>&1
+(bootloader) anti: 1
+(bootloader) tokenversion: 2
+(bootloader) token: VQECHgEEcQ2J1gMEYXJlcwIQ4F8Ks4J7ISAEl2Qu0lH2Jw==
+(bootloader) max-download-size: 0x10000000
+(bootloader) variant:
+(bootloader) logical-block-size: 0x1000
+(bootloader) erase-block-size: 0x0
+(bootloader) hw-revision: ca00
+(bootloader) battery-soc-ok: yes
+(bootloader) battery-voltage: 4181mV
+(bootloader) partition-size:sgpt: 8000
+(bootloader) partition-type:sgpt: raw data
+(bootloader) partition-size:flashinfo: 1000000
+(bootloader) partition-type:flashinfo: raw data
+(bootloader) partition-size:userdata: 1ad47f8000
+(bootloader) partition-type:userdata: f2fs
+(bootloader) partition-size:rescue: 8200000
+(bootloader) partition-type:rescue: raw data
+(bootloader) partition-size:cust: 40000000
+(bootloader) partition-type:cust: raw data
+(bootloader) partition-size:backup5: 8000000
+(bootloader) partition-type:backup5: raw data
+(bootloader) partition-size:backup4: 4000000
+(bootloader) partition-type:backup4: raw data
+(bootloader) partition-size:backup3: 1000000
+(bootloader) partition-type:backup3: raw data
+(bootloader) partition-size:backup2: 100000
+(bootloader) partition-type:backup2: raw data
+(bootloader) partition-size:backup1: 100000
+(bootloader) partition-type:backup1: raw data
+(bootloader) partition-size:exaid: 18000000
+(bootloader) partition-type:exaid: raw data
+(bootloader) partition-size:oem_misc1: 1000000
+(bootloader) partition-type:oem_misc1: raw data
+(bootloader) partition-size:oops: 1000000
+(bootloader) partition-type:oops: raw data
+(bootloader) partition-size:mem: 400000
+(bootloader) partition-type:mem: raw data
+(bootloader) partition-size:ffu: 800000
+(bootloader) partition-type:ffu: raw data
+(bootloader) partition-size:gsort: 1000000
+(bootloader) partition-type:gsort: raw data
+(bootloader) partition-size:super: 220000000
+(bootloader) partition-type:super: raw data
+(bootloader) partition-size:mitee_b: 800000
+(bootloader) partition-type:mitee_b: raw data
+(bootloader) partition-size:tee_b: 500000
+(bootloader) partition-type:tee_b: raw data
+(bootloader) partition-size:dtbo_b: 2000000
+(bootloader) partition-type:dtbo_b: raw data
+(bootloader) partition-size:vendor_boot_b: 4000000
+(bootloader) partition-type:vendor_boot_b: raw data
+(bootloader) partition-size:boot_b: 8000000
+(bootloader) partition-type:boot_b: raw data
+(bootloader) partition-size:lk_b: 800000
+(bootloader) partition-type:lk_b: raw data
+(bootloader) partition-size:gz_b: 2000000
+(bootloader) partition-type:gz_b: raw data
+(bootloader) partition-size:cam_vpu3_b: f00000
+(bootloader) partition-type:cam_vpu3_b: raw data
+(bootloader) partition-size:cam_vpu2_b: f00000
+(bootloader) partition-type:cam_vpu2_b: raw data
+(bootloader) partition-size:cam_vpu1_b: f00000
+(bootloader) partition-type:cam_vpu1_b: raw data
+(bootloader) partition-size:mcupm_b: 100000
+(bootloader) partition-type:mcupm_b: raw data
+(bootloader) partition-size:sspm_b: 100000
+(bootloader) partition-type:sspm_b: raw data
+(bootloader) partition-size:scp_b: 600000
+(bootloader) partition-type:scp_b: raw data
+(bootloader) partition-size:dpm_b: 400000
+(bootloader) partition-type:dpm_b: raw data
+(bootloader) partition-size:pi_img_b: 100000
+(bootloader) partition-type:pi_img_b: raw data
+(bootloader) partition-size:audio_dsp_b: 800000
+(bootloader) partition-type:audio_dsp_b: raw data
+(bootloader) partition-size:spmfw_b: 100000
+(bootloader) partition-type:spmfw_b: raw data
+(bootloader) partition-size:md1img_b: c800000
+(bootloader) partition-type:md1img_b: raw data
+(bootloader) partition-size:logo: 4080000
+(bootloader) partition-type:logo: raw data
+(bootloader) partition-size:boot_para: 1a00000
+(bootloader) partition-type:boot_para: raw data
+(bootloader) partition-size:nvram: 4000000
+(bootloader) partition-type:nvram: raw data
+(bootloader) partition-size:efuse: 80000
+(bootloader) partition-type:efuse: raw data
+(bootloader) partition-size:proinfo: 300000
+(bootloader) partition-type:proinfo: raw data
+(bootloader) partition-size:sec1: 200000
+(bootloader) partition-type:sec1: raw data
+(bootloader) partition-size:mitee_a: 800000
+(bootloader) partition-type:mitee_a: raw data
+(bootloader) partition-size:tee_a: 500000
+(bootloader) partition-type:tee_a: raw data
+(bootloader) partition-size:dtbo_a: 2000000
+(bootloader) partition-type:dtbo_a: raw data
+(bootloader) partition-size:vendor_boot_a: 4000000
+(bootloader) partition-type:vendor_boot_a: raw data
+(bootloader) partition-size:boot_a: 8000000
+(bootloader) partition-type:boot_a: raw data
+(bootloader) partition-size:lk_a: 800000
+(bootloader) partition-type:lk_a: raw data
+(bootloader) partition-size:gz_a: 2000000
+(bootloader) partition-type:gz_a: raw data
+(bootloader) partition-size:cam_vpu3_a: 1200000
+(bootloader) partition-type:cam_vpu3_a: raw data
+(bootloader) partition-size:cam_vpu2_a: 1300000
+(bootloader) partition-type:cam_vpu2_a: raw data
+(bootloader) partition-size:cam_vpu1_a: 800000
+(bootloader) partition-type:cam_vpu1_a: raw data
+(bootloader) partition-size:mcupm_a: 100000
+(bootloader) partition-type:mcupm_a: raw data
+(bootloader) partition-size:sspm_a: 100000
+(bootloader) partition-type:sspm_a: raw data
+(bootloader) partition-size:scp_a: 600000
+(bootloader) partition-type:scp_a: raw data
+(bootloader) partition-size:dpm_a: 400000
+(bootloader) partition-type:dpm_a: raw data
+(bootloader) partition-size:pi_img_a: 100000
+(bootloader) partition-type:pi_img_a: raw data
+(bootloader) partition-size:audio_dsp_a: 800000
+(bootloader) partition-type:audio_dsp_a: raw data
+(bootloader) partition-size:spmfw_a: 100000
+(bootloader) partition-type:spmfw_a: raw data
+(bootloader) partition-size:md1img_a: c800000
+(bootloader) partition-type:md1img_a: raw data
+(bootloader) partition-size:otp: 3000000
+(bootloader) partition-type:otp: raw data
+(bootloader) partition-size:seccfg: 800000
+(bootloader) partition-type:seccfg: raw data
+(bootloader) partition-size:protect2: 800000
+(bootloader) partition-type:protect2: ext4
+(bootloader) partition-size:protect1: 800000
+(bootloader) partition-type:protect1: ext4
+(bootloader) partition-size:persist: 4278000
+(bootloader) partition-type:persist: ext4
+(bootloader) partition-size:metadata: 2000000
+(bootloader) partition-type:metadata: raw data
+(bootloader) partition-size:vbmeta_vendor_b: 800000
+(bootloader) partition-type:vbmeta_vendor_b: raw data
+(bootloader) partition-size:vbmeta_system_b: 800000
+(bootloader) partition-type:vbmeta_system_b: raw data
+(bootloader) partition-size:vbmeta_b: 800000
+(bootloader) partition-type:vbmeta_b: raw data
+(bootloader) partition-size:vbmeta_vendor_a: 800000
+(bootloader) partition-type:vbmeta_vendor_a: raw data
+(bootloader) partition-size:vbmeta_system_a: 800000
+(bootloader) partition-type:vbmeta_system_a: raw data
+(bootloader) partition-size:vbmeta_a: 800000
+(bootloader) partition-type:vbmeta_a: raw data
+(bootloader) partition-size:nvdata: 4000000
+(bootloader) partition-type:nvdata: ext4
+(bootloader) partition-size:nvcfg: 2000000
+(bootloader) partition-type:nvcfg: ext4
+(bootloader) partition-size:frp: 100000
+(bootloader) partition-type:frp: raw data
+(bootloader) partition-size:expdb: 2800000
+(bootloader) partition-type:expdb: raw data
+(bootloader) partition-size:para: 80000
+(bootloader) partition-type:para: raw data
+(bootloader) partition-size:misc: 400000
+(bootloader) partition-type:misc: raw data
+(bootloader) partition-size:pgpt: 8000
+(bootloader) partition-type:pgpt: raw data
+(bootloader) partition-size:preloader_b: 400000
+(bootloader) partition-type:preloader_b: raw data
+(bootloader) partition-size:preloader_a: 400000
+(bootloader) partition-type:preloader_a: raw data
+(bootloader) partition-size:preloader: 400000
+(bootloader) partition-type:preloader: raw data
+(bootloader) serialno: wkbmq8pfbeaejbo7
+(bootloader) off-mode-charge: 1
+(bootloader) warranty: no
+(bootloader) unlocked: yes
+(bootloader) secure: no
+(bootloader) fuse: yes
+(bootloader) crc: 1
+(bootloader) kernel: lk
+(bootloader) product: ares
+(bootloader) is-userspace: no
+(bootloader) slot-retry-count:b: 0
+(bootloader) slot-retry-count:a: 0
+(bootloader) slot-unbootable:b: yes
+(bootloader) slot-unbootable:a: no
+(bootloader) slot-successful:b: no
+(bootloader) slot-successful:a: no
+(bootloader) slot-count: 2
+(bootloader) current-slot: a
+(bootloader) has-slot:sgpt: no
+(bootloader) has-slot:flashinfo: no
+(bootloader) has-slot:userdata: no
+(bootloader) has-slot:rescue: no
+(bootloader) has-slot:cust: no
+(bootloader) has-slot:backup5: no
+(bootloader) has-slot:backup4: no
+(bootloader) has-slot:backup3: no
+(bootloader) has-slot:backup2: no
+(bootloader) has-slot:backup1: no
+(bootloader) has-slot:exaid: no
+(bootloader) has-slot:oem_misc1: no
+(bootloader) has-slot:oops: no
+(bootloader) has-slot:mem: no
+(bootloader) has-slot:ffu: no
+(bootloader) has-slot:gsort: no
+(bootloader) has-slot:super: no
+(bootloader) has-slot:logo: no
+(bootloader) has-slot:boot_para: no
+(bootloader) has-slot:nvram: no
+(bootloader) has-slot:efuse: no
+(bootloader) has-slot:proinfo: no
+(bootloader) has-slot:sec1: no
+(bootloader) has-slot:mitee: yes
+(bootloader) has-slot:tee: yes
+(bootloader) has-slot:dtbo: yes
+(bootloader) has-slot:vendor_boot: yes
+(bootloader) has-slot:boot: yes
+(bootloader) has-slot:lk: yes
+(bootloader) has-slot:gz: yes
+(bootloader) has-slot:cam_vpu3: yes
+(bootloader) has-slot:cam_vpu2: yes
+(bootloader) has-slot:cam_vpu1: yes
+(bootloader) has-slot:mcupm: yes
+(bootloader) has-slot:sspm: yes
+(bootloader) has-slot:scp: yes
+(bootloader) has-slot:dpm: yes
+(bootloader) has-slot:pi_img: yes
+(bootloader) has-slot:audio_dsp: yes
+(bootloader) has-slot:spmfw: yes
+(bootloader) has-slot:md1img: yes
+(bootloader) has-slot:otp: no
+(bootloader) has-slot:seccfg: no
+(bootloader) has-slot:protect2: no
+(bootloader) has-slot:protect1: no
+(bootloader) has-slot:persist: no
+(bootloader) has-slot:metadata: no
+(bootloader) has-slot:vbmeta_vendor: yes
+(bootloader) has-slot:vbmeta_system: yes
+(bootloader) has-slot:vbmeta: yes
+(bootloader) has-slot:nvdata: no
+(bootloader) has-slot:nvcfg: no
+(bootloader) has-slot:frp: no
+(bootloader) has-slot:expdb: no
+(bootloader) has-slot:para: no
+(bootloader) has-slot:misc: no
+(bootloader) has-slot:pgpt: no
+(bootloader) has-slot:preloader: yes
+(bootloader) version-baseband: MOLY.NR15.R3.TC8.PR2.SP.V2.1.P87
+(bootloader) version-bootloader: ares-b4b182403-20230427143113-202310101
+(bootloader) version-preloader:
+(bootloader) version: 0.5
+all: Done!!
+Finished. Total time: 1.396s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar is-userspace 2>&1
+is-userspace: no
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar slot-successful:a 2>&1
+slot-successful:a: no
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar slot-unbootable:a 2>&1
+slot-unbootable:a: no
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar partition-type:nvdata 2>&1
+partition-type:nvdata: ext4
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar partition-size:nvdata 2>&1
+partition-size:nvdata: 4000000
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar partition-type:nvcfg 2>&1
+partition-type:nvcfg: ext4
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar partition-size:nvcfg 2>&1
+partition-size:nvcfg: 2000000
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar partition-type:nvram 2>&1
+partition-type:nvram: raw data
+Finished. Total time: 1.207s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar partition-size:nvram 2>&1
+partition-size:nvram: 4000000
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>,
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\adb.exe" devices
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+List of devices attached
+066872517N105600        unauthorized
+
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\adb.exe" shell
+adb.exe: device unauthorized.
+This adb server's $ADB_VENDOR_KEYS is not set
+Try 'adb kill-server' if that seems wrong.
+Otherwise check for a confirmation dialog on your device.
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\adb.exe" kill-server
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\adb.exe" start-server
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\adb.exe" devices
+List of devices attached
+066872517N105600        unauthorized
+
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" devices
+wkbmq8pfbeaejbo7         fastboot
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar product 2>&1
+product: ares
+Finished. Total time: 0.006s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar version-bootloader 2>&1
+version-bootloader: ares-b4b182403-20230427143113-20231010143052
+Finished. Total time: 0.002s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>"C:\Programs\Telefon adb\platform-tools\fastboot.exe" getvar version-baseband 2>&1
+version-baseband: MOLY.NR15.R3.TC8.PR2.SP.V2.1.P87
+Finished. Total time: 0.001s
+
+C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0>

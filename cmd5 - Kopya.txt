@@ -1,0 +1,245 @@
+Microsoft Windows [Version 10.0.19045.7725]
+(c) Microsoft Corporation. Tüm hakları saklıdır.
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py wf C:\Users\Yusuf\Desktop\ares_eng\images
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+..DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.....
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...........
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...........
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...........
+Traceback (most recent call last):
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 347, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 343, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_main.py", line 727, in run
+    mtk = da_handler.connect(mtk, directory)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\DA\mtk_da_handler.py", line 116, in connect
+    mtk.preloader.init(directory=directory)
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_preloader.py", line 164, in init
+    res = self.mtk.port.handshake(maxtries=maxtries)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\Port.py", line 200, in handshake
+    time.sleep(0.3)
+KeyboardInterrupt
+^C
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py flash C:\ares_eng\images
+fuse library not installed
+usage: mtk.py [-h] [--vid VID] [--pid PID] [--serialport [SERIALPORT]]
+              [--noreconnect] [--stock] [--uartloglevel UARTLOGLEVEL]
+              [--loglevel LOGLEVEL] [--write_preloader_to_file]
+              [--generatekeys] [--iot] [--socid] [--auth AUTH] [--cert CERT]
+              [--debugmode] [--loader LOADER] [--preloader PRELOADER]
+              [--ptype PTYPE] [--var1 VAR1] [--uart_addr UART_ADDR]
+              [--da_addr DA_ADDR] [--brom_addr BROM_ADDR] [--mode MODE]
+              [--wdt WDT] [--skipwdt] [--crash] [--appid APPID]
+              [--sectorsize SECTORSIZE]
+              [--gpt-num-part-entries GPT_NUM_PART_ENTRIES]
+              [--gpt-part-entry-size GPT_PART_ENTRY_SIZE]
+              [--gpt-part-entry-start-lba GPT_PART_ENTRY_START_LBA]
+              [--parttype PARTTYPE] [--skip SKIP]
+              command ...
+mtk.py: error: argument command: invalid choice: 'flash' (choose from printgpt, gpt, r, rl, rf, rs, ro, w, wf, wl, wo, e, es, ess, footer, fs, reset, meta, meta2, dumpbrom, dumpsram, dumppreloader, payload, crash, brute, gettargetconfig, logs, peek, stage, plstage, da, devices, script, multi)
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py flash C:\ares_eng\images
+fuse library not installed
+usage: mtk.py [-h] [--vid VID] [--pid PID] [--serialport [SERIALPORT]]
+              [--noreconnect] [--stock] [--uartloglevel UARTLOGLEVEL]
+              [--loglevel LOGLEVEL] [--write_preloader_to_file]
+              [--generatekeys] [--iot] [--socid] [--auth AUTH] [--cert CERT]
+              [--debugmode] [--loader LOADER] [--preloader PRELOADER]
+              [--ptype PTYPE] [--var1 VAR1] [--uart_addr UART_ADDR]
+              [--da_addr DA_ADDR] [--brom_addr BROM_ADDR] [--mode MODE]
+              [--wdt WDT] [--skipwdt] [--crash] [--appid APPID]
+              [--sectorsize SECTORSIZE]
+              [--gpt-num-part-entries GPT_NUM_PART_ENTRIES]
+              [--gpt-part-entry-size GPT_PART_ENTRY_SIZE]
+              [--gpt-part-entry-start-lba GPT_PART_ENTRY_START_LBA]
+              [--parttype PARTTYPE] [--skip SKIP]
+              command ...
+mtk.py: error: argument command: invalid choice: 'flash' (choose from printgpt, gpt, r, rl, rf, rs, ro, w, wf, wl, wo, e, es, ess, footer, fs, reset, meta, meta2, dumpbrom, dumpsram, dumppreloader, payload, crash, brute, gettargetconfig, logs, peek, stage, plstage, da, devices, script, multi)
+
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py wf C:\Users\Yusuf\Desktop\ares_eng\images
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+......DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+..
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...........
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...........
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+Traceback (most recent call last):
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 347, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 343, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_main.py", line 727, in run
+    mtk = da_handler.connect(mtk, directory)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\DA\mtk_da_handler.py", line 116, in connect
+    mtk.preloader.init(directory=directory)
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_preloader.py", line 164, in init
+    res = self.mtk.port.handshake(maxtries=maxtries)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\Port.py", line 200, in handshake
+    time.sleep(0.3)
+KeyboardInterrupt
+^C
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>python mtk.py printgpt
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+.DeviceClass
+DeviceClass - [LIB]: Couldn't get device configuration.
+Traceback (most recent call last):
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 347, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtk.py", line 343, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_main.py", line 727, in run
+    mtk = da_handler.connect(mtk, directory)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\DA\mtk_da_handler.py", line 116, in connect
+    mtk.preloader.init(directory=directory)
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\mtk_preloader.py", line 164, in init
+    res = self.mtk.port.handshake(maxtries=maxtries)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\Port.py", line 183, in handshake
+    if self.cdc.connect() and self.run_handshake():
+       ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1\mtkclient\Library\Connection\usblib.py", line 326, in connect
+    self.error("Couldn't get device configuration.")
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1568, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1684, in _log
+    self.handle(record)
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1700, in handle
+    self.callHandlers(record)
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1762, in callHandlers
+    hdlr.handle(record)
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1028, in handle
+    self.emit(record)
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1164, in emit
+    self.flush()
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1144, in flush
+    self.stream.flush()
+KeyboardInterrupt
+^C
+C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>

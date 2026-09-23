@@ -1,0 +1,97 @@
+Microsoft Windows [Version 10.0.19045.7725]
+(c) Microsoft Corporation. Tüm hakları saklıdır.
+
+C:\Windows\system32>cd /d "C:\Programs\Telefon adb\platform-tools"
+
+C:\Programs\Telefon adb\platform-tools>fastboot devices
+wkbmq8pfbeaejbo7         fastboot
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar product
+product: ares
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar unlocked
+unlocked: no
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar all 2>&1 | findstr /i "product region country variant sku"
+(bootloader) variant:
+(bootloader) product: ares
+
+C:\Programs\Telefon adb\platform-tools>cd /d "C:\Programs\Telefon adb\platform-tools"
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar version-bootloader
+version-bootloader: ares-b4b182403-20230427143113-20231010143052
+Finished. Total time: 0.002s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar version-baseband
+version-baseband: MOLY.NR15.R3.TC8.PR2.SP.V2.1.P87
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar anti
+anti: 1
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>cd /d "C:\Programs\Telefon adb\platform-tools"
+
+C:\Programs\Telefon adb\platform-tools>fastboot flashing get_unlock_ability
+(bootloader) unlock_ability = 0
+OKAY [  0.002s]
+Finished. Total time: 0.003s
+
+C:\Programs\Telefon adb\platform-tools>cd /d "E:\TELEFON\K40 yedek\YEDEK" && dir /b
+nvcfg_backup.bin
+nvdata_backup.bin
+nvram_backup.bin
+
+E:\TELEFON\K40 yedek\YEDEK>cd /d "E:\TELEFON\K40 yedek\YEDEK" && tree /f
+Folder PATH listing for volume HARD
+Volume serial number is 04E4-A1CA
+E:.
+    nvcfg_backup.bin
+    nvdata_backup.bin
+    nvram_backup.bin
+
+No subfolders exist
+
+
+E:\TELEFON\K40 yedek\YEDEK>cd /d "E:\TELEFON\K40 yedek\YEDEK" && tree /f /a
+Folder PATH listing for volume HARD
+Volume serial number is 04E4-A1CA
+E:.
+    nvcfg_backup.bin
+    nvdata_backup.bin
+    nvram_backup.bin
+
+No subfolders exist
+
+
+E:\TELEFON\K40 yedek\YEDEK>cd /d "E:\TELEFON\K40 yedek\YEDEK" && dir
+ Volume in drive E is HARD
+ Volume Serial Number is 04E4-A1CA
+
+ Directory of E:\TELEFON\K40 yedek\YEDEK
+
+23.09.2026  01:24    <DIR>          .
+23.09.2026  01:24    <DIR>          ..
+22.09.2026  23:17        33.554.432 nvcfg_backup.bin
+22.09.2026  23:17        67.108.864 nvdata_backup.bin
+22.09.2026  23:16        67.108.864 nvram_backup.bin
+               3 File(s)    167.772.160 bytes
+               2 Dir(s)  57.207.648.256 bytes free
+
+E:\TELEFON\K40 yedek\YEDEK>
+E:\TELEFON\K40 yedek\YEDEK>
+E:\TELEFON\K40 yedek\YEDEK>
+E:\TELEFON\K40 yedek\YEDEK>
+E:\TELEFON\K40 yedek\YEDEK>
+E:\TELEFON\K40 yedek\YEDEK>
+E:\TELEFON\K40 yedek\YEDEK>
+E:\TELEFON\K40 yedek\YEDEK>
+E:\TELEFON\K40 yedek\YEDEK>powershell -NoProfile -Command "Get-ChildItem 'E:\TELEFON' -Force -Recurse -ErrorAction SilentlyContinue | Select-Object FullName,Length,LastWriteTime,Attributes | Format-Table -AutoSize | Out-File 'E:\TELEFON\LISTE.txt' -Width 300"
+
+E:\TELEFON\K40 yedek\YEDEK>notepad "E:\TELEFON\LISTE.txt"
+
+E:\TELEFON\K40 yedek\YEDEK>notepad "E:\TELEFON\LISTE.txt"
+
+E:\TELEFON\K40 yedek\YEDEK>

@@ -1,0 +1,1027 @@
+Microsoft Windows [Version 10.0.19045.7725]
+(c) Microsoft Corporation. Tüm hakları saklıdır.
+
+C:\Programs\Telefon adb\mtkclient-2.1.2>python mtk.py ro 0 4096 sector0_kucuk.bin
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+..Port - Device detected :)
+Preloader -     CPU:                    MT6891/MT6893(Dimensity 1200)
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xa
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x950
+Preloader - Target config:              0xe7
+Preloader -     SBC enabled:            True
+Preloader -     SLA enabled:            True
+Preloader -     DAA enabled:            True
+Preloader -     SWJTAG enabled:         True
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          True
+Preloader -     Mem write auth:         True
+Preloader -     Cmd 0xC8 blocked:       True
+Preloader - Get Target info
+Preloader - BROM mode detected.
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xca00
+Preloader -     SW Ver:                 0x0
+Preloader - ME_ID:                      514B7C693AC7BA62167CAA36E21BCC76
+Preloader - SOC_ID:                     CB5FC8C80D799CBD8D6FB659D9FC07D3CE309AED37B088A23C72C4E4FC5FF027
+Preloader
+Preloader - [LIB]: Auth file is required. Use --auth option.
+DaHandler - Device is protected.
+DaHandler - Device is in BROM-Mode. Bypassing security.
+PLTools - Loading payload from mt6893_payload.bin, 0x264 bytes
+Exploitation - Kamakiri Run
+Exploitation - Done sending payload...
+PLTools - Successfully sent payload: C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\payloads\mt6893_payload.bin
+Port - Device detected :)
+DaHandler
+DaHandler - [LIB]: Device is in BROM mode. No preloader given, trying to dump preloader from ram.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Sending emi data ...
+DAXFlash - DRAM setup passed.
+DAXFlash - Sending emi data succeeded.
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - UFS Blocksize: 0x1000
+DAXFlash - UFS ID:       KLUDG4UHDC-B0E
+DAXFlash - UFS MID:      0xce
+DAXFlash - UFS CID:      ce014b4c55444734554844432d423045
+DAXFlash - UFS FWVer:    30323030
+DAXFlash - UFS Serial:   353132316338333838643230
+DAXFlash - UFS LU0 Size: 0x1dcb000000
+DAXFlash - UFS LU1 Size: 0x400000
+DAXFlash - UFS LU2 Size: 0x400000
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added at 0x4fff0000
+Main - Handling da commands ...
+Done |█████-----| 50.0% Read: (0x10000/0x20000),0.00 MB/sTraceback (most recent call last):
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 341, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 337, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\mtk_main.py", line 728, in run
+    da_handler.handle_da_cmds(mtk, cmd, self.args)
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_da_handler.py", line 1282, in handle_da_cmds
+    if self.da_ro(start=start, length=length, filename=filename, parttype=parttype):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_da_handler.py", line 476, in da_ro
+    return self.mtk.daloader.readflash(addr=start,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_daloader.py", line 330, in readflash
+    return self.da.readflash(addr=addr, length=length, filename=filename, parttype=parttype, display=display)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\xflash\xflash_lib.py", line 724, in readflash
+    status = self.usbread(12, maxtimeout=5000)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\Connection\usblib.py", line 508, in usbread
+    dt = epr(sz)
+         ^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 431, in read
+    return self.device.read(self, size_or_buffer, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 1043, in read
+    ret = fn(
+          ^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 850, in bulk_read
+    return self.__read(self.lib.libusb_bulk_transfer,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 950, in __read
+    retval = fn(dev_handle.handle,
+             ^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+^C
+C:\Programs\Telefon adb\mtkclient-2.1.2>python mtk.py ro 0 512 sector0_kucuk.bin
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+.Port - Device detected :)
+Preloader -     CPU:                    MT6891/MT6893(Dimensity 1200)
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xa
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x950
+Preloader - Target config:              0xe7
+Preloader -     SBC enabled:            True
+Preloader -     SLA enabled:            True
+Preloader -     DAA enabled:            True
+Preloader -     SWJTAG enabled:         True
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          True
+Preloader -     Mem write auth:         True
+Preloader -     Cmd 0xC8 blocked:       True
+Preloader - Get Target info
+Preloader - BROM mode detected.
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xca00
+Preloader -     SW Ver:                 0x0
+Preloader - ME_ID:                      514B7C693AC7BA62167CAA36E21BCC76
+Preloader - SOC_ID:                     CB5FC8C80D799CBD8D6FB659D9FC07D3CE309AED37B088A23C72C4E4FC5FF027
+Preloader
+Preloader - [LIB]: Auth file is required. Use --auth option.
+DaHandler - Device is protected.
+DaHandler - Device is in BROM-Mode. Bypassing security.
+PLTools - Loading payload from mt6893_payload.bin, 0x264 bytes
+Exploitation - Kamakiri Run
+Exploitation - Done sending payload...
+PLTools - Successfully sent payload: C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\payloads\mt6893_payload.bin
+Port - Device detected :)
+DaHandler
+DaHandler - [LIB]: Device is in BROM mode. No preloader given, trying to dump preloader from ram.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Sending emi data ...
+DAXFlash - DRAM setup passed.
+DAXFlash - Sending emi data succeeded.
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - UFS Blocksize: 0x1000
+DAXFlash - UFS ID:       KLUDG4UHDC-B0E
+DAXFlash - UFS MID:      0xce
+DAXFlash - UFS CID:      ce014b4c55444734554844432d423045
+DAXFlash - UFS FWVer:    30323030
+DAXFlash - UFS Serial:   353132316338333838643230
+DAXFlash - UFS LU0 Size: 0x1dcb000000
+DAXFlash - UFS LU1 Size: 0x400000
+DAXFlash - UFS LU2 Size: 0x400000
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added at 0x4fff0000
+Main - Handling da commands ...
+Done |█████-----| 50.0% Read: (0x10000/0x20000),0.00 MB/sTraceback (most recent call last):
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 341, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 337, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\mtk_main.py", line 728, in run
+    da_handler.handle_da_cmds(mtk, cmd, self.args)
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_da_handler.py", line 1282, in handle_da_cmds
+    if self.da_ro(start=start, length=length, filename=filename, parttype=parttype):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_da_handler.py", line 476, in da_ro
+    return self.mtk.daloader.readflash(addr=start,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_daloader.py", line 330, in readflash
+    return self.da.readflash(addr=addr, length=length, filename=filename, parttype=parttype, display=display)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\xflash\xflash_lib.py", line 724, in readflash
+    status = self.usbread(12, maxtimeout=5000)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\Connection\usblib.py", line 508, in usbread
+    dt = epr(sz)
+         ^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 431, in read
+    return self.device.read(self, size_or_buffer, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 1043, in read
+    ret = fn(
+          ^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 850, in bulk_read
+    return self.__read(self.lib.libusb_bulk_transfer,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 950, in __read
+    retval = fn(dev_handle.handle,
+             ^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+^C
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>python mtk.py printpartition
+fuse library not installed
+usage: mtk.py [-h] [--vid VID] [--pid PID] [--serialport [SERIALPORT]]
+              [--noreconnect] [--stock] [--uartloglevel UARTLOGLEVEL]
+              [--loglevel LOGLEVEL] [--write_preloader_to_file]
+              [--generatekeys] [--iot] [--socid] [--auth AUTH] [--cert CERT]
+              [--debugmode] [--loader LOADER] [--preloader PRELOADER]
+              [--ptype PTYPE] [--var1 VAR1] [--uart_addr UART_ADDR]
+              [--da_addr DA_ADDR] [--brom_addr BROM_ADDR] [--mode MODE]
+              [--wdt WDT] [--skipwdt] [--crash] [--appid APPID]
+              [--sectorsize SECTORSIZE]
+              [--gpt-num-part-entries GPT_NUM_PART_ENTRIES]
+              [--gpt-part-entry-size GPT_PART_ENTRY_SIZE]
+              [--gpt-part-entry-start-lba GPT_PART_ENTRY_START_LBA]
+              [--parttype PARTTYPE] [--skip SKIP]
+              command ...
+mtk.py: error: argument command: invalid choice: 'printpartition' (choose from printgpt, gpt, r, rl, rf, rs, ro, w, wf, wl, wo, e, es, ess, footer, fs, reset, meta, meta2, dumpbrom, dumpsram, dumppreloader, payload, crash, brute, gettargetconfig, logs, peek, stage, plstage, da, devices, script, multi)
+
+C:\Programs\Telefon adb\mtkclient-2.1.2>python mtk.py printgpt
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+Port - Device detected :)
+Preloader -     CPU:                    MT6891/MT6893(Dimensity 1200)
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xa
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x950
+Preloader - Target config:              0xe7
+Preloader -     SBC enabled:            True
+Preloader -     SLA enabled:            True
+Preloader -     DAA enabled:            True
+Preloader -     SWJTAG enabled:         True
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          True
+Preloader -     Mem write auth:         True
+Preloader -     Cmd 0xC8 blocked:       True
+Preloader - Get Target info
+Preloader - BROM mode detected.
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xca00
+Preloader -     SW Ver:                 0x0
+Preloader - ME_ID:                      514B7C693AC7BA62167CAA36E21BCC76
+Preloader - SOC_ID:                     CB5FC8C80D799CBD8D6FB659D9FC07D3CE309AED37B088A23C72C4E4FC5FF027
+Preloader
+Preloader - [LIB]: Auth file is required. Use --auth option.
+DaHandler - Device is protected.
+DaHandler - Device is in BROM-Mode. Bypassing security.
+PLTools - Loading payload from mt6893_payload.bin, 0x264 bytes
+Exploitation - Kamakiri Run
+Exploitation - Done sending payload...
+PLTools - Successfully sent payload: C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\payloads\mt6893_payload.bin
+Port - Device detected :)
+DaHandler
+DaHandler - [LIB]: Device is in BROM mode. No preloader given, trying to dump preloader from ram.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Sending emi data ...
+DAXFlash - DRAM setup passed.
+DAXFlash - Sending emi data succeeded.
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - UFS Blocksize: 0x1000
+DAXFlash - UFS ID:       KLUDG4UHDC-B0E
+DAXFlash - UFS MID:      0xce
+DAXFlash - UFS CID:      ce014b4c55444734554844432d423045
+DAXFlash - UFS FWVer:    30323030
+DAXFlash - UFS Serial:   353132316338333838643230
+DAXFlash - UFS LU0 Size: 0x1dcb000000
+DAXFlash - UFS LU1 Size: 0x400000
+DAXFlash - UFS LU2 Size: 0x400000
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added at 0x4fff0000
+Main - Handling da commands ...
+Traceback (most recent call last):
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 341, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 337, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\mtk_main.py", line 728, in run
+    da_handler.handle_da_cmds(mtk, cmd, self.args)
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_da_handler.py", line 1228, in handle_da_cmds
+    data, guid_gpt = mtk.daloader.get_gpt()
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_daloader.py", line 294, in get_gpt
+    data, guid_gpt = self.da.partition.get_gpt(self.mtk.config.gpt_settings, parttype)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\partition.py", line 158, in get_gpt
+    data = fh.read(2 * self.config.pagesize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\realtime.py", line 137, in read
+    return self.readdata(length)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\realtime.py", line 128, in readdata
+    bw(self.readblock(sector, sectors))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\realtime.py", line 111, in readblock
+    return self.mtk.daloader.readflash(addr=sector * self.mtk.config.pagesize,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_daloader.py", line 330, in readflash
+    return self.da.readflash(addr=addr, length=length, filename=filename, parttype=parttype, display=display)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\xflash\xflash_lib.py", line 724, in readflash
+    status = self.usbread(12, maxtimeout=5000)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\Connection\usblib.py", line 508, in usbread
+    dt = epr(sz)
+         ^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 431, in read
+    return self.device.read(self, size_or_buffer, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 1043, in read
+    ret = fn(
+          ^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 850, in bulk_read
+    return self.__read(self.lib.libusb_bulk_transfer,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 950, in __read
+    retval = fn(dev_handle.handle,
+             ^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+^C
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>python mtk.py --sectorsize 512 printgpt
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+Port - Device detected :)
+Preloader -     CPU:                    MT6891/MT6893(Dimensity 1200)
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xa
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x950
+Preloader - Target config:              0xe7
+Preloader -     SBC enabled:            True
+Preloader -     SLA enabled:            True
+Preloader -     DAA enabled:            True
+Preloader -     SWJTAG enabled:         True
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          True
+Preloader -     Mem write auth:         True
+Preloader -     Cmd 0xC8 blocked:       True
+Preloader - Get Target info
+Preloader - BROM mode detected.
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xca00
+Preloader -     SW Ver:                 0x0
+Preloader - ME_ID:                      514B7C693AC7BA62167CAA36E21BCC76
+Preloader - SOC_ID:                     CB5FC8C80D799CBD8D6FB659D9FC07D3CE309AED37B088A23C72C4E4FC5FF027
+Preloader
+Preloader - [LIB]: Auth file is required. Use --auth option.
+DaHandler - Device is protected.
+DaHandler - Device is in BROM-Mode. Bypassing security.
+PLTools - Loading payload from mt6893_payload.bin, 0x264 bytes
+Exploitation - Kamakiri Run
+Exploitation - Done sending payload...
+PLTools - Successfully sent payload: C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\payloads\mt6893_payload.bin
+Port - Device detected :)
+DaHandler
+DaHandler - [LIB]: Device is in BROM mode. No preloader given, trying to dump preloader from ram.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Sending emi data ...
+DAXFlash - DRAM setup passed.
+DAXFlash - Sending emi data succeeded.
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - UFS Blocksize: 0x1000
+DAXFlash - UFS ID:       KLUDG4UHDC-B0E
+DAXFlash - UFS MID:      0xce
+DAXFlash - UFS CID:      ce014b4c55444734554844432d423045
+DAXFlash - UFS FWVer:    30323030
+DAXFlash - UFS Serial:   353132316338333838643230
+DAXFlash - UFS LU0 Size: 0x1dcb000000
+DAXFlash - UFS LU1 Size: 0x400000
+DAXFlash - UFS LU2 Size: 0x400000
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added at 0x4fff0000
+Main - Handling da commands ...
+Traceback (most recent call last):
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 341, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 337, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\mtk_main.py", line 728, in run
+    da_handler.handle_da_cmds(mtk, cmd, self.args)
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_da_handler.py", line 1228, in handle_da_cmds
+    data, guid_gpt = mtk.daloader.get_gpt()
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_daloader.py", line 294, in get_gpt
+    data, guid_gpt = self.da.partition.get_gpt(self.mtk.config.gpt_settings, parttype)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\partition.py", line 158, in get_gpt
+    data = fh.read(2 * self.config.pagesize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\realtime.py", line 137, in read
+    return self.readdata(length)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\realtime.py", line 128, in readdata
+    bw(self.readblock(sector, sectors))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\realtime.py", line 111, in readblock
+    return self.mtk.daloader.readflash(addr=sector * self.mtk.config.pagesize,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_daloader.py", line 330, in readflash
+    return self.da.readflash(addr=addr, length=length, filename=filename, parttype=parttype, display=display)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\xflash\xflash_lib.py", line 724, in readflash
+    status = self.usbread(12, maxtimeout=5000)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\Connection\usblib.py", line 508, in usbread
+    dt = epr(sz)
+         ^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 431, in read
+    return self.device.read(self, size_or_buffer, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 1043, in read
+    ret = fn(
+          ^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 850, in bulk_read
+    return self.__read(self.lib.libusb_bulk_transfer,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 950, in __read
+    retval = fn(dev_handle.handle,
+             ^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+^C
+C:\Programs\Telefon adb\mtkclient-2.1.2>python mtk.py --auth auth_file.bin printgpt
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+.....Port - Device detected :)
+Preloader -     CPU:                    MT6891/MT6893(Dimensity 1200)
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xa
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x950
+Preloader - Target config:              0xe7
+Preloader -     SBC enabled:            True
+Preloader -     SLA enabled:            True
+Preloader -     DAA enabled:            True
+Preloader -     SWJTAG enabled:         True
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          True
+Preloader -     Mem write auth:         True
+Preloader -     Cmd 0xC8 blocked:       True
+Preloader - Get Target info
+Preloader - BROM mode detected.
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xca00
+Preloader -     SW Ver:                 0x0
+Preloader - ME_ID:                      514B7C693AC7BA62167CAA36E21BCC76
+Preloader - SOC_ID:                     CB5FC8C80D799CBD8D6FB659D9FC07D3CE309AED37B088A23C72C4E4FC5FF027
+Preloader
+Preloader - [LIB]: Auth file is required. Use --auth option.
+DaHandler - Device is protected.
+DaHandler - Device is in BROM-Mode. Bypassing security.
+PLTools - Loading payload from mt6893_payload.bin, 0x264 bytes
+Exploitation - Kamakiri Run
+Exploitation - Done sending payload...
+PLTools - Successfully sent payload: C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\payloads\mt6893_payload.bin
+Port - Device detected :)
+DaHandler
+DaHandler - [LIB]: Device is in BROM mode. No preloader given, trying to dump preloader from ram.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Sending emi data ...
+DAXFlash - DRAM setup passed.
+DAXFlash - Sending emi data succeeded.
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - UFS Blocksize: 0x1000
+DAXFlash - UFS ID:       KLUDG4UHDC-B0E
+DAXFlash - UFS MID:      0xce
+DAXFlash - UFS CID:      ce014b4c55444734554844432d423045
+DAXFlash - UFS FWVer:    30323030
+DAXFlash - UFS Serial:   353132316338333838643230
+DAXFlash - UFS LU0 Size: 0x1dcb000000
+DAXFlash - UFS LU1 Size: 0x400000
+DAXFlash - UFS LU2 Size: 0x400000
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added at 0x4fff0000
+Main - Handling da commands ...
+Traceback (most recent call last):
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 341, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 337, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\mtk_main.py", line 728, in run
+    da_handler.handle_da_cmds(mtk, cmd, self.args)
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_da_handler.py", line 1228, in handle_da_cmds
+    data, guid_gpt = mtk.daloader.get_gpt()
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_daloader.py", line 294, in get_gpt
+    data, guid_gpt = self.da.partition.get_gpt(self.mtk.config.gpt_settings, parttype)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\partition.py", line 158, in get_gpt
+    data = fh.read(2 * self.config.pagesize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\realtime.py", line 137, in read
+    return self.readdata(length)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\realtime.py", line 128, in readdata
+    bw(self.readblock(sector, sectors))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\realtime.py", line 111, in readblock
+    return self.mtk.daloader.readflash(addr=sector * self.mtk.config.pagesize,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_daloader.py", line 330, in readflash
+    return self.da.readflash(addr=addr, length=length, filename=filename, parttype=parttype, display=display)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\xflash\xflash_lib.py", line 724, in readflash
+    status = self.usbread(12, maxtimeout=5000)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\Connection\usblib.py", line 508, in usbread
+    dt = epr(sz)
+         ^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 431, in read
+    return self.device.read(self, size_or_buffer, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 1043, in read
+    ret = fn(
+          ^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 850, in bulk_read
+    return self.__read(self.lib.libusb_bulk_transfer,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 950, in __read
+    retval = fn(dev_handle.handle,
+             ^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+^C
+C:\Programs\Telefon adb\mtkclient-2.1.2>python mtk.py dumpbrom brom.bin
+fuse library not installed
+usage: mtk.py [-h] [--vid VID] [--pid PID] [--serialport [SERIALPORT]]
+              [--noreconnect] [--stock] [--uartloglevel UARTLOGLEVEL]
+              [--loglevel LOGLEVEL] [--write_preloader_to_file]
+              [--generatekeys] [--iot] [--socid] [--auth AUTH] [--cert CERT]
+              [--debugmode] [--loader LOADER] [--preloader PRELOADER]
+              [--ptype PTYPE] [--var1 VAR1] [--uart_addr UART_ADDR]
+              [--da_addr DA_ADDR] [--brom_addr BROM_ADDR] [--mode MODE]
+              [--wdt WDT] [--skipwdt] [--crash] [--appid APPID]
+              [--sectorsize SECTORSIZE]
+              [--gpt-num-part-entries GPT_NUM_PART_ENTRIES]
+              [--gpt-part-entry-size GPT_PART_ENTRY_SIZE]
+              [--gpt-part-entry-start-lba GPT_PART_ENTRY_START_LBA]
+              [--parttype PARTTYPE] [--skip SKIP]
+              command ...
+mtk.py: error: unrecognized arguments: brom.bin
+
+C:\Programs\Telefon adb\mtkclient-2.1.2>python mtk.py dumpbrom
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+..........Port - Device detected :)
+Preloader -     CPU:                    MT6891/MT6893(Dimensity 1200)
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xa
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x950
+Preloader - Target config:              0xe7
+Preloader -     SBC enabled:            True
+Preloader -     SLA enabled:            True
+Preloader -     DAA enabled:            True
+Preloader -     SWJTAG enabled:         True
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          True
+Preloader -     Mem write auth:         True
+Preloader -     Cmd 0xC8 blocked:       True
+Preloader - Get Target info
+Preloader - BROM mode detected.
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xca00
+Preloader -     SW Ver:                 0x0
+Preloader - ME_ID:                      514B7C693AC7BA62167CAA36E21BCC76
+Preloader - SOC_ID:                     CB5FC8C80D799CBD8D6FB659D9FC07D3CE309AED37B088A23C72C4E4FC5FF027
+Preloader
+Preloader - [LIB]: Auth file is required. Use --auth option.
+Traceback (most recent call last):
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 341, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 337, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\mtk_main.py", line 467, in run
+    filename = self.args.filename
+               ^^^^^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'filename'
+
+C:\Programs\Telefon adb\mtkclient-2.1.2>python mtk.py ro -h
+fuse library not installed
+usage: mtk.py ro [-h] [--vid VID] [--pid PID] [--serialport [SERIALPORT]]
+                 [--noreconnect] [--stock] [--uartloglevel UARTLOGLEVEL]
+                 [--loglevel LOGLEVEL] [--write_preloader_to_file]
+                 [--generatekeys] [--iot] [--socid] [--auth AUTH]
+                 [--cert CERT] [--debugmode] [--loader LOADER]
+                 [--preloader PRELOADER] [--ptype PTYPE] [--var1 VAR1]
+                 [--uart_addr UART_ADDR] [--da_addr DA_ADDR]
+                 [--brom_addr BROM_ADDR] [--mode MODE] [--wdt WDT] [--skipwdt]
+                 [--crash] [--appid APPID] [--sectorsize SECTORSIZE]
+                 [--gpt-num-part-entries GPT_NUM_PART_ENTRIES]
+                 [--gpt-part-entry-size GPT_PART_ENTRY_SIZE]
+                 [--gpt-part-entry-start-lba GPT_PART_ENTRY_START_LBA]
+                 [--parttype PARTTYPE] [--skip SKIP]
+                 offset length filename
+
+positional arguments:
+  offset                Byte offset
+  length                Length
+  filename              File
+
+options:
+  -h, --help            show this help message and exit
+
+Connection & Interface:
+  --vid VID
+  --pid PID
+  --serialport [SERIALPORT]
+                        Use serial port (can be DETECT)
+  --noreconnect
+  --stock               use stock da
+  --uartloglevel UARTLOGLEVEL
+                        Set uart log level (0=Trace, 2=Normal)
+  --loglevel LOGLEVEL   Set log level (0=Trace, 2=Normal)
+  --write_preloader_to_file
+                        Dump preloader to file
+  --generatekeys        Derive HW keys
+  --iot                 Use special mode for iot MT6261/2301
+  --socid               Read Soc ID
+
+Authentication:
+  --auth AUTH           Use auth file (auth_sv5.auth)
+  --cert CERT           Use cert file
+
+Debug & Sector:
+  --debugmode           Enable verbose mode
+
+Bootrom / Preloader Exploit:
+  --loader LOADER       Use specific DA loader, disable autodetection
+  --preloader PRELOADER
+                        Set the preloader filename for dram config
+  --ptype PTYPE         Payload type: amonet, kamakiri, kamakiri2, carbonara
+  --var1 VAR1           Set kamakiri specific var1 value
+  --uart_addr UART_ADDR
+                        Set payload uart_addr value
+  --da_addr DA_ADDR     Set a specific da payload addr
+  --brom_addr BROM_ADDR
+                        Set a specific brom payload addr
+  --mode MODE           Set a crash mode (0=dasend1,1=dasend2,2=daread)
+  --wdt WDT             Set a specific watchdog addr
+  --skipwdt             Skip wdt init
+  --crash               Enforce crash if device is in pl mode
+  --appid APPID         Use app id (hexstring)
+
+GPT & Partition:
+  --sectorsize SECTORSIZE
+                        Set default sector size
+  --gpt-num-part-entries GPT_NUM_PART_ENTRIES
+                        Set GPT entry count
+  --gpt-part-entry-size GPT_PART_ENTRY_SIZE
+                        Set GPT entry size
+  --gpt-part-entry-start-lba GPT_PART_ENTRY_START_LBA
+                        Set GPT entry start lba sector
+  --parttype PARTTYPE   Partition type (user/boot1/rpmb/lu0 etc.)
+  --skip SKIP           Skip partitions (comma separated names)
+
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>python mtk.py ro 0 4096 sector0_kucuk.bin
+fuse library not installed
+DaHandler - Please disconnect, start mtkclient and reconnect.
+
+C:\Programs\Telefon adb\mtkclient-2.1.2>python mtk.py ro 0 4096 sector0_kucuk.bin
+fuse library not installed
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile/iot device to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+....Port - Device detected :)
+Preloader -     CPU:                    MT6891/MT6893(Dimensity 1200)
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xa
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x950
+Preloader - Target config:              0xe7
+Preloader -     SBC enabled:            True
+Preloader -     SLA enabled:            True
+Preloader -     DAA enabled:            True
+Preloader -     SWJTAG enabled:         True
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          True
+Preloader -     Mem write auth:         True
+Preloader -     Cmd 0xC8 blocked:       True
+Preloader - Get Target info
+Preloader - BROM mode detected.
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xca00
+Preloader -     SW Ver:                 0x0
+Preloader - ME_ID:                      514B7C693AC7BA62167CAA36E21BCC76
+Preloader - SOC_ID:                     CB5FC8C80D799CBD8D6FB659D9FC07D3CE309AED37B088A23C72C4E4FC5FF027
+Preloader
+Preloader - [LIB]: Auth file is required. Use --auth option.
+DaHandler - Device is protected.
+DaHandler - Device is in BROM-Mode. Bypassing security.
+PLTools - Loading payload from mt6893_payload.bin, 0x264 bytes
+Exploitation - Kamakiri Run
+Exploitation - Done sending payload...
+PLTools - Successfully sent payload: C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\payloads\mt6893_payload.bin
+Port - Device detected :)
+DaHandler
+DaHandler - [LIB]: Device is in BROM mode. No preloader given, trying to dump preloader from ram.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Sending emi data ...
+DAXFlash - DRAM setup passed.
+DAXFlash - Sending emi data succeeded.
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - UFS Blocksize: 0x1000
+DAXFlash - UFS ID:       KLUDG4UHDC-B0E
+DAXFlash - UFS MID:      0xce
+DAXFlash - UFS CID:      ce014b4c55444734554844432d423045
+DAXFlash - UFS FWVer:    30323030
+DAXFlash - UFS Serial:   353132316338333838643230
+DAXFlash - UFS LU0 Size: 0x1dcb000000
+DAXFlash - UFS LU1 Size: 0x400000
+DAXFlash - UFS LU2 Size: 0x400000
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added at 0x4fff0000
+Main - Handling da commands ...
+Done |█████-----| 50.0% Read: (0x10000/0x20000),0.00 MB/sTraceback (most recent call last):
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 341, in <module>
+    sys.exit(main() or 0)
+             ^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtk.py", line 337, in main
+    return mtk.run(parser)
+           ^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\mtk_main.py", line 728, in run
+    da_handler.handle_da_cmds(mtk, cmd, self.args)
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_da_handler.py", line 1282, in handle_da_cmds
+    if self.da_ro(start=start, length=length, filename=filename, parttype=parttype):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_da_handler.py", line 476, in da_ro
+    return self.mtk.daloader.readflash(addr=start,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\mtk_daloader.py", line 330, in readflash
+    return self.da.readflash(addr=addr, length=length, filename=filename, parttype=parttype, display=display)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\DA\xflash\xflash_lib.py", line 724, in readflash
+    status = self.usbread(12, maxtimeout=5000)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Programs\Telefon adb\mtkclient-2.1.2\mtkclient\Library\Connection\usblib.py", line 508, in usbread
+    dt = epr(sz)
+         ^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 431, in read
+    return self.device.read(self, size_or_buffer, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\core.py", line 1043, in read
+    ret = fn(
+          ^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 850, in bulk_read
+    return self.__read(self.lib.libusb_bulk_transfer,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Yusuf\AppData\Local\Programs\Python\Python312\Lib\site-packages\usb\backend\libusb1.py", line 950, in __read
+    retval = fn(dev_handle.handle,
+             ^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+^C
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>
+C:\Programs\Telefon adb\mtkclient-2.1.2>

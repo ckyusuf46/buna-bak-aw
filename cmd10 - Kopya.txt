@@ -1,0 +1,194 @@
+Microsoft Windows [Version 10.0.19045.7725]
+(c) Microsoft Corporation. Tüm hakları saklıdır.
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+< waiting for any device >
+OKAY [  0.004s]
+Finished. Total time: 0.004s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.001s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>platform-tools>fastboot oem poweroff
+'platform-tools' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.000s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.000s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.000s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.000s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>>fastboot oem poweroff
+'oem' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.001s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.001s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.001s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.001s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+< waiting for any device >
+OKAY [  0.000s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.001s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.003s]
+Finished. Total time: 0.004s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.003s]
+Finished. Total time: 0.004s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+< waiting for any device >
+OKAY [  3.784s]
+Finished. Total time: 3.786s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+< waiting for any device >
+OKAY [  0.001s]
+Finished. Total time: 0.002s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.001s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.003s]
+Finished. Total time: 0.003s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.041s]
+Finished. Total time: 0.063s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+OKAY [  0.003s]
+Finished. Total time: 0.013s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+FAILED (remote: 'not allowed in locked state')
+fastboot: error: Command failed
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+FAILED (remote: 'not allowed in locked state')
+fastboot: error: Command failed
+
+C:\Programs\Telefon adb\platform-tools>C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>fastboot reboot-bootloader
+'C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Programs\Telefon adb\platform-tools>'fastboot' is not recognized as an internal or external command,
+''fastboot'' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Programs\Telefon adb\platform-tools>operable program or batch file.
+'operable' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1>fastboot reboot-bootloader
+'C:\Users\Yusuf\Desktop\mtkclient-2.1.4.1' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+FAILED (remote: 'not allowed in locked state')
+fastboot: error: Command failed
+
+C:\Programs\Telefon adb\platform-tools>fastboot reboot-bootloader
+Rebooting into bootloader                          OKAY [  0.000s]
+Finished. Total time: 0.002s
+
+C:\Programs\Telefon adb\platform-tools>fastboot oem poweroff
+FAILED (remote: 'not allowed in locked state')
+fastboot: error: Command failed
+
+C:\Programs\Telefon adb\platform-tools>cd /d C:\Programs\Telefon adb\platform-tools
+
+C:\Programs\Telefon adb\platform-tools>fastboot devices
+wkbmq8pfbeaejbo7         fastboot
+
+C:\Programs\Telefon adb\platform-tools>cd /d C:\ares\ares_images_V14.0.4.0.TKJCNXM_13.0
+Sistem belirtilen yolu bulamıyor.
+
+C:\Programs\Telefon adb\platform-tools>cd /d C:\ares\ares_images_V14.0.4.0.TKJCNXM_13.0
+Sistem belirtilen yolu bulamıyor.
+
+C:\Programs\Telefon adb\platform-tools>cd /d C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>set PATH=%PATH%;C:\Programs\Telefon adb\platform-tools
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>flash_all.bat
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>if exist C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0\images\anti_version.txt (for /F "delims==" %a in (C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0\images\anti_version.txt) do (set CURRENT_ANTI_VER=%a ) )
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>(set CURRENT_ANTI_VER=1 )
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>if [1] EQU [] set CURRENT_ANTI_VER=0
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>for /F "tokens=2 delims=: " %i in ('fastboot getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i )
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>(set version=1 )
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>if [1] EQU [] set version=0
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>set anticheck="antirollback check pass"
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage"
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>echo "antirollback check pass"   | findstr /r /c:"pass"   ||
+"antirollback check pass"
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>fastboot  getvar product   2>&1  | findstr "ares"   ||
+product: ares
+"Now Check Finished ......"
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>fastboot  getvar crc   2>&1  | findstr /r /c:"^crc: 1"   && if 0 EQU 0 (
+fastboot  flash crclist C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0\images\crclist.txt   ||
+ fastboot  flash sparsecrclist C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0\images\sparsecrclist.txt   ||
+)
+crc: 1
+Warning: skip copying crclist image avb footer (crclist partition size: 0, crclist image size: 442).
+Sending 'crclist' (0 KB)                           OKAY [  0.038s]
+Writing 'crclist'                                  FAILED (remote: 'not allowed in locked state')
+fastboot: error: Command failed
+"Flash crclist error"
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>fastboot oem device-info
+< waiting for any device >
+FAILED (remote: 'unknown command')
+fastboot: error: Command failed
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>fastboot oem device-info
+FAILED (remote: 'unknown command')
+fastboot: error: Command failed
+
+C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_13.0>
