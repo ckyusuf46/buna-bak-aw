@@ -1,0 +1,1043 @@
+Microsoft Windows [Version 10.0.19045.7725]
+(c) Microsoft Corporation. Tüm hakları saklıdır.
+
+C:\Users\Yusuf>fastboot devices
+'fastboot' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Yusuf>cd /d "C:\Programs\Telefon adb\platform-tools"
+
+C:\Programs\Telefon adb\platform-tools>fastboot devices
+wkbmq8pfbeaejbo7         fastboot
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar product
+product: ares
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar unlocked
+unlocked: no
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot flashing get_unlock_ability
+(bootloader) unlock_ability = 0
+OKAY [  0.001s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar current-slot
+current-slot: a
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar anti
+anti: 1
+Finished. Total time: 0.000s
+
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>fastboot getvar version-bootloaderfastboot getvar version-basebandfastboot getvar slot-successful:afastboot getvar slot-successful:bfastboot getvar slot-unbootable:afastboot getvar slot-unbootable:bfastboot getvar has-slot:bootfastboot getvar has-slot:vendor_bootfastboot getvar has-slot:vbmeta
+getvar:version-bootloaderfastboot                  FAILED (remote: 'GetVar Variable Not found')
+getvar:version-basebandfastboot                    FAILED (remote: 'GetVar Variable Not found')
+getvar:slot-successful:afastboot                   FAILED (remote: 'GetVar Variable Not found')
+getvar:slot-successful:bfastboot                   FAILED (remote: 'GetVar Variable Not found')
+getvar:slot-unbootable:afastboot                   FAILED (remote: 'GetVar Variable Not found')
+getvar:slot-unbootable:bfastboot                   FAILED (remote: 'GetVar Variable Not found')
+getvar:has-slot:bootfastboot                       FAILED (remote: 'GetVar Variable Not found')
+getvar:has-slot:vendor_bootfastboot                FAILED (remote: 'GetVar Variable Not found')
+has-slot:vbmeta: yes
+Finished. Total time: 0.013s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar version-bootloader & fastboot getvar version-baseband & fastboot getvar slot-successful:a & fastboot getvar slot-successful:b & fastboot getvar slot-unbootable:a & fastboot getvar slot-unbootable:b & fastboot getvar has-slot:boot & fastboot getvar has-slot:vendor_boot & fastboot getvar has-slot:vbmeta
+version-bootloader: ares-b4b182403-20230427143113-20231010143052
+Finished. Total time: 0.001s
+version-baseband: MOLY.NR15.R3.TC8.PR2.SP.V2.1.P87
+Finished. Total time: 0.001s
+slot-successful:a: no
+Finished. Total time: 0.001s
+slot-successful:b: no
+Finished. Total time: 0.001s
+slot-unbootable:a: yes
+Finished. Total time: 0.001s
+slot-unbootable:b: yes
+Finished. Total time: 0.001s
+has-slot:boot: yes
+Finished. Total time: 0.001s
+has-slot:vendor_boot: yes
+Finished. Total time: 0.001s
+has-slot:vbmeta: yes
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>fastboot getvar all
+(bootloader) anti: 1
+(bootloader) tokenversion: 2
+(bootloader) token: VQECHgEE/QFOVQMEYXJlcwIQ4F8Ks4J7ISAEl2Qu0lH2Jw==
+(bootloader) max-download-size: 0x10000000
+(bootloader) variant:
+(bootloader) logical-block-size: 0x1000
+(bootloader) erase-block-size: 0x0
+(bootloader) hw-revision: ca00
+(bootloader) battery-soc-ok: yes
+(bootloader) battery-voltage: 4260mV
+(bootloader) partition-size:sgpt: 8000
+(bootloader) partition-type:sgpt: raw data
+(bootloader) partition-size:flashinfo: 1000000
+(bootloader) partition-type:flashinfo: raw data
+(bootloader) partition-size:userdata: 1ad47f8000
+(bootloader) partition-type:userdata: f2fs
+(bootloader) partition-size:rescue: 8200000
+(bootloader) partition-type:rescue: raw data
+(bootloader) partition-size:cust: 40000000
+(bootloader) partition-type:cust: raw data
+(bootloader) partition-size:backup5: 8000000
+(bootloader) partition-type:backup5: raw data
+(bootloader) partition-size:backup4: 4000000
+(bootloader) partition-type:backup4: raw data
+(bootloader) partition-size:backup3: 1000000
+(bootloader) partition-type:backup3: raw data
+(bootloader) partition-size:backup2: 100000
+(bootloader) partition-type:backup2: raw data
+(bootloader) partition-size:backup1: 100000
+(bootloader) partition-type:backup1: raw data
+(bootloader) partition-size:exaid: 18000000
+(bootloader) partition-type:exaid: raw data
+(bootloader) partition-size:oem_misc1: 1000000
+(bootloader) partition-type:oem_misc1: raw data
+(bootloader) partition-size:oops: 1000000
+(bootloader) partition-type:oops: raw data
+(bootloader) partition-size:mem: 400000
+(bootloader) partition-type:mem: raw data
+(bootloader) partition-size:ffu: 800000
+(bootloader) partition-type:ffu: raw data
+(bootloader) partition-size:gsort: 1000000
+(bootloader) partition-type:gsort: raw data
+(bootloader) partition-size:super: 220000000
+(bootloader) partition-type:super: raw data
+(bootloader) partition-size:mitee_b: 800000
+(bootloader) partition-type:mitee_b: raw data
+(bootloader) partition-size:tee_b: 500000
+(bootloader) partition-type:tee_b: raw data
+(bootloader) partition-size:dtbo_b: 2000000
+(bootloader) partition-type:dtbo_b: raw data
+(bootloader) partition-size:vendor_boot_b: 4000000
+(bootloader) partition-type:vendor_boot_b: raw data
+(bootloader) partition-size:boot_b: 8000000
+(bootloader) partition-type:boot_b: raw data
+(bootloader) partition-size:lk_b: 800000
+(bootloader) partition-type:lk_b: raw data
+(bootloader) partition-size:gz_b: 2000000
+(bootloader) partition-type:gz_b: raw data
+(bootloader) partition-size:cam_vpu3_b: f00000
+(bootloader) partition-type:cam_vpu3_b: raw data
+(bootloader) partition-size:cam_vpu2_b: f00000
+(bootloader) partition-type:cam_vpu2_b: raw data
+(bootloader) partition-size:cam_vpu1_b: f00000
+(bootloader) partition-type:cam_vpu1_b: raw data
+(bootloader) partition-size:mcupm_b: 100000
+(bootloader) partition-type:mcupm_b: raw data
+(bootloader) partition-size:sspm_b: 100000
+(bootloader) partition-type:sspm_b: raw data
+(bootloader) partition-size:scp_b: 600000
+(bootloader) partition-type:scp_b: raw data
+(bootloader) partition-size:dpm_b: 400000
+(bootloader) partition-type:dpm_b: raw data
+(bootloader) partition-size:pi_img_b: 100000
+(bootloader) partition-type:pi_img_b: raw data
+(bootloader) partition-size:audio_dsp_b: 800000
+(bootloader) partition-type:audio_dsp_b: raw data
+(bootloader) partition-size:spmfw_b: 100000
+(bootloader) partition-type:spmfw_b: raw data
+(bootloader) partition-size:md1img_b: c800000
+(bootloader) partition-type:md1img_b: raw data
+(bootloader) partition-size:logo: 4080000
+(bootloader) partition-type:logo: raw data
+(bootloader) partition-size:boot_para: 1a00000
+(bootloader) partition-type:boot_para: raw data
+(bootloader) partition-size:nvram: 4000000
+(bootloader) partition-type:nvram: raw data
+(bootloader) partition-size:efuse: 80000
+(bootloader) partition-type:efuse: raw data
+(bootloader) partition-size:proinfo: 300000
+(bootloader) partition-type:proinfo: raw data
+(bootloader) partition-size:sec1: 200000
+(bootloader) partition-type:sec1: raw data
+(bootloader) partition-size:mitee_a: 800000
+(bootloader) partition-type:mitee_a: raw data
+(bootloader) partition-size:tee_a: 500000
+(bootloader) partition-type:tee_a: raw data
+(bootloader) partition-size:dtbo_a: 2000000
+(bootloader) partition-type:dtbo_a: raw data
+(bootloader) partition-size:vendor_boot_a: 4000000
+(bootloader) partition-type:vendor_boot_a: raw data
+(bootloader) partition-size:boot_a: 8000000
+(bootloader) partition-type:boot_a: raw data
+(bootloader) partition-size:lk_a: 800000
+(bootloader) partition-type:lk_a: raw data
+(bootloader) partition-size:gz_a: 2000000
+(bootloader) partition-type:gz_a: raw data
+(bootloader) partition-size:cam_vpu3_a: 1200000
+(bootloader) partition-type:cam_vpu3_a: raw data
+(bootloader) partition-size:cam_vpu2_a: 1300000
+(bootloader) partition-type:cam_vpu2_a: raw data
+(bootloader) partition-size:cam_vpu1_a: 800000
+(bootloader) partition-type:cam_vpu1_a: raw data
+(bootloader) partition-size:mcupm_a: 100000
+(bootloader) partition-type:mcupm_a: raw data
+(bootloader) partition-size:sspm_a: 100000
+(bootloader) partition-type:sspm_a: raw data
+(bootloader) partition-size:scp_a: 600000
+(bootloader) partition-type:scp_a: raw data
+(bootloader) partition-size:dpm_a: 400000
+(bootloader) partition-type:dpm_a: raw data
+(bootloader) partition-size:pi_img_a: 100000
+(bootloader) partition-type:pi_img_a: raw data
+(bootloader) partition-size:audio_dsp_a: 800000
+(bootloader) partition-type:audio_dsp_a: raw data
+(bootloader) partition-size:spmfw_a: 100000
+(bootloader) partition-type:spmfw_a: raw data
+(bootloader) partition-size:md1img_a: c800000
+(bootloader) partition-type:md1img_a: raw data
+(bootloader) partition-size:otp: 3000000
+(bootloader) partition-type:otp: raw data
+(bootloader) partition-size:seccfg: 800000
+(bootloader) partition-type:seccfg: raw data
+(bootloader) partition-size:protect2: 800000
+(bootloader) partition-type:protect2: ext4
+(bootloader) partition-size:protect1: 800000
+(bootloader) partition-type:protect1: ext4
+(bootloader) partition-size:persist: 4278000
+(bootloader) partition-type:persist: ext4
+(bootloader) partition-size:metadata: 2000000
+(bootloader) partition-type:metadata: raw data
+(bootloader) partition-size:vbmeta_vendor_b: 800000
+(bootloader) partition-type:vbmeta_vendor_b: raw data
+(bootloader) partition-size:vbmeta_system_b: 800000
+(bootloader) partition-type:vbmeta_system_b: raw data
+(bootloader) partition-size:vbmeta_b: 800000
+(bootloader) partition-type:vbmeta_b: raw data
+(bootloader) partition-size:vbmeta_vendor_a: 800000
+(bootloader) partition-type:vbmeta_vendor_a: raw data
+(bootloader) partition-size:vbmeta_system_a: 800000
+(bootloader) partition-type:vbmeta_system_a: raw data
+(bootloader) partition-size:vbmeta_a: 800000
+(bootloader) partition-type:vbmeta_a: raw data
+(bootloader) partition-size:nvdata: 4000000
+(bootloader) partition-type:nvdata: ext4
+(bootloader) partition-size:nvcfg: 2000000
+(bootloader) partition-type:nvcfg: ext4
+(bootloader) partition-size:frp: 100000
+(bootloader) partition-type:frp: raw data
+(bootloader) partition-size:expdb: 2800000
+(bootloader) partition-type:expdb: raw data
+(bootloader) partition-size:para: 80000
+(bootloader) partition-type:para: raw data
+(bootloader) partition-size:misc: 400000
+(bootloader) partition-type:misc: raw data
+(bootloader) partition-size:pgpt: 8000
+(bootloader) partition-type:pgpt: raw data
+(bootloader) partition-size:preloader_b: 400000
+(bootloader) partition-type:preloader_b: raw data
+(bootloader) partition-size:preloader_a: 400000
+(bootloader) partition-type:preloader_a: raw data
+(bootloader) partition-size:preloader: 400000
+(bootloader) partition-type:preloader: raw data
+(bootloader) serialno: wkbmq8pfbeaejbo7
+(bootloader) off-mode-charge: 1
+(bootloader) warranty: no
+(bootloader) unlocked: no
+(bootloader) secure: yes
+(bootloader) fuse: yes
+(bootloader) crc: 1
+(bootloader) kernel: lk
+(bootloader) product: ares
+(bootloader) is-userspace: no
+(bootloader) slot-retry-count:b: 0
+(bootloader) slot-retry-count:a: 0
+(bootloader) slot-unbootable:b: yes
+(bootloader) slot-unbootable:a: yes
+(bootloader) slot-successful:b: no
+(bootloader) slot-successful:a: no
+(bootloader) slot-count: 2
+(bootloader) current-slot: a
+(bootloader) has-slot:sgpt: no
+(bootloader) has-slot:flashinfo: no
+(bootloader) has-slot:userdata: no
+(bootloader) has-slot:rescue: no
+(bootloader) has-slot:cust: no
+(bootloader) has-slot:backup5: no
+(bootloader) has-slot:backup4: no
+(bootloader) has-slot:backup3: no
+(bootloader) has-slot:backup2: no
+(bootloader) has-slot:backup1: no
+(bootloader) has-slot:exaid: no
+(bootloader) has-slot:oem_misc1: no
+(bootloader) has-slot:oops: no
+(bootloader) has-slot:mem: no
+(bootloader) has-slot:ffu: no
+(bootloader) has-slot:gsort: no
+(bootloader) has-slot:super: no
+(bootloader) has-slot:logo: no
+(bootloader) has-slot:boot_para: no
+(bootloader) has-slot:nvram: no
+(bootloader) has-slot:efuse: no
+(bootloader) has-slot:proinfo: no
+(bootloader) has-slot:sec1: no
+(bootloader) has-slot:mitee: yes
+(bootloader) has-slot:tee: yes
+(bootloader) has-slot:dtbo: yes
+(bootloader) has-slot:vendor_boot: yes
+(bootloader) has-slot:boot: yes
+(bootloader) has-slot:lk: yes
+(bootloader) has-slot:gz: yes
+(bootloader) has-slot:cam_vpu3: yes
+(bootloader) has-slot:cam_vpu2: yes
+(bootloader) has-slot:cam_vpu1: yes
+(bootloader) has-slot:mcupm: yes
+(bootloader) has-slot:sspm: yes
+(bootloader) has-slot:scp: yes
+(bootloader) has-slot:dpm: yes
+(bootloader) has-slot:pi_img: yes
+(bootloader) has-slot:audio_dsp: yes
+(bootloader) has-slot:spmfw: yes
+(bootloader) has-slot:md1img: yes
+(bootloader) has-slot:otp: no
+(bootloader) has-slot:seccfg: no
+(bootloader) has-slot:protect2: no
+(bootloader) has-slot:protect1: no
+(bootloader) has-slot:persist: no
+(bootloader) has-slot:metadata: no
+(bootloader) has-slot:vbmeta_vendor: yes
+(bootloader) has-slot:vbmeta_system: yes
+(bootloader) has-slot:vbmeta: yes
+(bootloader) has-slot:nvdata: no
+(bootloader) has-slot:nvcfg: no
+(bootloader) has-slot:frp: no
+(bootloader) has-slot:expdb: no
+(bootloader) has-slot:para: no
+(bootloader) has-slot:misc: no
+(bootloader) has-slot:pgpt: no
+(bootloader) has-slot:preloader: yes
+(bootloader) version-baseband: MOLY.NR15.R3.TC8.PR2.SP.V2.1.P87
+(bootloader) version-bootloader: ares-b4b182403-20230427143113-202310101
+(bootloader) version-preloader:
+(bootloader) version: 0.5
+all: Done!!
+Finished. Total time: 0.227s
+
+C:\Programs\Telefon adb\platform-tools>dir /s /b "C:\Users\Yusuf\Desktop\rom ve flash\ares_eng"
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\CheckSum_Gen
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\check_sum.sh
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\flash_all.bat
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\flash_all.sh
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\flash_all_except_data_storage.bat
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\flash_all_except_data_storage.sh
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\flash_all_lock.bat
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\flash_all_lock.sh
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\flash_gen_crc_list.py
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\flash_gen_md5_list.py
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\libflashtool.so
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\libflashtool.v1.so
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\libflashtoolEx.so
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\Log
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\md5sum.xml
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\misc.txt
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\MTK_AllInOne_DA.bin
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\romadd cmc.txt
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\anti_version.txt
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\audio_dsp.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\boot.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\cam_vpu1.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\cam_vpu2.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\cam_vpu3.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\crclist.txt
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\cust.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\dpm.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\dtbo.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\efuse.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\fw_checklist.bin
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\gz.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\lk.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\logo.bin
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\mcupm.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\md1img.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\mitee.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\MI_FFU
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\MT6893_Android_scatter.txt
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\oem_misc1.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\pi_img.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\preloader_ares.bin
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\provision.xml
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\rescue.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\scp.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\sparsecrclist.txt
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\spmfw.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\sspm.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\super.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\tee.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\userdata.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\vbmeta.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\vbmeta_system.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\vbmeta_vendor.img
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\MI_FFU\ffu_list.txt
+C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\Log\ADPT_20210421-060237_0.log
+
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>type "C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\anti_version.txt"
+1
+
+C:\Programs\Telefon adb\platform-tools>powershell -Command "Get-Content 'C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\MT6893_Android_scatter.txt' -TotalCount 100"
+############################################################################################################
+#
+#  General Setting
+#
+############################################################################################################
+- general: MTK_PLATFORM_CFG
+  info:
+    - config_version: V2.1.0
+      platform: MT6893
+      project: ares
+############################################################################################################
+#
+#  EMMC Layout Setting
+#
+############################################################################################################
+- storage_type: EMMC
+  description:
+  - general: MTK_STORAGE_CFG
+    info:
+      - storage: EMMC
+        boot_channel: MSDC_0
+        block_size: 0x20000
+
+  - partition_index: SYS0
+    partition_name: preloader
+    file_name: preloader_ares.bin
+    is_download: true
+    type: SV5_BL_BIN
+    linear_start_addr: 0x0
+    physical_start_addr: 0x0
+    partition_size: 0x80000
+    region: EMMC_BOOT1_BOOT2
+    storage: HW_STORAGE_EMMC
+    boundary_check: true
+    is_reserved: false
+    operation_type: BOOTLOADERS
+    is_upgradable: true
+    empty_boot_needed: false
+    combo_partsize_check: false
+    reserve: 0x00
+
+  - partition_index: SYS1
+    partition_name: pgpt
+    file_name: NONE
+    is_download: false
+    type: NORMAL_ROM
+    linear_start_addr: 0x0
+    physical_start_addr: 0x0
+    partition_size: 0x8000
+    region: EMMC_USER
+    storage: HW_STORAGE_EMMC
+    boundary_check: true
+    is_reserved: false
+    operation_type: INVISIBLE
+    is_upgradable: false
+    empty_boot_needed: false
+    combo_partsize_check: false
+    reserve: 0x00
+
+  - partition_index: SYS2
+    partition_name: misc
+    file_name: NONE
+    is_download: false
+    type: NORMAL_ROM
+    linear_start_addr: 0x8000
+    physical_start_addr: 0x8000
+    partition_size: 0x400000
+    region: EMMC_USER
+    storage: HW_STORAGE_EMMC
+    boundary_check: true
+    is_reserved: false
+    operation_type: INVISIBLE
+    is_upgradable: false
+    empty_boot_needed: false
+    combo_partsize_check: false
+    reserve: 0x00
+
+  - partition_index: SYS3
+    partition_name: para
+    file_name: NONE
+    is_download: false
+    type: NORMAL_ROM
+    linear_start_addr: 0x408000
+    physical_start_addr: 0x408000
+    partition_size: 0x80000
+    region: EMMC_USER
+    storage: HW_STORAGE_EMMC
+    boundary_check: true
+    is_reserved: false
+    operation_type: INVISIBLE
+    is_upgradable: false
+    empty_boot_needed: false
+    combo_partsize_check: false
+    reserve: 0x00
+
+  - partition_index: SYS4
+    partition_name: expdb
+    file_name: NONE
+    is_download: false
+    type: NORMAL_ROM
+
+C:\Programs\Telefon adb\platform-tools>type "C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\flash_all.bat"
+if exist %~dp0images\anti_version.txt (for /f "delims==" %%a in (%~dp0images\anti_version.txt) do (set CURRENT_ANTI_VER=%%a))
+if [%CURRENT_ANTI_VER%] EQU [] set CURRENT_ANTI_VER=0
+for /f "tokens=2 delims=: " %%i in ('fastboot %* getvar anti 2^>^&1 ^| findstr /r /c:"anti:"') do (set version=%%i)
+if [%version%] EQU [] set version=0
+set anticheck="antirollback check pass"
+if %version% GTR %CURRENT_ANTI_VER% set anticheck="Current device antirollback version is greater than this pakcage"
+echo %anticheck% | findstr /r /c:"pass" || @echo "Antirollback check error" && exit /B 1
+fastboot %* getvar product 2>&1 | findstr "ares" || @echo "Missmatching image and device" && exit /B 1
+@echo "Now Check Finished ......"
+
+fastboot %* getvar crc 2>&1 | findstr /r /c:"^crc: 1" && if %errorlevel% equ 0 (
+fastboot %* flash crclist %~dp0images\crclist.txt || @echo "Flash crclist error" && exit /B 1
+fastboot %* flash sparsecrclist %~dp0images\sparsecrclist.txt || @echo "Flash sparsecrclist error" && exit /B 1
+)
+
+fastboot %* erase boot_ab  || @echo "Erase boot error" && exit /B 1
+fastboot %* erase metadata || @echo "Erase metadata error" && exit /B 1
+
+@echo "Now Start Flash ......"
+fastboot %* flash preloader_ab          %~dp0images\preloader_ares.bin          || @echo "Flash preloader              error" && exit /B 1
+fastboot %* flash vbmeta_ab         %~dp0images\vbmeta.img              || @echo "Flash vbmeta                  error" && exit /B 1
+fastboot %* flash vbmeta_system_ab  %~dp0images\vbmeta_system.img       || @echo "Flash vbmeta_system   error" && exit /B 1
+fastboot %* flash vbmeta_vendor_ab  %~dp0images\vbmeta_vendor.img       || @echo "Flash vbmeta_vendor   error" && exit /B 1
+fastboot %* flash md1img_ab             %~dp0images\md1img.img                          || @echo "Flash md1img
+error" && exit /B 1
+fastboot %* flash spmfw_ab              %~dp0images\spmfw.img                           || @echo "Flash spmfw
+error" && exit /B 1
+fastboot %* flash audio_dsp_ab          %~dp0images\audio_dsp.img                       || @echo "Flash audio_dsp
+error" && exit /B 1
+fastboot %* flash pi_img_ab             %~dp0images\pi_img.img                          || @echo "Flash pi_img
+error" && exit /B 1
+fastboot %* flash dpm_ab                %~dp0images\dpm.img                             || @echo "Flash dpm
+error" && exit /B 1
+fastboot %* flash scp_ab                %~dp0images\scp.img                             || @echo "Flash scp
+error" && exit /B 1
+fastboot %* flash sspm_ab               %~dp0images\sspm.img                            || @echo "Flash sspm
+error" && exit /B 1
+fastboot %* flash mcupm_ab                      %~dp0images\mcupm.img                           || @echo "Flash mcupm                   error" && exit /B 1
+fastboot %* flash cam_vpu1_ab           %~dp0images\cam_vpu1.img                        || @echo "Flash cam_vpu1
+error" && exit /B 1
+fastboot %* flash cam_vpu2_ab           %~dp0images\cam_vpu2.img                        || @echo "Flash cam_vpu2
+error" && exit /B 1
+fastboot %* flash cam_vpu3_ab           %~dp0images\cam_vpu3.img                        || @echo "Flash cam_vpu3
+error" && exit /B 1
+fastboot %* flash gz_ab                 %~dp0images\gz.img                              || @echo "Flash gz
+error" && exit /B 1
+fastboot %* flash lk_ab                 %~dp0images\lk.img                              || @echo "Flash lk
+error" && exit /B 1
+fastboot %* flash boot_ab               %~dp0images\boot.img                    || @echo "Flash boot                   error" && exit /B 1
+fastboot %* flash dtbo_ab               %~dp0images\dtbo.img                            || @echo "Flash dtbo
+error" && exit /B 1
+fastboot %* flash tee_ab                %~dp0images\tee.img                             || @echo "Flash tee
+error" && exit /B 1
+fastboot %* flash mitee_ab              %~dp0images\mitee.img                   || @echo "Flash mitee                  error" && exit /B 1
+fastboot %* flash logo                  %~dp0images\logo.bin                            || @echo "Flash logo
+error" && exit /B 1
+fastboot %* flash super                 %~dp0images\super.img                   || @echo "Flash super                  error" && exit /B 1
+fastboot %* flash rescue                %~dp0images\rescue.img                  || @echo "Flash rescue                 error" && exit /B 1
+fastboot %* flash cust                  %~dp0images\cust.img                    || @echo "Flash cust                   error" && exit /B 1
+fastboot %* flash userdata              %~dp0images\userdata.img                || @echo "Flash userdata               error" && exit /B 1
+@echo "Now Flash Finished ......"
+
+fastboot %* oem cdms
+fastboot %* set_active a || @echo "set_active a" && exit /B 1
+
+@echo "Now Reboot ......"
+fastboot %* reboot || @echo "Reboot error" && exit /B 1
+
+
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>findstr /i /c:"version" /c:"build" /c:"TKJ" /c:"OS1" "C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\images\provision.xml"
+<?xml version="1.0" ?>
+<!--xml version1->2 :增加HPB的相关描述。 -->
+
+C:\Programs\Telefon adb\platform-tools>findstr /i /c:"version" /c:"build" /c:"TKJ" /c:"OS1" "C:\Users\Yusuf\Desktop\rom ve flash\ares_eng\misc.txt"
+build_number=FACTORY-ARES-0420
+userdata_version=20210421.0000.00
+
+C:\Programs\Telefon adb\platform-tools>dir /ad "C:\Users\Yusuf\Desktop\rom ve flash"
+ Volume in drive C has no label.
+ Volume Serial Number is A259-8752
+
+ Directory of C:\Users\Yusuf\Desktop\rom ve flash
+
+23.09.2026  06:24    <DIR>          .
+23.09.2026  06:24    <DIR>          ..
+28.04.2022  04:56    <DIR>          ares_eng
+10.07.2023  08:39    <DIR>          ares_images_V14.0.4.0.TKJCNXM_13.0
+23.09.2026  01:06    <DIR>          ares_in_global_images_V14.0.5.0.TKJINXM_13.0
+22.09.2026  21:53    <DIR>          bypass_utility-v.1.4.2
+23.09.2026  06:18    <DIR>          MiFlash20250720
+23.09.2026  03:48    <DIR>          miflash_unlock_en_7_6_727_43
+23.09.2026  02:08    <DIR>          mtkclient-2.1.4.1
+22.09.2026  21:40    <DIR>          SP_Flash_Tool_v5.2120_Win
+               0 File(s)              0 bytes
+              10 Dir(s)  14.516.121.600 bytes free
+
+C:\Programs\Telefon adb\platform-tools>dir /ad "E:\TELEFON"
+ Volume in drive E is HARD
+ Volume Serial Number is 04E4-A1CA
+
+ Directory of E:\TELEFON
+
+23.09.2026  05:17    <DIR>          .
+23.09.2026  05:17    <DIR>          ..
+23.09.2026  05:04    <DIR>          ARES-EVOX
+23.09.2026  01:15    <DIR>          ares_images_OS1.0.4.0.TKJCNXM_13.0
+23.09.2026  05:05    <DIR>          ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn
+23.09.2026  00:57    <DIR>          ares_in_global_images_V14.0.5.0.TKJINXM_20231010.0000.00_13.0_in_4cfd7ac934
+23.09.2026  00:59    <DIR>          bypass_utility-v.1.4.2
+23.09.2026  00:59    <DIR>          exploits_collection-master
+23.09.2026  01:24    <DIR>          K40 yedek
+23.09.2026  01:00    <DIR>          latest_usb_driver_windows
+23.09.2026  01:27    <DIR>          Masaüstü
+23.09.2026  01:00    <DIR>          MiFlash20250720
+23.09.2026  01:00    <DIR>          miui_ARESINGlobal_V14.0.5.0.TKJINXM_f82c4bfd01_13.0_3
+23.09.2026  00:59    <DIR>          sancak-vC++
+23.09.2026  05:04    <DIR>          SP_Flash_Tool_v5.1924_Win
+23.09.2026  00:59    <DIR>          SP_Flash_Tool_v5.2120_Win
+23.09.2026  01:00    <DIR>          TWRP-k40g-F3GT
+23.09.2026  05:03    <DIR>          UMTv2_UMTPro_UltimateMTK2_3.5 (by_gsmofficial.com)
+               0 File(s)              0 bytes
+              18 Dir(s)  57.200.152.576 bytes free
+
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>for %R in ("E:\TELEFON\ares_images_V14.0.4.0.TKJCNXM_13.0" "E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0" "E:\TELEFON\ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn") do @echo ==== %~nxR ==== & if exist "%~R\images\anti_version.txt" (type "%~R\images\anti_version.txt") else (echo anti_version.txt YOK)
+==== ares_images_V14.0.4.0.TKJCNXM_13.0 ====
+anti_version.txt YOK
+==== ares_images_OS1.0.4.0.TKJCNXM_13.0 ====
+1
+==== ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn ====
+1
+
+C:\Programs\Telefon adb\platform-tools>for %R in ("E:\TELEFON\ares_images_V14.0.4.0.TKJCNXM_13.0" "E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0") do @echo ==== %~nxR ==== & if exist "%~R\flash_all.bat" (type "%~R\flash_all.bat") else (echo flash_all.bat YOK)
+==== ares_images_V14.0.4.0.TKJCNXM_13.0 ====
+flash_all.bat YOK
+==== ares_images_OS1.0.4.0.TKJCNXM_13.0 ====
+if exist %~dp0images\anti_version.txt (for /f "delims==" %%a in (%~dp0images\anti_version.txt) do (set CURRENT_ANTI_VER=%%a))
+if [%CURRENT_ANTI_VER%] EQU [] set CURRENT_ANTI_VER=0
+for /f "tokens=2 delims=: " %%i in ('fastboot %* getvar anti 2^>^&1 ^| findstr /r /c:"anti:"') do (set version=%%i)
+if [%version%] EQU [] set version=0
+set anticheck="antirollback check pass"
+if %version% GTR %CURRENT_ANTI_VER% set anticheck="Current device antirollback version is greater than this pakcage"
+echo %anticheck% | findstr /r /c:"pass" || @echo "Antirollback check error" && exit /B 1
+fastboot %* getvar product 2>&1 | findstr "ares" || @echo "Missmatching image and device" && exit /B 1
+@echo "Now Check Finished ......"
+
+fastboot %* getvar crc 2>&1 | findstr /r /c:"^crc: 1" && if %errorlevel% equ 0 (
+fastboot %* flash crclist %~dp0images\crclist.txt || @echo "Flash crclist error" && exit /B 1
+fastboot %* flash sparsecrclist %~dp0images\sparsecrclist.txt || @echo "Flash sparsecrclist error" && exit /B 1
+)
+
+fastboot %* erase boot_ab  || @echo "Erase boot error" && exit /B 1
+fastboot %* erase expdb || @echo "Erase expdb error" && exit /B 1
+fastboot %* erase metadata || @echo "Erase metadata error" && exit /B 1
+
+@echo "Now Start Flash ......"
+fastboot %* flash preloader_ab          %~dp0images\preloader_ares.bin          || @echo "Flash preloader              error" && exit /B 1
+fastboot %* flash vbmeta_ab         %~dp0images\vbmeta.img              || @echo "Flash vbmeta                  error" && exit /B 1
+fastboot %* flash vbmeta_system_ab  %~dp0images\vbmeta_system.img       || @echo "Flash vbmeta_system   error" && exit /B 1
+fastboot %* flash vbmeta_vendor_ab  %~dp0images\vbmeta_vendor.img       || @echo "Flash vbmeta_vendor   error" && exit /B 1
+fastboot %* flash md1img_ab             %~dp0images\md1img.img                          || @echo "Flash md1img
+error" && exit /B 1
+fastboot %* flash spmfw_ab              %~dp0images\spmfw.img                           || @echo "Flash spmfw
+error" && exit /B 1
+fastboot %* flash audio_dsp_ab          %~dp0images\audio_dsp.img                       || @echo "Flash audio_dsp
+error" && exit /B 1
+fastboot %* flash pi_img_ab             %~dp0images\pi_img.img                          || @echo "Flash pi_img
+error" && exit /B 1
+fastboot %* flash dpm_ab                %~dp0images\dpm.img                             || @echo "Flash dpm
+error" && exit /B 1
+fastboot %* flash scp_ab                %~dp0images\scp.img                             || @echo "Flash scp
+error" && exit /B 1
+fastboot %* flash sspm_ab               %~dp0images\sspm.img                            || @echo "Flash sspm
+error" && exit /B 1
+fastboot %* flash mcupm_ab                      %~dp0images\mcupm.img                           || @echo "Flash mcupm                   error" && exit /B 1
+fastboot %* flash cam_vpu1_ab           %~dp0images\cam_vpu1.img                        || @echo "Flash cam_vpu1
+error" && exit /B 1
+fastboot %* flash cam_vpu2_ab           %~dp0images\cam_vpu2.img                        || @echo "Flash cam_vpu2
+error" && exit /B 1
+fastboot %* flash cam_vpu3_ab           %~dp0images\cam_vpu3.img                        || @echo "Flash cam_vpu3
+error" && exit /B 1
+fastboot %* flash gz_ab                 %~dp0images\gz.img                              || @echo "Flash gz
+error" && exit /B 1
+fastboot %* flash lk_ab                 %~dp0images\lk.img                              || @echo "Flash lk
+error" && exit /B 1
+fastboot %* flash boot_ab               %~dp0images\boot.img                    || @echo "Flash boot                   error" && exit /B 1
+fastboot %* flash dtbo_ab               %~dp0images\dtbo.img                            || @echo "Flash dtbo
+error" && exit /B 1
+fastboot %* flash tee_ab                %~dp0images\tee.img                             || @echo "Flash tee
+error" && exit /B 1
+fastboot %* flash mitee_ab              %~dp0images\mitee.img                   || @echo "Flash mitee                  error" && exit /B 1
+fastboot %* flash logo                  %~dp0images\logo.bin                            || @echo "Flash logo
+error" && exit /B 1
+fastboot %* flash super                 %~dp0images\super.img                   || @echo "Flash super                  error" && exit /B 1
+fastboot %* flash rescue                %~dp0images\rescue.img                  || @echo "Flash rescue                 error" && exit /B 1
+fastboot %* flash cust                  %~dp0images\cust.img                    || @echo "Flash cust                   error" && exit /B 1
+fastboot %* flash userdata              %~dp0images\userdata.img                || @echo "Flash userdata               error" && exit /B 1
+@echo "Now Flash Finished ......"
+
+fastboot %* oem cdms
+fastboot %* set_active a || @echo "set_active a" && exit /B 1
+
+@echo "Now Reboot ......"
+fastboot %* reboot || @echo "Reboot error" && exit /B 1
+
+
+C:\Programs\Telefon adb\platform-tools>dir /s /b "E:\TELEFON\ares_images_V14.0.4.0.TKJCNXM_13.0"
+File Not Found
+
+C:\Programs\Telefon adb\platform-tools>E:\TELEFON\ares_images_V14.0.4.0.TKJCNXM_13.0
+'E:\TELEFON\ares_images_V14.0.4.0.TKJCNXM_13.0' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Programs\Telefon adb\platform-tools>dir /ad "E:\TELEFON"
+ Volume in drive E is HARD
+ Volume Serial Number is 04E4-A1CA
+
+ Directory of E:\TELEFON
+
+23.09.2026  05:17    <DIR>          .
+23.09.2026  05:17    <DIR>          ..
+23.09.2026  05:04    <DIR>          ARES-EVOX
+23.09.2026  01:15    <DIR>          ares_images_OS1.0.4.0.TKJCNXM_13.0
+23.09.2026  05:05    <DIR>          ares_images_V13.0.9.0.SKJCNXM_20221017.0000.00_12.0_cn
+23.09.2026  00:57    <DIR>          ares_in_global_images_V14.0.5.0.TKJINXM_20231010.0000.00_13.0_in_4cfd7ac934
+23.09.2026  00:59    <DIR>          bypass_utility-v.1.4.2
+23.09.2026  00:59    <DIR>          exploits_collection-master
+23.09.2026  01:24    <DIR>          K40 yedek
+23.09.2026  01:00    <DIR>          latest_usb_driver_windows
+23.09.2026  01:27    <DIR>          Masaüstü
+23.09.2026  01:00    <DIR>          MiFlash20250720
+23.09.2026  01:00    <DIR>          miui_ARESINGlobal_V14.0.5.0.TKJINXM_f82c4bfd01_13.0_3
+23.09.2026  00:59    <DIR>          sancak-vC++
+23.09.2026  05:04    <DIR>          SP_Flash_Tool_v5.1924_Win
+23.09.2026  00:59    <DIR>          SP_Flash_Tool_v5.2120_Win
+23.09.2026  01:00    <DIR>          TWRP-k40g-F3GT
+23.09.2026  05:03    <DIR>          UMTv2_UMTPro_UltimateMTK2_3.5 (by_gsmofficial.com)
+               0 File(s)              0 bytes
+              18 Dir(s)  57.200.152.576 bytes free
+
+C:\Programs\Telefon adb\platform-tools>dir /s /b "E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0"
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\CheckSum_Gen
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\check_sum.sh
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_all.bat
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_all.sh
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_all_except_data_storage.bat
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_all_except_data_storage.sh
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_all_lock.bat
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_all_lock.sh
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_gen_crc_list.py
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_gen_md5_list.py
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\libflashtool.so
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\libflashtool.v1.so
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\libflashtoolEx.so
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\Log
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\misc.txt
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\MTK_AllInOne_DA.bin
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\anti_version.txt
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\audio_dsp.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\boot.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\cam_vpu1.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\cam_vpu2.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\cam_vpu3.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\crclist.txt
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\cust.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\dpm.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\dtbo.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\gsort.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\gz.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\lk.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\logo.bin
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\mcupm.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\md1img.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\mitee.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\MT6893_Android_scatter.txt
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\oem_misc1.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\pi_img.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\preloader_ares.bin
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\rescue.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\scp.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\sparsecrclist.txt
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\spmfw.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\sspm.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\super.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\tee.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\userdata.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\vbmeta.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\vbmeta_system.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\vbmeta_vendor.img
+E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\Log\ADPT_20250211-203102_0.log
+
+C:\Programs\Telefon adb\platform-tools>if exist "E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_all_lock.bat" (echo LOCK SCRIPT VAR) else (echo LOCK SCRIPT YOK)
+LOCK SCRIPT VAR
+
+C:\Programs\Telefon adb\platform-tools>^B
+'' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>
+C:\Programs\Telefon adb\platform-tools>for %F in ("E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_all.bat" "E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_all_except_data_storage.bat" "E:\TELEFON\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_all_lock.bat") do @echo. & echo ==================== %~nxF ==================== & findstr /i "flash erase set_active lock oem" "%~F"
+
+==================== flash_all.bat ====================
+fastboot %* flash crclist %~dp0images\crclist.txt || @echo "Flash crclist error" && exit /B 1
+fastboot %* flash sparsecrclist %~dp0images\sparsecrclist.txt || @echo "Flash sparsecrclist error" && exit /B 1
+fastboot %* erase boot_ab  || @echo "Erase boot error" && exit /B 1
+fastboot %* erase expdb || @echo "Erase expdb error" && exit /B 1
+fastboot %* erase metadata || @echo "Erase metadata error" && exit /B 1
+@echo "Now Start Flash ......"
+fastboot %* flash preloader_ab          %~dp0images\preloader_ares.bin          || @echo "Flash preloader              error" && exit /B 1
+fastboot %* flash vbmeta_ab         %~dp0images\vbmeta.img              || @echo "Flash vbmeta                  error" && exit /B 1
+fastboot %* flash vbmeta_system_ab  %~dp0images\vbmeta_system.img       || @echo "Flash vbmeta_system   error" && exit /B 1
+fastboot %* flash vbmeta_vendor_ab  %~dp0images\vbmeta_vendor.img       || @echo "Flash vbmeta_vendor   error" && exit /B 1
+fastboot %* flash md1img_ab             %~dp0images\md1img.img                          || @echo "Flash md1img
+error" && exit /B 1
+fastboot %* flash spmfw_ab              %~dp0images\spmfw.img                           || @echo "Flash spmfw
+error" && exit /B 1
+fastboot %* flash audio_dsp_ab          %~dp0images\audio_dsp.img                       || @echo "Flash audio_dsp
+error" && exit /B 1
+fastboot %* flash pi_img_ab             %~dp0images\pi_img.img                          || @echo "Flash pi_img
+error" && exit /B 1
+fastboot %* flash dpm_ab                %~dp0images\dpm.img                             || @echo "Flash dpm
+error" && exit /B 1
+fastboot %* flash scp_ab                %~dp0images\scp.img                             || @echo "Flash scp
+error" && exit /B 1
+fastboot %* flash sspm_ab               %~dp0images\sspm.img                            || @echo "Flash sspm
+error" && exit /B 1
+fastboot %* flash mcupm_ab                      %~dp0images\mcupm.img                           || @echo "Flash mcupm                   error" && exit /B 1
+fastboot %* flash cam_vpu1_ab           %~dp0images\cam_vpu1.img                        || @echo "Flash cam_vpu1
+error" && exit /B 1
+fastboot %* flash cam_vpu2_ab           %~dp0images\cam_vpu2.img                        || @echo "Flash cam_vpu2
+error" && exit /B 1
+fastboot %* flash cam_vpu3_ab           %~dp0images\cam_vpu3.img                        || @echo "Flash cam_vpu3
+error" && exit /B 1
+fastboot %* flash gz_ab                 %~dp0images\gz.img                              || @echo "Flash gz
+error" && exit /B 1
+fastboot %* flash lk_ab                 %~dp0images\lk.img                              || @echo "Flash lk
+error" && exit /B 1
+fastboot %* flash boot_ab               %~dp0images\boot.img                    || @echo "Flash boot                   error" && exit /B 1
+fastboot %* flash dtbo_ab               %~dp0images\dtbo.img                            || @echo "Flash dtbo
+error" && exit /B 1
+fastboot %* flash tee_ab                %~dp0images\tee.img                             || @echo "Flash tee
+error" && exit /B 1
+fastboot %* flash mitee_ab              %~dp0images\mitee.img                   || @echo "Flash mitee                  error" && exit /B 1
+fastboot %* flash logo                  %~dp0images\logo.bin                            || @echo "Flash logo
+error" && exit /B 1
+fastboot %* flash super                 %~dp0images\super.img                   || @echo "Flash super                  error" && exit /B 1
+fastboot %* flash rescue                %~dp0images\rescue.img                  || @echo "Flash rescue                 error" && exit /B 1
+fastboot %* flash cust                  %~dp0images\cust.img                    || @echo "Flash cust                   error" && exit /B 1
+fastboot %* flash userdata              %~dp0images\userdata.img                || @echo "Flash userdata               error" && exit /B 1
+@echo "Now Flash Finished ......"
+fastboot %* oem cdms
+fastboot %* set_active a || @echo "set_active a" && exit /B 1
+
+==================== flash_all_except_data_storage.bat ====================
+fastboot %* flash crclist %~dp0images\crclist.txt || @echo "Flash crclist error" && exit /B 1
+fastboot %* flash sparsecrclist %~dp0images\sparsecrclist.txt || @echo "Flash sparsecrclist error" && exit /B 1
+fastboot %* erase boot_ab   || @echo "Erase boot error" && exit /B 1
+fastboot %* erase expdb || @echo "Erase expdb error" && exit /B 1
+@echo "Now Start Flash ......"
+fastboot %* flash preloader_ab          %~dp0images\preloader_ares.bin          || @echo "Flash preloader              error" && exit /B 1
+fastboot %* flash vbmeta_ab         %~dp0images\vbmeta.img              || @echo "Flash vbmeta                  error" && exit /B 1
+fastboot %* flash vbmeta_system_ab  %~dp0images\vbmeta_system.img       || @echo "Flash vbmeta_system   error" && exit /B 1
+fastboot %* flash vbmeta_vendor_ab  %~dp0images\vbmeta_vendor.img       || @echo "Flash vbmeta_vendor   error" && exit /B 1
+fastboot %* flash md1img_ab             %~dp0images\md1img.img                          || @echo "Flash md1img
+error" && exit /B 1
+fastboot %* flash spmfw_ab              %~dp0images\spmfw.img                           || @echo "Flash spmfw
+error" && exit /B 1
+fastboot %* flash audio_dsp_ab          %~dp0images\audio_dsp.img                       || @echo "Flash audio_dsp
+error" && exit /B 1
+fastboot %* flash pi_img_ab             %~dp0images\pi_img.img                          || @echo "Flash pi_img
+error" && exit /B 1
+fastboot %* flash dpm_ab                %~dp0images\dpm.img                             || @echo "Flash dpm
+error" && exit /B 1
+fastboot %* flash scp_ab                %~dp0images\scp.img                             || @echo "Flash scp
+error" && exit /B 1
+fastboot %* flash sspm_ab               %~dp0images\sspm.img                            || @echo "Flash sspm
+error" && exit /B 1
+fastboot %* flash mcupm_ab                      %~dp0images\mcupm.img                           || @echo "Flash mcupm                   error" && exit /B 1
+fastboot %* flash cam_vpu1_ab           %~dp0images\cam_vpu1.img                        || @echo "Flash cam_vpu1
+error" && exit /B 1
+fastboot %* flash cam_vpu2_ab           %~dp0images\cam_vpu2.img                        || @echo "Flash cam_vpu2
+error" && exit /B 1
+fastboot %* flash cam_vpu3_ab           %~dp0images\cam_vpu3.img                        || @echo "Flash cam_vpu3
+error" && exit /B 1
+fastboot %* flash gz_ab                 %~dp0images\gz.img                              || @echo "Flash gz
+error" && exit /B 1
+fastboot %* flash lk_ab                 %~dp0images\lk.img                              || @echo "Flash lk
+error" && exit /B 1
+fastboot %* flash boot_ab               %~dp0images\boot.img                    || @echo "Flash boot                   error" && exit /B 1
+fastboot %* flash dtbo_ab               %~dp0images\dtbo.img                            || @echo "Flash dtbo
+error" && exit /B 1
+fastboot %* flash tee_ab                %~dp0images\tee.img                             || @echo "Flash tee
+error" && exit /B 1
+fastboot %* flash mitee_ab              %~dp0images\mitee.img                   || @echo "Flash mitee                  error" && exit /B 1
+fastboot %* flash logo                  %~dp0images\logo.bin                            || @echo "Flash logo
+error" && exit /B 1
+fastboot %* flash super                 %~dp0images\super.img                   || @echo "Flash super                  error" && exit /B 1
+fastboot %* flash rescue                %~dp0images\rescue.img                  || @echo "Flash rescue                          error" && exit /B 1
+fastboot %* flash cust                  %~dp0images\cust.img                    || @echo "Flash cust                   error" && exit /B 1
+@echo "Now Flash Finished ......"
+fastboot %* oem cdms
+fastboot %* set_active a || @echo "set_active a" && exit /B 1
+
+==================== flash_all_lock.bat ====================
+fastboot %* flash crclist %~dp0images\crclist.txt || @echo "Flash crclist error" && exit /B 1
+fastboot %* flash sparsecrclist %~dp0images\sparsecrclist.txt || @echo "Flash sparsecrclist error" && exit /B 1
+fastboot %* erase boot_ab  || @echo "Erase boot error" && exit /B 1
+fastboot %* erase expdb || @echo "Erase expdb error" && exit /B 1
+fastboot %* erase metadata || @echo "Erase metadata error" && exit /B 1
+@echo "Now Start Flash ......"
+fastboot %* flash preloader_ab          %~dp0images\preloader_ares.bin          || @echo "Flash preloader              error" && exit /B 1
+fastboot %* flash vbmeta_ab         %~dp0images\vbmeta.img              || @echo "Flash vbmeta                  error" && exit /B 1
+fastboot %* flash vbmeta_system_ab  %~dp0images\vbmeta_system.img       || @echo "Flash vbmeta_system   error" && exit /B 1
+fastboot %* flash vbmeta_vendor_ab  %~dp0images\vbmeta_vendor.img       || @echo "Flash vbmeta_vendor   error" && exit /B 1
+fastboot %* flash md1img_ab             %~dp0images\md1img.img                          || @echo "Flash md1img
+error" && exit /B 1
+fastboot %* flash spmfw_ab              %~dp0images\spmfw.img                           || @echo "Flash spmfw
+error" && exit /B 1
+fastboot %* flash audio_dsp_ab          %~dp0images\audio_dsp.img                       || @echo "Flash audio_dsp
+error" && exit /B 1
+fastboot %* flash pi_img_ab             %~dp0images\pi_img.img                          || @echo "Flash pi_img
+error" && exit /B 1
+fastboot %* flash dpm_ab                %~dp0images\dpm.img                             || @echo "Flash dpm
+error" && exit /B 1
+fastboot %* flash scp_ab                %~dp0images\scp.img                             || @echo "Flash scp
+error" && exit /B 1
+fastboot %* flash sspm_ab               %~dp0images\sspm.img                            || @echo "Flash sspm
+error" && exit /B 1
+fastboot %* flash mcupm_ab                      %~dp0images\mcupm.img                           || @echo "Flash mcupm                   error" && exit /B 1
+fastboot %* flash cam_vpu1_ab           %~dp0images\cam_vpu1.img                        || @echo "Flash cam_vpu1
+error" && exit /B 1
+fastboot %* flash cam_vpu2_ab           %~dp0images\cam_vpu2.img                        || @echo "Flash cam_vpu2
+error" && exit /B 1
+fastboot %* flash cam_vpu3_ab           %~dp0images\cam_vpu3.img                        || @echo "Flash cam_vpu3
+error" && exit /B 1
+fastboot %* flash gz_ab                 %~dp0images\gz.img                              || @echo "Flash gz
+error" && exit /B 1
+fastboot %* flash lk_ab                 %~dp0images\lk.img                              || @echo "Flash lk
+error" && exit /B 1
+fastboot %* flash boot_ab               %~dp0images\boot.img                    || @echo "Flash boot                   error" && exit /B 1
+fastboot %* flash dtbo_ab               %~dp0images\dtbo.img                            || @echo "Flash dtbo
+error" && exit /B 1
+fastboot %* flash tee_ab                %~dp0images\tee.img                             || @echo "Flash tee
+error" && exit /B 1
+fastboot %* flash mitee_ab              %~dp0images\mitee.img                   || @echo "Flash mitee                  error" && exit /B 1
+fastboot %* flash logo                  %~dp0images\logo.bin                            || @echo "Flash logo
+error" && exit /B 1
+fastboot %* flash super                 %~dp0images\super.img                   || @echo "Flash super                  error" && exit /B 1
+fastboot %* flash rescue                %~dp0images\rescue.img                  || @echo "Flash rescue                          error" && exit /B 1
+fastboot %* flash cust                          %~dp0images\cust.img                            || @echo "Flash cust
+        error" && exit /B 1
+fastboot %* flash userdata              %~dp0images\userdata.img                || @echo "Flash userdata               error" && exit /B 1
+@echo "Now Flash Finished ......"
+fastboot %* oem cdms
+fastboot %* set_active a  || @echo "set_active a error" && exit /B 1
+fastboot %* oem lock || @echo "oem lock error" && exit /B 1
+
+C:\Programs\Telefon adb\platform-tools>flash_all.batflash_all_except_data_storage.batflash_all_lock.bat
+'flash_all.batflash_all_except_data_storage.batflash_all_lock.bat' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Programs\Telefon adb\platform-tools>

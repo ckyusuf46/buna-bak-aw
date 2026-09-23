@@ -1,0 +1,30 @@
+Microsoft Windows [Version 10.0.19045.7725]
+(c) Microsoft Corporation. Tüm hakları saklıdır.
+
+C:\Programs\Telefon adb\platform-tools>fastboot flashing get_unlock_abilityunlock_ability = 0
+fastboot: usage: unknown 'flashing' command get_unlock_abilityunlock_ability
+
+C:\Programs\Telefon adb\platform-tools>fastboot flashing get_unlock_ability
+(bootloader) unlock_ability = 0
+OKAY [  0.001s]
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar product 2>&1
+product: ares
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar anti 2>&1
+anti: 1
+Finished. Total time: 0.000s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar unlocked 2>&1
+unlocked: no
+Finished. Total time: 0.001s
+
+C:\Programs\Telefon adb\platform-tools>fastboot getvar all 2>&1 | findstr /i "unlocked lock-state secure product anti"
+(bootloader) anti: 1
+(bootloader) unlocked: no
+(bootloader) secure: yes
+(bootloader) product: ares
+
+C:\Programs\Telefon adb\platform-tools>
